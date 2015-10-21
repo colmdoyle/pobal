@@ -1,14 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <title>Pobal</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Who is my TD?</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
-
-<%= yield %>
-
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <%= link_to "Who is my TD?", root_path, class: "navbar-brand", id: "navbar-wimt" %>
+    </div>
+  </nav>
+  <div class="container">
+    <%= yield %>
+  </div>
 </body>
+
 </html>

@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$primary-color: #E9EAED;
+$light-blue: #479CE3;
+$standard-font-family: 'Avenir', Helvetica, Arial;
+
+.navbar {
+  background-color: $light-blue;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+}
+
+body {
+  padding-top: 70px;
+  background-color: $primary-color;
+  font-family: $standard-font-family;
+}

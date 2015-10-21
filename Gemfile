@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'devise'
-gem "bower-rails", "~> 0.10.0"
+gem 'bootstrap-sass', '~> 3.3.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
