@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021150940) do
+ActiveRecord::Schema.define(version: 20151022142126) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -65,18 +65,21 @@ ActiveRecord::Schema.define(version: 20151021150940) do
   end
 
   create_table "people", force: :cascade do |t|
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "first_name",      limit: 255
-    t.string   "last_name",       limit: 255
-    t.string   "phone_number",    limit: 255
-    t.string   "email",           limit: 255
-    t.string   "website",         limit: 255
-    t.string   "facebook",        limit: 255
-    t.string   "twitter",         limit: 255
-    t.string   "profile_picture", limit: 255
-    t.string   "postal_address",  limit: 255
-    t.string   "gender",          limit: 255
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.string   "first_name",          limit: 255
+    t.string   "last_name",           limit: 255
+    t.string   "phone_number",        limit: 255
+    t.string   "email",               limit: 255
+    t.string   "website",             limit: 255
+    t.string   "facebook",            limit: 255
+    t.string   "twitter",             limit: 255
+    t.string   "postal_address",      limit: 255
+    t.string   "gender",              limit: 255
+    t.string   "avatar_file_name",    limit: 255
+    t.string   "avatar_content_type", limit: 255
+    t.integer  "avatar_file_size",    limit: 4
+    t.datetime "avatar_updated_at"
   end
 
   create_table "positions", force: :cascade do |t|

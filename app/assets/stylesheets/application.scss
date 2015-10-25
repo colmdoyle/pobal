@@ -9,8 +9,13 @@ $standard-font-family: 'Avenir', Helvetica, Arial;
   background-color: $light-blue;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-default .navbar-nav > li > a {
   color: white;
+}
+
+.dropdown .open > a {
+  background-color: white;
 }
 
 body {

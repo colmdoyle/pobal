@@ -8,14 +8,27 @@
 
   <title>Who is my TD?</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+      <%= csrf_meta_tags %>
 </head>
 
 <body>
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <%= link_to "Who is my TD?", root_path, class: "navbar-brand", id: "navbar-wimt" %>
+      <a href="<%= root_path %>" class="navbar-brand">
+        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Who is my TD?</a>
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oireachtas <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Dáil Éireann</a></li>
+            <li><a href="#">Seanad Éireann</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Committees</a></li>
+          </ul>
+        </li>
+
+      </ul>
     </div>
   </nav>
   <div class="container">
