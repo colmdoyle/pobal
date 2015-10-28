@@ -12,28 +12,46 @@
       <%= csrf_meta_tags %>
 </head>
 
-<body>
+<body class="<%= controller_name %>">
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
-      <a href="<%= root_path %>" class="navbar-brand">
-        <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Who is my TD?</a>
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oireachtas <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Dáil Éireann</a></li>
-            <li><a href="#">Seanad Éireann</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Committees</a></li>
-          </ul>
-        </li>
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation-bar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="<%= root_path %>" class="navbar-brand">
+          <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+          Who is my TD?
+        </a>
+      </div>
 
-      </ul>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="navigation-bar">
+        <ul class="nav navbar-nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Oireachtas <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Dáil Éireann</a></li>
+              <li><a href="#">Seanad Éireann</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Committees</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Link</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container-fluid -->
   </nav>
-  <div class="container">
-    <%= yield %>
-  </div>
+  <%= yield %>
+
 </body>
 
 </html>

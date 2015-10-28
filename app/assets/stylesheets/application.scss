@@ -2,24 +2,53 @@
 @import "bootstrap";
 
 $primary-color: #E9EAED;
+$white: white;
 $light-blue: #479CE3;
+$darkest-blue: #202B3A;
 $standard-font-family: 'Avenir', Helvetica, Arial;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
 
 .navbar {
   background-color: $light-blue;
+  font-size: 18px;
 }
 
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-  color: white;
+  color: $white;
+}
+
+@media (max-width: 768px) {
+  .navbar-default .navbar-collapse {
+    background-color: $darkest-blue;
+  }
 }
 
 .dropdown .open > a {
-  background-color: white;
+  background-color: $white;
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 50px;
   background-color: $primary-color;
   font-family: $standard-font-family;
+  margin-bottom: 60px;
 }
+
+.footer {
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: absolute;
+  min-height: 120px;
+  bottom: 0;
+  width: 100%;
+  background-color: $darkest-blue;
+  color: $white;
+}
+
+
+@import "welcome"

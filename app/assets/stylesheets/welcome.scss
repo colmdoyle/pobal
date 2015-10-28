@@ -1,3 +1,40 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$top-padding: 70px;
+
+.welcome {
+  background-color: $white;
+}
+
+.welcome > .navbar {
+  background-color: transparent;
+  border: 0;
+}
+
+.homepage {
+  margin-top: -$top-padding;
+  padding-top: $top-padding;
+  background-image: image-url('billboard.jpg');
+  background-size: cover;
+}
+
+.billboard {
+  padding-top: 48px;
+  padding-bottom: 96px;
+  color: $white;
+}
+
+.billboard h1,
+.billboard p {
+  text-align: center;
+}
+
+.billboard h1 {
+  font-size: 48px;
+}
+
+.search-area {
+  margin-top: 24px;
+}
