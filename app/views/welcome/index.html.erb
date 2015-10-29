@@ -18,14 +18,15 @@
       <p class="text-center lead">
         To get started, just enter your address.
       </p>
-      <form role="form">
-  		<div class="input-group" id="form-search-group">
-        <input type="text" placeholder="e.g. Kildare Street, Dublin 2, Ireland" id="form-input" class="form-control" autocomplete="off">
+      <%= form_tag search_index_path, {role: 'form', method: 'GET'} do %>
+      <div class="input-group" id="form-search-group">
+        <%= text_field_tag 'form-input', nil, placeholder: 'e.g. Kildare Street, Dublin 2, Ireland', class: 'form-control', autocomplete: 'off' %>
         <span class="input-group-btn">
-          <button class="btn btn-primary btn-search" id="form-submit" type="button">Search</button>
+          <button class="btn btn-primary btn-search" id="form-submit" type="submit">Search</button>
         </span>
   		</div>
-  	</form>
+      <% end %>
     </div>
   </div>
 </div>
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&amp;sensor=false"></script>

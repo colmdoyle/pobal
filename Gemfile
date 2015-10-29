@@ -33,6 +33,9 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'paperclip', '~> 4.3'
+gem 'geocoder'
+gem 'httparty', '~> 0.13.7'
+gem 'json'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
