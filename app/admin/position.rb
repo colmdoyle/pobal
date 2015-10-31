@@ -1,8 +1,9 @@
 ActiveAdmin.register Position do
 
-  permit_params :body, :constituency, :person, :position_type, :start_date, :end_date
+  permit_params :body_id, :constituency_id, :person_id, :position_type_id, :start_date, :end_date
 
   form do |f|
+    f.semantic_errors *f.object.errors.keys
     f.inputs do
       f.input :body
       f.input :constituency
@@ -11,7 +12,6 @@ ActiveAdmin.register Position do
       f.input :start_date
       f.input :end_date
     end
-    # Will preview the image when the object is edited
     f.actions
   end
 
