@@ -37,6 +37,8 @@ gem 'geocoder'
 gem 'httparty', '~> 0.13.7'
 gem 'json'
 
+gem "codeclimate-test-reporter", group: :test, require: nil
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
