@@ -1,4 +1,4 @@
-== README
+# README
 
 Pobal is an application that enables citizens to contact their local representatives.
 
@@ -10,7 +10,7 @@ Pobal is a Ruby on Rails port of that site.
 
 [![Test Coverage](https://codeclimate.com/github/colmdoyle/pobal/badges/coverage.svg)](https://codeclimate.com/github/colmdoyle/pobal/coverage)
 
-== LICENSE
+# LICENSE
 
 The MIT License (MIT)
 
