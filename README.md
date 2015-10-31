@@ -10,6 +10,8 @@ Pobal is a Ruby on Rails port of that site.
 
 [![Test Coverage](https://codeclimate.com/github/colmdoyle/pobal/badges/coverage.svg)](https://codeclimate.com/github/colmdoyle/pobal/coverage)
 
+[ ![Codeship Status for colmdoyle/pobal](https://codeship.com/projects/10fc0730-60b9-0133-0336-1a6c59bbc52b/status?branch=master)](https://codeship.com/projects/112277)
+
 # LICENSE
 
 The MIT License (MIT)
