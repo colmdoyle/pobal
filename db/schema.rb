@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102180139) do
+ActiveRecord::Schema.define(version: 20151102214214) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -79,6 +79,18 @@ ActiveRecord::Schema.define(version: 20151102180139) do
     t.text     "description", limit: 65535
     t.string   "homepage",    limit: 255
   end
+
+  create_table "memberships", force: :cascade do |t|
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "person_id",  limit: 4
+    t.integer  "group_id",   limit: 4
+  end
+
+  add_index "memberships", ["group_id"], name: "index_memberships_on_group_id", using: :btree
+  add_index "memberships", ["person_id"], name: "index_memberships_on_person_id", using: :btree
 
   create_table "people", force: :cascade do |t|
     t.datetime "created_at",                      null: false
