@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151030131801) do
+ActiveRecord::Schema.define(version: 20151102180139) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -54,11 +54,22 @@ ActiveRecord::Schema.define(version: 20151030131801) do
   end
 
   create_table "constituencies", force: :cascade do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "name",       limit: 255
-    t.integer  "MapItID",    limit: 4
-    t.string   "const_type", limit: 255
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.string   "name",                 limit: 255
+    t.integer  "MapItID",              limit: 4
+    t.integer  "constituency_type_id", limit: 4
+  end
+
+  add_index "constituencies", ["constituency_type_id"], name: "index_constituencies_on_constituency_type_id", using: :btree
+
+  create_table "constituency_types", force: :cascade do |t|
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "name",                      limit: 255
+    t.text     "description",               limit: 65535
+    t.string   "member_title_abbreviation", limit: 255
+    t.string   "mapit_code",                limit: 255
   end
 
   create_table "groups", force: :cascade do |t|
