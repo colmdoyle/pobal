@@ -1,5 +1,8 @@
 <div class="container">
-  <% for @result in @search_results %>
-    <%= render partial: "listing", locals: { rep: @result } %>
-  <% end %>
+  <% @search_results.each { |constituency_key, result| %>
+    <h1><%= constituency_key %></h1>
+    <% for rep in result %>
+      <%= render partial: "listing", locals: {rep: rep} %>
+    <% end %>
+  <% } %>
 </div>
