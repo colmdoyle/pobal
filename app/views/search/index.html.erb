@@ -1,7 +1,10 @@
 <div class="container">
-  <% @search_results.each { |constituency_key, result| %>
-    <h1><%= constituency_key %></h1>
-    <% for rep in result %>
+  <% @search_results.each { |_, details| %>
+    <h1><%= details["constituency_type"].name %></h1>
+    <p>
+      <%= details["constituency_type"].description %>
+    </p>
+    <% for rep in details["representatives"] %>
       <%= render partial: "listing", locals: {rep: rep} %>
     <% end %>
   <% } %>

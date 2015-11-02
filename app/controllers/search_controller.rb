@@ -12,7 +12,11 @@ class SearchController < ApplicationController
         for @representative in @representatives
           constituency_reps << @representative unless @representative.nil?
         end
-        @search_results[constituency_type.name] = constituency_reps
+        @search_results[constituency.id] = {
+          "constituency_type" => constituency_type,
+          "constituency" => constituency,
+          "representatives" => constituency_reps
+        }
       end
     end
   end
