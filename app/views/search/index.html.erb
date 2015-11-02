@@ -1,5 +1,5 @@
 <div class="container">
-  <% for @rep in @current_reps %>
-    <%= render partial: "listing", locals: { rep: @rep } %>
+  <% for @result in @search_results %>
+    <%= render partial: "listing", locals: { rep: @result } %>
   <% end %>
 </div>
