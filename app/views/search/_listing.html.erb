@@ -1,24 +1,28 @@
-<%= rep.person.name %>
-<% unless rep.person.avatar.nil? %>
-  <%= image_tag rep.person.avatar.url(:thumb) %>
-<% end %>
-<ul class="list-unstyled">
-  <% unless rep.person.email.nil? %>
-    <li><%= mail_to rep.person.email %></li>
-  <% end %>
-  <% unless rep.person.facebook.nil? %>
-    <li><%= link_to "Facebook", "https://fb.me/#{rep.person.facebook}", target: "_blank" %></li>
-  <% end %>
-  <% unless rep.person.twitter.nil? %>
-    <li><%= link_to "twitter", "https://twitter.com/#{rep.person.twitter}", target: "_blank" %></li>
-  <% end %>
-  <% unless rep.person.phone_number.nil? %>
-    <li><%= link_to rep.person.phone_number, "tel:#{rep.person.phone_number}", target: "_blank" %></li>
-  <% end %>
-  <% unless rep.person.website.nil? %>
-    <li><%= link_to "Website", rep.person.website, target: "_blank" %></li>
-  <% end %>
-  <% unless rep.person.postal_address.nil? %>
-    <li><%= rep.person.postal_address %></li>
-  <% end %>
-</ul>
+<div class="media">
+  <div class="media-left media-middle">
+    <img class="media-object" src="<%= rep.person.avatar.url(:thumb) %>" alt="<%= rep.person.name %>">
+  </div>
+  <div class="media-body">
+    <h2><%= rep.person.name %></h2>
+    <ul class="list-unstyled">
+      <% unless rep.person.email.nil? %>
+        <li><%= mail_to rep.person.email %></li>
+      <% end %>
+      <% unless rep.person.facebook.nil? %>
+        <li><%= link_to "Facebook", "https://fb.me/#{rep.person.facebook}", target: "_blank" %></li>
+      <% end %>
+      <% unless rep.person.twitter.nil? %>
+        <li><%= link_to "twitter", "https://twitter.com/#{rep.person.twitter}", target: "_blank" %></li>
+      <% end %>
+      <% unless rep.person.phone_number.nil? %>
+        <li><%= link_to rep.person.phone_number, "tel:#{rep.person.phone_number}", target: "_blank" %></li>
+      <% end %>
+      <% unless rep.person.website.nil? %>
+        <li><%= link_to "Website", rep.person.website, target: "_blank" %></li>
+      <% end %>
+      <% unless rep.person.postal_address.nil? %>
+        <li><%= rep.person.postal_address %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>

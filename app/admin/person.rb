@@ -24,8 +24,7 @@ ActiveAdmin.register Person do
       f.input :facebook
       f.input :twitter
       f.input :postal_address
-      f.input :gender
-      f.input :positions
+      f.input :gender, :as => :radio, :collection => ["Female", "Male", "Trans", "Unknown"]
     end
     # Will preview the image when the object is edited
     f.actions
