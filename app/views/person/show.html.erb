@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="media">
+    <div class="media-left media-middle">
+      <img class="media-object" src="<%= @person.avatar.url(:thumb) %>" alt="<%= @person.name %>">
+    </div>
+    <div class="media-body">
+      <h2><%= @person.name %></h2>
+      <ul class="list-unstyled">
+        <% unless @person.email.nil? %>
+          <li><%= mail_to @person.email %></li>
+        <% end %>
+        <% unless @person.facebook.nil? %>
+          <li><%= link_to "Facebook", "https://fb.me/#{@person.facebook}", target: "_blank" %></li>
+        <% end %>
+        <% unless @person.twitter.nil? %>
+          <li><%= link_to "twitter", "https://twitter.com/#{@person.twitter}", target: "_blank" %></li>
+        <% end %>
+        <% unless @person.phone_number.nil? %>
+          <li><%= link_to @person.phone_number, "tel:#{@person.phone_number}", target: "_blank" %></li>
+        <% end %>
+        <% unless @person.website.nil? %>
+          <li><%= link_to "Website", @person.website, target: "_blank" %></li>
+        <% end %>
+        <% unless @person.postal_address.nil? %>
+          <li><%= @person.postal_address %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

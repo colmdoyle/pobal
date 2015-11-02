@@ -3,7 +3,7 @@
     <img class="media-object" src="<%= rep.person.avatar.url(:thumb) %>" alt="<%= rep.person.name %>">
   </div>
   <div class="media-body">
-    <h2><%= rep.person.name %></h2>
+    <h2><%= link_to rep.person.name, rep.person %></h2>
     <ul class="list-unstyled">
       <% unless rep.person.email.nil? %>
         <li><%= mail_to rep.person.email %></li>

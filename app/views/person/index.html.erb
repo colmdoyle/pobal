@@ -1,0 +1,6 @@
+<div class="container">
+<% for person in @people %>
+  <%= render partial: "person", locals: {person: person} %>
+<% end %>
+</div>
+<%= console %>
