@@ -12,6 +12,10 @@ Pobal is a Ruby on Rails port of that site.
 
 [ ![Codeship Status for colmdoyle/pobal](https://codeship.com/projects/10fc0730-60b9-0133-0336-1a6c59bbc52b/status?branch=master)](https://codeship.com/projects/112277)
 
+# DEPENDENCIES
+
+* Access to an instance of [MapIt](https://mapit.mysociety.org/) which has boundary information for the area you want to cover.
+
 # LICENSE
 
 The MIT License (MIT)
