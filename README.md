@@ -1,6 +1,6 @@
 # README
 
-Pobal is an application that enables citizens to contact their local representatives.
+Pobal is an application that enables citizens to find contact information for their local representatives.
 
 It is currently a work in progress and subject to constant change, but will likely be similar to [Who is my TD?](http://whoismytd.com), which is currently written in PHP.
 
