@@ -1,5 +1,4 @@
 ActiveAdmin.register Membership do
-
   permit_params :group_id, :person_id, :start_date, :end_date
 
   form do |f|
@@ -11,5 +10,4 @@ ActiveAdmin.register Membership do
     end
     f.actions
   end
-
 end

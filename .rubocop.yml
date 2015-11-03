@@ -2,6 +2,9 @@
 # This is used to easily disable Style/* checks
 AllCops:
   DisabledByDefault: true
+  Exclude:
+    - 'db/schema.rb'
+    - 'bin/**/*'
 
 ################## STYLE #################################
 
@@ -113,7 +116,7 @@ Style/CharacterLiteral:
 Style/ClassAndModuleCamelCase:
   Description: 'Use CamelCase for classes and modules.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#camelcase-classes'
-  Enabled: false
+  Enabled: true
 
 Style/ClassAndModuleChildren:
   Description: 'Checks style of children classes and modules.'
@@ -206,7 +209,7 @@ Style/EmptyLineBetweenDefs:
 
 Style/EmptyLines:
   Description: "Don't use several empty lines in a row."
-  Enabled: false
+  Enabled: true
 
 Style/EmptyLinesAroundAccessModifier:
   Description: "Keep blank lines around access modifiers."
@@ -231,7 +234,7 @@ Style/EmptyLinesAroundMethodBody:
 Style/EmptyLiteral:
   Description: 'Prefer literals to Array.new/Hash.new/String.new.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#literal-array-hash'
-  Enabled: false
+  Enabled: true
 
 Style/EndBlock:
   Description: 'Avoid the use of END blocks.'
@@ -241,7 +244,7 @@ Style/EndBlock:
 Style/EndOfLine:
   Description: 'Use Unix-style line endings.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#crlf'
-  Enabled: false
+  Enabled: true
 
 Style/EvenOdd:
   Description: 'Favor the use of Fixnum#even? && Fixnum#odd?'
@@ -250,7 +253,7 @@ Style/EvenOdd:
 
 Style/ExtraSpacing:
   Description: 'Do not use unnecessary spacing.'
-  Enabled: false
+  Enabled: true
 
 Style/FileName:
   Description: 'Use snake_case for source file names.'
@@ -313,12 +316,12 @@ Style/IfWithSemicolon:
 
 Style/IndentationConsistency:
   Description: 'Keep indentation straight.'
-  Enabled: false
+  Enabled: true
 
 Style/IndentationWidth:
   Description: 'Use 2 spaces for indentation.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-indentation'
-  Enabled: false
+  Enabled: true
 
 Style/IndentArray:
   Description: >-
@@ -348,7 +351,7 @@ Style/LambdaCall:
 Style/LeadingCommentSpace:
   Description: 'Comments should start with a space.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#hash-space'
-  Enabled: false
+  Enabled: true
 
 Style/LineEndConcatenation:
   Description: >-
@@ -430,17 +433,17 @@ Style/Next:
 Style/NilComparison:
   Description: 'Prefer x.nil? to x == nil.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#predicate-methods'
-  Enabled: false
+  Enabled: true
 
 Style/NonNilCheck:
   Description: 'Checks for redundant nil checks.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#no-non-nil-checks'
-  Enabled: false
+  Enabled: true
 
 Style/Not:
   Description: 'Use ! instead of not.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#bang-not-not'
-  Enabled: false
+  Enabled: true
 
 Style/NumericLiterals:
   Description: >-
@@ -466,16 +469,6 @@ Style/OptionalArguments:
                  Checks for optional arguments that do not appear at the end
                  of the argument list
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#optional-arguments'
-  Enabled: false
-
-Style/ParallelAssignment:
-  Description: >-
-                  Check for simple usages of parallel assignment.
-                  It will only warn when the number of variables
-                  matches on both sides of the assignment.
-                  This also provides performance benefits
-  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#parallel-assignment'
-  Reference: 'https://github.com/JuanitoFatas/fast-ruby#parallel-assignment-vs-sequential-assignment-code'
   Enabled: false
 
 Style/ParenthesesAroundCondition:
@@ -589,11 +582,11 @@ Style/SpaceAfterColon:
 Style/SpaceAfterComma:
   Description: 'Use spaces after commas.'
   StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-operators'
-  Enabled: false
+  Enabled: true
 
 Style/SpaceAfterControlKeyword:
   Description: 'Use spaces after if/elsif/unless/while/until/case/when.'
-  Enabled: false
+  Enabled: true
 
 Style/SpaceAfterMethodName:
   Description: >-
@@ -824,7 +817,7 @@ Metrics/CyclomaticComplexity:
   Description: >-
                  A complexity metric that is strongly correlated to the number
                  of test cases needed to validate a method.
-  Enabled: false
+  Enabled: true
 
 Metrics/LineLength:
   Description: 'Limit lines to 80 characters.'
@@ -845,7 +838,7 @@ Metrics/PerceivedComplexity:
   Description: >-
                  A complexity metric geared towards measuring complexity for a
                  human reader.
-  Enabled: false
+  Enabled: true
 
 #################### Lint ################################
 ### Warnings
