@@ -13,6 +13,12 @@ $top-padding: 70px;
   border: 0;
 }
 
+.welcome > .navbar-default .navbar-brand:hover,
+.welcome > .navbar-default .navbar-nav > li > a:hover {
+  color: $white;
+  text-decoration: underline;
+}
+
 .homepage {
   margin-top: -$top-padding;
   padding-top: $top-padding;
