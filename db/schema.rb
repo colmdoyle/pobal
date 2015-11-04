@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104090621) do
+ActiveRecord::Schema.define(version: 20151104091143) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -80,13 +80,24 @@ ActiveRecord::Schema.define(version: 20151104090621) do
     t.string   "mapit_code",                limit: 255
   end
 
-  create_table "groups", force: :cascade do |t|
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
-    t.string   "name",        limit: 255
-    t.text     "description", limit: 65535
-    t.string   "homepage",    limit: 255
+  create_table "group_types", force: :cascade do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "name",       limit: 255
   end
+
+  create_table "groups", force: :cascade do |t|
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.string   "name",           limit: 255
+    t.text     "description",    limit: 65535
+    t.string   "homepage",       limit: 255
+    t.integer  "group_types_id", limit: 4
+    t.integer  "group_type_id",  limit: 4
+  end
+
+  add_index "groups", ["group_type_id"], name: "index_groups_on_group_type_id", using: :btree
+  add_index "groups", ["group_types_id"], name: "index_groups_on_group_types_id", using: :btree
 
   create_table "memberships", force: :cascade do |t|
     t.datetime "created_at",           null: false
@@ -141,5 +152,6 @@ ActiveRecord::Schema.define(version: 20151104090621) do
   add_index "positions", ["position_type_id"], name: "index_positions_on_position_type_id", using: :btree
 
   add_foreign_key "bodies", "body_types"
+  add_foreign_key "groups", "group_types"
   add_foreign_key "positions", "position_types"
 end
