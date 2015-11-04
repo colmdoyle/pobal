@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151102214214) do
+ActiveRecord::Schema.define(version: 20151104090621) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -47,10 +47,18 @@ ActiveRecord::Schema.define(version: 20151102214214) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "bodies", force: :cascade do |t|
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "name",         limit: 255
+    t.integer  "body_type_id", limit: 4
+  end
+
+  add_index "bodies", ["body_type_id"], name: "index_bodies_on_body_type_id", using: :btree
+
+  create_table "body_types", force: :cascade do |t|
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "name",       limit: 255
-    t.string   "body_type",  limit: 255
   end
 
   create_table "constituencies", force: :cascade do |t|
@@ -132,5 +140,6 @@ ActiveRecord::Schema.define(version: 20151102214214) do
   add_index "positions", ["person_id"], name: "index_positions_on_person_id", using: :btree
   add_index "positions", ["position_type_id"], name: "index_positions_on_position_type_id", using: :btree
 
+  add_foreign_key "bodies", "body_types"
   add_foreign_key "positions", "position_types"
 end
