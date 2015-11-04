@@ -1,3 +1,6 @@
+$well-bg: white;
+$well-border: #d3e0e9;
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -6,6 +9,7 @@ $white: white;
 $light-blue: #479CE3;
 $darkest-blue: #202B3A;
 $standard-font-family: 'Avenir', Helvetica, Arial;
+
 
 html {
   position: relative;
@@ -51,4 +55,5 @@ body {
 }
 
 
-@import "welcome"
+@import "welcome";
+@import "search";

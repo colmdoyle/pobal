@@ -1,11 +1,19 @@
 <div class="container">
   <% @search_results.each { |_, details| %>
-    <h1><%= details["constituency_type"].name %></h1>
-    <p>
-      <%= details["constituency_type"].description %>
-    </p>
-    <% for rep in details["representatives"] %>
-      <%= render partial: "listing", locals: {rep: rep} %>
-    <% end %>
+    <div class="well">
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Your <%= details["constituency_type"].member_title_abbreviation.pluralize(details["representatives"].count) %></h2>
+          <p>
+            <%= details["constituency_type"].description %>
+          </p>
+        </div>
+        <div class="col-md-8">
+          <% for rep in details["representatives"] %>
+            <p class="lead"><%= link_to rep.person.name, rep.person %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
   <% } %>
 </div>
