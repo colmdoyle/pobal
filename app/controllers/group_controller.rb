@@ -5,7 +5,7 @@ class GroupController < ApplicationController
 
   def show
     @group = Group.find(params[:id])
-    @members = Membership.where(group: @group)
+    @members = Membership.where(group: @group).includes(:person).order("people.last_name ASC")
   end
 
 end

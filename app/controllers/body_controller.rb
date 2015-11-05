@@ -5,7 +5,7 @@ class BodyController < ApplicationController
 
   def show
     @body = Body.find(params[:id])
-    @members = Position.where(body: @body)
+    @members = Position.where(body: @body).includes(:person).order("people.last_name ASC")
   end
 
 end
