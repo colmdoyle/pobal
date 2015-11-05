@@ -35,6 +35,8 @@ gem 'paperclip', '~> 4.3'
 gem 'geocoder'
 gem 'httparty', '~> 0.13.7'
 gem 'json'
+gem 'will_paginate', '~> 3.0.6'
+gem 'will_paginate-bootstrap'
 
 gem "codeclimate-test-reporter", group: :test, require: nil
 

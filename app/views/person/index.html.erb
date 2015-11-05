@@ -2,4 +2,5 @@
 <% for person in @people %>
   <%= render partial: "person", locals: {person: person} %>
 <% end %>
+<%= will_paginate @people, renderer: BootstrapPagination::Rails %>
 </div>
