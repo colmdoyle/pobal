@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe BodyType, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'instance method' do
+    let(:body_type) {FactoryGirl.create(:body_type)}
+    describe '#name' do
+      it 'returns the name' do
+        expect(body_type.name).to eq("Dáil Éireann")
+      end
+    end
+  end
 end
