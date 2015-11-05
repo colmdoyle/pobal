@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   resources :search
   resources :person
+  resources :body
   root 'welcome#index'
 end

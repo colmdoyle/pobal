@@ -1,0 +1,6 @@
+<div class="container">
+<% for body in @bodies %>
+  <h2><%= link_to body.name, body %></h2>
+<% end %>
+<%= will_paginate @bodies, renderer: BootstrapPagination::Rails %>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @body.name %></h1>
+  <% for member in @members %>
+  <p>
+    <%= member.person.name %>
+  </p>
+  <% end %>
+</div>
