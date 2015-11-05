@@ -10,10 +10,10 @@
           <li><%= mail_to @person.email %></li>
         <% end %>
         <% unless @person.facebook.nil? %>
-          <li><%= link_to "Facebook", "https://fb.me/#{@person.facebook}", target: "_blank" %></li>
+          <li><%= link_to "Facebook", @person.facebook_url, target: "_blank" %></li>
         <% end %>
         <% unless @person.twitter.nil? %>
-          <li><%= link_to "twitter", "https://twitter.com/#{@person.twitter}", target: "_blank" %></li>
+          <li><%= link_to "twitter", @person.twitter_url, target: "_blank" %></li>
         <% end %>
         <% unless @person.phone_number.nil? %>
           <li><%= link_to @person.phone_number, "tel:#{@person.phone_number}", target: "_blank" %></li>

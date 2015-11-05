@@ -28,12 +28,20 @@ RSpec.describe Person, type: :model do
         expect(person.website).to eq("http://www.google.com")
       end
 
-      it 'returns the facebook vanity' do
+      it 'returns the facebook username/id' do
         expect(person.facebook).to eq("4")
       end
 
-      it 'returns the twitter vanity' do
+      it 'returns the facebook vanity' do
+        expect(person.facebook_url).to eq("https://fb.me/4")
+      end
+
+      it 'returns the twitter username' do
         expect(person.twitter).to eq("jane_bloggs_tweets")
+      end
+
+      it 'returns the twitter vanity' do
+        expect(person.twitter_url).to eq("https://twitter.com/jane_bloggs_tweets")
       end
 
       it 'returns the postal address' do

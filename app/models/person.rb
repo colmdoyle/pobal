@@ -9,4 +9,12 @@ class Person < ActiveRecord::Base
     "#{first_name} #{last_name}"
   end
 
+  def facebook_url
+    "https://fb.me/#{facebook}"
+  end
+
+  def twitter_url
+    "https://twitter.com/#{twitter}"
+  end
+
 end
