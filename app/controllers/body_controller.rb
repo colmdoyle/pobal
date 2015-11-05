@@ -6,7 +6,6 @@ class BodyController < ApplicationController
   def show
     @body = Body.find(params[:id])
     @members = Position.where(body: @body)
-
   end
 
 end

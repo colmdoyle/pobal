@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @group.name %> <small><%= @group.group_type.name %></small></h1>
+  <p><%= @group.description %></p>
+  <p><%= link_to "Website", @group.homepage %></p>
+  <h2>Members</h2>
+  <% for member in @members %>
+  <p>
+    <%= link_to member.person.name, member.person %>
+  </p>
+  <% end %>
+</div>

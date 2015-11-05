@@ -1,5 +1,5 @@
 <div class="container">
-  <h1><%= @body.name %></h1>
+  <h1><%= @body.name %> <small><%= @body.body_type.name %></small></h1>
   <% for member in @members %>
   <p>
     <%= member.person.name %>

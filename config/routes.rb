@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :search
   resources :person
   resources :body
+  resources :group
+  
   root 'welcome#index'
 end
