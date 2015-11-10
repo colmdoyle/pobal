@@ -4,7 +4,9 @@
       <img class="media-object" src="<%= @person.avatar.url(:thumb) %>" alt="<%= @person.name %>">
     </div>
     <div class="media-body">
-      <h2><%= @person.name %></h2>
+      <h2><%= @person.name %> <small><%= if @person.current_party
+        @person.current_party.name
+      end %></small></h2>
       <ul class="list-unstyled">
         <% unless @person.email.nil? %>
           <li><%= mail_to @person.email %></li>
