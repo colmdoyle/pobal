@@ -18,7 +18,7 @@ class Person < ActiveRecord::Base
   end
 
   def current_party
-    groups.where(group_type_id: 1).first
+    groups.order('memberships.end_date').where(group_type_id: 1).first
   end
 
 end
