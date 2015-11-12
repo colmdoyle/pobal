@@ -16,7 +16,7 @@ production:
   <<: *default
 
   database: whoismytd_production
-  host: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV["DATABASE_URL"] %>
   socket: /tmp/mysql.sock
 
 staging:
