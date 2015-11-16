@@ -1,6 +1,9 @@
 <div class="container">
+  <h1>People</h1>
 <% for person in @people %>
+<div class="well">
   <%= render partial: "person", locals: {person: person} %>
+</div>
 <% end %>
 <%= will_paginate @people, renderer: BootstrapPagination::Rails %>
 </div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112183218) do
+ActiveRecord::Schema.define(version: 20151116182702) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 20151112183218) do
     t.datetime "updated_at",               null: false
     t.string   "name",         limit: 255
     t.integer  "body_type_id", limit: 4
+    t.string   "slug",         limit: 255, null: false
   end
 
   add_index "bodies", ["body_type_id"], name: "index_bodies_on_body_type_id", using: :btree
@@ -59,6 +60,7 @@ ActiveRecord::Schema.define(version: 20151112183218) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "name",       limit: 255
+    t.string   "slug",       limit: 255, null: false
   end
 
   create_table "constituencies", force: :cascade do |t|
@@ -67,6 +69,7 @@ ActiveRecord::Schema.define(version: 20151112183218) do
     t.string   "name",                 limit: 255
     t.integer  "MapItID",              limit: 4
     t.integer  "constituency_type_id", limit: 4
+    t.string   "slug",                 limit: 255, null: false
   end
 
   add_index "constituencies", ["constituency_type_id"], name: "index_constituencies_on_constituency_type_id", using: :btree
@@ -78,12 +81,14 @@ ActiveRecord::Schema.define(version: 20151112183218) do
     t.text     "description",               limit: 65535
     t.string   "member_title_abbreviation", limit: 255
     t.string   "mapit_code",                limit: 255
+    t.string   "slug",                      limit: 255,   null: false
   end
 
   create_table "group_types", force: :cascade do |t|
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "name",       limit: 255
+    t.string   "slug",       limit: 255, null: false
   end
 
   create_table "groups", force: :cascade do |t|
@@ -93,6 +98,7 @@ ActiveRecord::Schema.define(version: 20151112183218) do
     t.text     "description",   limit: 65535
     t.string   "homepage",      limit: 255
     t.integer  "group_type_id", limit: 4
+    t.string   "slug",          limit: 255,   null: false
   end
 
   add_index "groups", ["group_type_id"], name: "index_groups_on_group_type_id", using: :btree
@@ -110,8 +116,8 @@ ActiveRecord::Schema.define(version: 20151112183218) do
   add_index "memberships", ["person_id"], name: "index_memberships_on_person_id", using: :btree
 
   create_table "people", force: :cascade do |t|
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
     t.string   "first_name",          limit: 255
     t.string   "last_name",           limit: 255
     t.string   "phone_number",        limit: 255
@@ -125,13 +131,14 @@ ActiveRecord::Schema.define(version: 20151112183218) do
     t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
-    t.string   "slug",                limit: 255, null: false
+    t.string   "slug",                limit: 255, default: ""
   end
 
   create_table "position_types", force: :cascade do |t|
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "title",      limit: 255
+    t.string   "slug",       limit: 255, null: false
   end
 
   create_table "positions", force: :cascade do |t|
