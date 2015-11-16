@@ -52,6 +52,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
+  gem 'dotenv-rails'
 end
 
 group :development do
