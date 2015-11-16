@@ -1,9 +1,20 @@
 class Person < ActiveRecord::Base
+  include FriendlyId
   has_many :groups, through: :memberships
   has_many :memberships
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/placeholder.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
+  # slug
+  friendly_id :name, :use => [:slugged, :finders]
+
+  def slug_candidates
+    [
+      :name,
+      :name, :id
+    ]
+  end
 
   def name
     "#{first_name} #{last_name}"
@@ -19,6 +30,10 @@ class Person < ActiveRecord::Base
 
   def current_party
     groups.order('memberships.end_date').where(group_type_id: 1).first
+  end
+
+  def should_generate_new_friendly_id?
+    new_record? || slug.blank?
   end
 
 end

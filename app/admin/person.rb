@@ -1,5 +1,5 @@
 ActiveAdmin.register Person do
-  permit_params :first_name, :last_name, :phone_number, :email, :website, :facebook, :twitter, :postal_address, :gender, :avatar
+  permit_params :first_name, :last_name, :phone_number, :email, :website, :facebook, :twitter, :postal_address, :gender, :avatar, :slug
 
   form do |f|
     f.inputs do
@@ -16,4 +16,5 @@ ActiveAdmin.register Person do
     end
     f.actions
   end
+
 end

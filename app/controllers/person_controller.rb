@@ -4,6 +4,6 @@ class PersonController < ApplicationController
   end
 
   def show
-    @person = Person.find(params[:id])
+    @person = Person.friendly.find(params[:id])
   end
 end
