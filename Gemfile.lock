@@ -165,6 +165,7 @@ GEM
     polyamorous (1.2.0)
       activerecord (>= 3.0)
     powerpack (0.1.1)
+    puma (2.15.3)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -292,6 +293,7 @@ DEPENDENCIES
   json
   mysql2
   paperclip (~> 4.3)
+  puma
   rails (= 4.2.4)
   rspec-rails (~> 3.0)
   rubocop
