@@ -38,7 +38,8 @@ gem 'json'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'friendly_id', '~> 5.1.0'
-gem "airbrake"
+gem 'airbrake'
+gem 'high_voltage', '~> 2.4.0'
 
 gem "codeclimate-test-reporter", group: :test, require: nil
 

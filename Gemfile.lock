@@ -121,6 +121,7 @@ GEM
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
+    high_voltage (2.4.0)
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
@@ -291,6 +292,7 @@ DEPENDENCIES
   factory_girl_rails
   friendly_id (~> 5.1.0)
   geocoder
+  high_voltage (~> 2.4.0)
   httparty (~> 0.13.7)
   jbuilder (~> 2.0)
   jquery-rails
