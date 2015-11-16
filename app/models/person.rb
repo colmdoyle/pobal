@@ -1,7 +1,9 @@
 class Person < ActiveRecord::Base
   include FriendlyId
   has_many :groups, through: :memberships
+  has_many :bodies, through: :positions
   has_many :memberships
+  has_many :positions
 
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/assets/:style/placeholder.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/

@@ -1,6 +1,7 @@
 <div class="container">
+  <h2>Bodies</h2>
 <% for group in @groups %>
-  <h2><%= link_to group.name, group %></h2>
+  <h3><%= link_to group.name, group %></h3>
 <% end %>
 <%= will_paginate @groups, renderer: BootstrapPagination::Rails %>
 </div>
