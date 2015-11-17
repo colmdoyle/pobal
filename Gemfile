@@ -29,6 +29,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'unicorn'
 
 gem 'activeadmin', '~> 1.0.0.pre2'
+gem 'active_admin_import'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'paperclip', '~> 4.3'

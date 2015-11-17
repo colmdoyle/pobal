@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :person
   resources :body
   resources :group
-  
+  resources :group_type
+
   root 'welcome#index'
 end

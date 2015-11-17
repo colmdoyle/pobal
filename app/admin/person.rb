@@ -1,6 +1,8 @@
 ActiveAdmin.register Person do
   permit_params :first_name, :last_name, :phone_number, :email, :website, :facebook, :twitter, :postal_address, :gender, :avatar, :slug
 
+  active_admin_import
+
   form do |f|
     f.inputs do
       f.input :avatar, as: :file
