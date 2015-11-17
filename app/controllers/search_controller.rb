@@ -5,7 +5,7 @@ class SearchController < ApplicationController
     @mapit_response.each do |_, value|
 
       constituency_type = ConstituencyType.find_by(mapit_code: value['type'])
-      constituency = Constituency.find_by(MapItID: value['id'], constituency_type: constituency_type)
+      constituency = Constituency.find_by(map_it_id: value['id'], constituency_type: constituency_type)
 
       unless constituency.nil?
         constituency_reps = []

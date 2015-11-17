@@ -9,9 +9,9 @@ RSpec.describe Constituency, type: :model do
       end
     end
 
-    describe '#MapItID' do
-      it 'returns the MapItID' do
-        expect(constituency.MapItID).to eq(42)
+    describe '#map_it_id' do
+      it 'returns the map_it_id' do
+        expect(constituency.map_it_id).to eq(42)
       end
     end
   end

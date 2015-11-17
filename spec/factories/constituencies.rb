@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :constituency do
     name "Dublin"
-    MapItID 42
+    map_it_id 42
     association :constituency_type
   end
 
