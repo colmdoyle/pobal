@@ -41,7 +41,7 @@ gem 'will_paginate-bootstrap'
 gem 'friendly_id', '~> 5.1.0'
 gem 'airbrake'
 gem 'high_voltage', '~> 2.4.0'
-gem 'aws-sdk'
+gem 'aws-sdk-v1'
 
 gem "codeclimate-test-reporter", group: :test, require: nil
 
