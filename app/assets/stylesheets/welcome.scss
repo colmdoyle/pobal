@@ -24,12 +24,19 @@ $top-padding: 70px;
   padding-top: $top-padding;
   background-image: image-url('billboard.jpg');
   background-size: cover;
+  background-position: center;
 }
 
 .billboard {
   padding-top: 48px;
-  padding-bottom: 96px;
+  padding-bottom: 72px;
   color: $white;
+}
+
+@media (min-width: 768px) {
+  .billboard {
+    padding-bottom: 96px;
+  }
 }
 
 .billboard h1,
@@ -38,7 +45,13 @@ $top-padding: 70px;
 }
 
 .billboard h1 {
-  font-size: 48px;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .billboard h1 {
+    font-size: 44px;
+  }
 }
 
 .search-area {
