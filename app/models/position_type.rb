@@ -1,12 +1,12 @@
 class PositionType < ActiveRecord::Base
   include FriendlyId
   # slug
-  friendly_id :name, :use => [:slugged, :finders]
+  friendly_id :title, :use => [:slugged, :finders]
 
   def slug_candidates
     [
-      :name,
-      :name, :id
+      :title,
+      :title, :id
     ]
   end
 
