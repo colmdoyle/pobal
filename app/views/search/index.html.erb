@@ -1,4 +1,15 @@
 <div class="container">
+  <% if @search_results.empty? %>
+    <div class="well">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>No results found</h1>
+          <p class="lead">Your search - <em><%= params['form-input'] %></em> - returned no results.</p>
+          <p>This is usually because there were too many similar addresses, like <em>"Blackrock, Co.Dublin"</em> and <em>"Blackrock, Cork"</em>. You can try providing a more detailed address <%= link_to "here", root_path %>.</p>
+        </div>
+      </div>
+    </div>
+  <% else %>
   <% @search_results.each { |_, details| %>
     <div class="well">
       <div class="row">
@@ -16,4 +27,5 @@
       </div>
     </div>
   <% } %>
+  <% end %>
 </div>
