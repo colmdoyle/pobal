@@ -6,7 +6,7 @@
           Contact your elected representatives on the issues that matter to you
         </h1>
         <p class="lead">
-          Listing over <%= number_with_delimiter(@representatives_count - 1) %> representatives
+          We list over <%= number_with_delimiter(@representatives_count - 1) %> representatives across Ireland
         </p>
       </div>
     </div>
@@ -16,7 +16,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <p class="text-center lead">
-        To get started, just enter your address.
+        To get started, just enter your home address.
       </p>
       <%= form_tag search_index_path, {role: 'form', method: 'GET'} do %>
       <div class="input-group" id="form-search-group">
@@ -26,6 +26,9 @@
         </span>
   		</div>
       <% end %>
+      <p class="text-center">
+        <small>We need your home address to figure out what constituency you are in.</small>
+      </p>
     </div>
   </div>
 </div>
