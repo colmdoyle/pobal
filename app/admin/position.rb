@@ -22,6 +22,7 @@ ActiveAdmin.register Position do
     column :position_type
     column :start_date
     column :end_date
+    actions
   end
 
 end
