@@ -14,4 +14,14 @@ ActiveAdmin.register Position do
     f.actions
   end
 
+  index do
+    id_column
+    column :body
+    column :constituency
+    column :person
+    column :position_type
+    column :start_date
+    column :end_date
+  end
+
 end
