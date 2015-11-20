@@ -3,6 +3,8 @@ class PositionType < ActiveRecord::Base
   # slug
   friendly_id :title, :use => [:slugged, :finders]
 
+  default_scope { order('title ASC') }
+
   def slug_candidates
     [
       :title,

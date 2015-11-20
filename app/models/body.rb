@@ -3,6 +3,8 @@ class Body < ActiveRecord::Base
   has_many :positions
   belongs_to :body_type
 
+  default_scope { order('name ASC') }
+
   # slug
   friendly_id :name, :use => [:slugged, :finders]
 

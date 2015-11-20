@@ -3,6 +3,8 @@ class ConstituencyType < ActiveRecord::Base
   # slug
   friendly_id :name, :use => [:slugged, :finders]
 
+  default_scope { order('name ASC') }
+
   def slug_candidates
     [
       :name,
