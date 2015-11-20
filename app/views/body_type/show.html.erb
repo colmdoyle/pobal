@@ -1,0 +1,8 @@
+<div class="container">
+  <h1><%= @body_type.name %> </h1>
+  <% for body in @bodies %>
+  <p>
+    <%= link_to body.name, body %>
+  </p>
+  <% end %>
+</div>
