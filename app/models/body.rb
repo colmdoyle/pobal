@@ -3,6 +3,9 @@ class Body < ActiveRecord::Base
   has_many :positions
   belongs_to :body_type
 
+  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "/assets/:style/placeholder.jpg"
+  validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
+
   default_scope { order('name ASC') }
 
   # slug

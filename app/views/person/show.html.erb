@@ -1,32 +1,74 @@
 <div class="container">
-  <div class="media">
-    <div class="media-left media-middle">
-      <img class="media-object" src="<%= @person.avatar.url(:thumb) %>" alt="<%= @person.name %>">
+  <div class="row bio-panel">
+    <div class="col-md-2">
+      <img alt="<%= @person.name %>" class="img-rounded" src="<%= @person.avatar.url(:small) %>">
     </div>
-    <div class="media-body">
-      <h2><%= @person.name %> <small><%= if @person.current_party
-        @person.current_party.name
-      end %></small></h2>
-      <ul class="list-unstyled">
-        <% unless @person.email.nil? %>
-          <li><%= mail_to @person.email %></li>
-        <% end %>
-        <% unless @person.facebook.nil? %>
-          <li><%= link_to "Facebook", @person.facebook_url, target: "_blank" %></li>
-        <% end %>
-        <% unless @person.twitter.nil? %>
-          <li><%= link_to "twitter", @person.twitter_url, target: "_blank" %></li>
-        <% end %>
-        <% unless @person.phone_number.nil? %>
-          <li><%= link_to @person.phone_number, "tel:#{@person.phone_number}", target: "_blank" %></li>
-        <% end %>
-        <% unless @person.website.nil? %>
-          <li><%= link_to "Website", @person.website, target: "_blank" %></li>
-        <% end %>
-        <% unless @person.postal_address.nil? %>
-          <li><%= @person.postal_address %></li>
-        <% end %>
-      </ul>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-12">
+          <h1><%= @person.name %></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <img alt="<%= @person.current_party.name %>" class="img-rounded img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
+            </div>
+            <div class="panel-footer"><%= if @person.current_party
+            link_to @person.current_party.name, @person.current_party
+          end %></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Panel content
+            </div>
+            <div class="panel-footer">Panel footer</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body">
+              Panel content
+            </div>
+            <div class="panel-footer">Panel footer</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Contact Details</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <% unless @person.email.nil? %>
+            <li><%= mail_to @person.email %></li>
+            <% end %>
+            <% unless @person.facebook.nil? %>
+            <li><%= link_to "Facebook", @person.facebook_url, target: "_blank" %></li>
+            <% end %>
+            <% unless @person.twitter.nil? %>
+            <li><%= link_to "twitter", @person.twitter_url, target: "_blank" %></li>
+            <% end %>
+            <% unless @person.phone_number.nil? %>
+            <li><%= link_to @person.phone_number, "tel:#{@person.phone_number}", target: "_blank" %></li>
+            <% end %>
+            <% unless @person.website.nil? %>
+            <li><%= link_to "Website", @person.website, target: "_blank" %></li>
+            <% end %>
+            <% unless @person.postal_address.nil? %>
+            <li><%= @person.postal_address %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </div>
