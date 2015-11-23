@@ -1,0 +1,20 @@
+<div class="container">
+  <h1><%= @constituency.name %> <small><%= @constituency.constituency_type.name %></small></h1>
+  <div id="map-canvas">
+  </div>
+  <% for member in @members %>
+  <p>
+    <%= member.person.name %>
+  </p>
+  <% end %>
+</div>
+<script type="text/javascript">
+var mapOptions = {
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  disableDefaultUI: false
+}
+var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @constituency.map_it_id %>.kml');
+ctaLayer.setMap(map);
+</script>

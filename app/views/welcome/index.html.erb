@@ -32,4 +32,8 @@
     </div>
   </div>
 </div>
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+<script>
+  var input=document.getElementById('form-input');
+  var options={componentRestrictions:{country:'ie'}};
+  autocomplete=new google.maps.places.Autocomplete(input,options);
+</script>

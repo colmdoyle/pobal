@@ -8,7 +8,9 @@
 
   <title>Who is my TD?</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+
 </head>
 
 <body class="<%= controller_name %>">

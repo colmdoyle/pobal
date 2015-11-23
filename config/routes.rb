@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :person
   resources :body
   resources :body_type
+  resources :constituency
   resources :group
   resources :group_type
 
