@@ -10,6 +10,7 @@
         </div>
       </div>
       <div class="row">
+        <% if @person.current_party %>
         <div class="col-md-6">
           <div class="panel panel-default">
             <div class="panel-body info-panel">
@@ -20,12 +21,15 @@
           end %></div>
           </div>
         </div>
+        <% end %>
+        <% if @person.current_constituency %>
         <div class="col-md-6">
           <div class="panel panel-default">
             <div class="panel-body info-panel" id="mini-map"></div>
             <div class="panel-footer"><%= @person.current_constituency.name %></div>
           </div>
         </div>
+        <% end %>
       </div>
     </div>
   </div>
@@ -170,6 +174,7 @@
     </div>
   </div>
 </div>
+<% if @person.current_constituency %>
 <script type="text/javascript">
   var mapOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -180,3 +185,4 @@
   var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
   ctaLayer.setMap(map);
 </script>
+<% end %>

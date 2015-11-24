@@ -41,7 +41,9 @@ class Person < ActiveRecord::Base
   end
 
   def current_constituency
-    positions.order('end_date').includes(:constituency).first.constituency
+    if positions.first
+      positions.order('end_date').includes(:constituency).first.constituency
+    end
   end
 
   def should_generate_new_friendly_id?
