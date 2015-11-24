@@ -59,6 +59,10 @@ body {
   border-bottom: 1px solid #d4dbe0;
 }
 
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #fff;
+}
+
 @import "font-awesome";
 @import "welcome";
 @import "search";
