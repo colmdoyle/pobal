@@ -139,14 +139,18 @@
               <th>From</th>
               <th>To</th>
             </thead>
-            <% for position in @person.positions %>
-            <td><%= link_to position.body.name, position.body %></td>
-            <td><%= position.position_type.title %></td>
-            <td><%= position.note %></td>
-            <td><%= position.constituency ? position.constituency.name : "" %></td>
-            <td><%= position.start_date %></td>
-            <td><%= position.end_date ? position.end_date : "Current" %></td>
-            <% end %>
+            <tbody>
+              <% for position in @person.positions %>
+              <tr>
+                <td><%= link_to position.body.name, position.body %></td>
+                <td><%= position.position_type.title %></td>
+                <td><%= position.note %></td>
+                <td><%= position.constituency ? position.constituency.name : "" %></td>
+                <td><%= position.start_date %></td>
+                <td><%= position.end_date ? position.end_date : "Current" %></td>
+              </tr>
+              <% end %>
+            </tbody>
           </table>
         </div>
       </div>
@@ -167,12 +171,16 @@
               <th>To</th>
               <th>Note</th>
             </thead>
-            <% for membership in @person.memberships %>
-            <td><%= link_to membership.group.name, membership.group %></td>
-            <td><%= membership.start_date %></td>
-            <td><%= membership.end_date ? membership.end_date : "Current" %></td>
-            <td><%= membership.note %></td>
-            <% end %>
+            <tbody>
+              <% for membership in @person.memberships %>
+              <tr>
+                <td><%= link_to membership.group.name, membership.group %></td>
+                <td><%= membership.start_date %></td>
+                <td><%= membership.end_date ? membership.end_date : "Current" %></td>
+                <td><%= membership.note %></td>
+              </tr>
+              <% end %>
+            </tbody>
           </table>
         </div>
       </div>
