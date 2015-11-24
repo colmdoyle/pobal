@@ -22,8 +22,7 @@
         </div>
         <div class="col-md-6">
           <div class="panel panel-default">
-            <div class="panel-body info-panel" id="mini-map">
-            </div>
+            <div class="panel-body info-panel" id="mini-map"></div>
             <div class="panel-footer"><%= @person.current_constituency.name %></div>
           </div>
         </div>
@@ -124,9 +123,22 @@
           <h3 class="panel-title">Positions held</h3>
         </div>
         <div class="panel-body">
-          <% for position in @person.positions %>
-            <strong><%= link_to position.body.name, position.body %></strong> <%= position.position_type.title %> for <%= position.constituency.name %>
-          <% end %>
+          <table class="table">
+            <thead>
+              <th>Body</th>
+              <th>Title</th>
+              <th>Constituency</th>
+              <th>From</th>
+              <th>To</th>
+            </thead>
+            <% for position in @person.positions %>
+            <td><%= link_to position.body.name, position.body %></td>
+            <td><%= position.position_type.title %></td>
+            <td><%= position.constituency.name %></td>
+            <td><%= position.start_date %></td>
+            <td><%= position.end_date ? position.end_date : "Current" %></td>
+            <% end %>
+          </table>
         </div>
       </div>
     </div>
@@ -139,21 +151,30 @@
           <h3 class="panel-title">Associations</h3>
         </div>
         <div class="panel-body">
-          <% for membership in @person.memberships %>
-            <strong><%= link_to membership.group.name, membership.group %></strong>
-          <% end %>
+          <table class="table">
+            <thead>
+              <th>Name</th>
+              <th>From</th>
+              <th>To</th>
+            </thead>
+            <% for membership in @person.memberships %>
+            <td><%= link_to membership.group.name, membership.group %></td>
+            <td><%= membership.start_date %></td>
+            <td><%= membership.end_date ? membership.end_date : "Current" %></td>
+            <% end %>
+          </table>
         </div>
       </div>
     </div>
   </div>
 </div>
 <script type="text/javascript">
-var mapOptions = {
-  mapTypeId: google.maps.MapTypeId.ROADMAP,
-  disableDefaultUI: false
-}
-var map = new google.maps.Map(document.getElementById("mini-map"), mapOptions);
+  var mapOptions = {
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    disableDefaultUI: false
+  }
+  var map = new google.maps.Map(document.getElementById("mini-map"), mapOptions);
 
-var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
-ctaLayer.setMap(map);
+  var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
+  ctaLayer.setMap(map);
 </script>
