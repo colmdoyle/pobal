@@ -7,11 +7,14 @@
       <div class="row">
         <div class="col-md-12">
           <h1><%= @person.name %></h1>
+          <% if @person.current_position && @person.current_position %>
+          <p class="lead"><%= "#{@person.current_party.name} #{@person.current_position.position_type.title} for #{@person.current_position.constituency.name}"  %>  </p>
+          <% end %>
         </div>
       </div>
       <div class="row">
         <% if @person.current_party %>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-body info-panel">
               <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
@@ -23,10 +26,18 @@
         </div>
         <% end %>
         <% if @person.current_constituency %>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <div class="panel panel-default">
             <div class="panel-body info-panel" id="mini-map"></div>
             <div class="panel-footer"><%= @person.current_constituency.name %></div>
+          </div>
+        </div>
+        <% end %>
+        <% if @person.current_body %>
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-body info-panel"></div>
+            <div class="panel-footer"><%= @person.current_body.name %></div>
           </div>
         </div>
         <% end %>

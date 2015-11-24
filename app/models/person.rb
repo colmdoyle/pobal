@@ -40,6 +40,10 @@ class Person < ActiveRecord::Base
     bodies.order('positions.end_date').first
   end
 
+  def current_position
+    positions.order('end_date').first
+  end
+
   def current_constituency
     if positions.first
       positions.order('end_date').includes(:constituency).first.constituency
