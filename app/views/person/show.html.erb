@@ -19,9 +19,9 @@
             <div class="panel-body info-panel">
               <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
             </div>
-            <div class="panel-footer"><%= if @person.current_party
-            link_to @person.current_party.name, @person.current_party
-          end %></div>
+            <div class="panel-footer">
+              <%= link_to @person.current_party.name, @person.current_party %>
+            </div>
           </div>
         </div>
         <% end %>
@@ -29,7 +29,7 @@
         <div class="col-md-6">
           <div class="panel panel-default">
             <div class="panel-body info-panel" id="mini-map"></div>
-            <div class="panel-footer"><%= @person.current_constituency.name %></div>
+            <div class="panel-footer"><%= link_to @person.current_constituency.name, @person.current_constituency %></div>
           </div>
         </div>
         <% end %>
