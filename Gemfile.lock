@@ -119,6 +119,8 @@ GEM
     factory_girl_rails (4.5.0)
       factory_girl (~> 4.5.0)
       railties (>= 3.0.0)
+    font-awesome-rails (4.4.0.0)
+      railties (>= 3.2, < 5.0)
     formtastic (3.1.3)
       actionpack (>= 3.2.13)
     formtastic_i18n (0.4.1)
@@ -307,6 +309,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_girl_rails
+  font-awesome-rails
   friendly_id (~> 5.1.0)
   geocoder
   high_voltage (~> 2.4.0)

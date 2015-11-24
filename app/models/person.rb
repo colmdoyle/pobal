@@ -36,6 +36,14 @@ class Person < ActiveRecord::Base
     groups.order('memberships.end_date').where(group_type_id: 1).first
   end
 
+  def current_body
+    bodies.order('positions.end_date').first
+  end
+
+  def current_constituency
+    positions.order('end_date').includes(:constituency).first.constituency
+  end
+
   def should_generate_new_friendly_id?
     new_record? || slug.blank?
   end

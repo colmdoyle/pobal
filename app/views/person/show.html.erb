@@ -1,7 +1,7 @@
 <div class="container">
-  <div class="row bio-panel">
+  <div class="row">
     <div class="col-md-2">
-      <img alt="<%= @person.name %>" class="img-rounded" src="<%= @person.avatar.url(:small) %>">
+      <img alt="<%= @person.name %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>">
     </div>
     <div class="col-md-10">
       <div class="row">
@@ -10,30 +10,21 @@
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="panel panel-default">
-            <div class="panel-body">
-              <img alt="<%= @person.current_party.name %>" class="img-rounded img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
+            <div class="panel-body info-panel">
+              <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
             </div>
             <div class="panel-footer"><%= if @person.current_party
             link_to @person.current_party.name, @person.current_party
           end %></div>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="panel panel-default">
-            <div class="panel-body">
-              Panel content
+            <div class="panel-body info-panel" id="mini-map">
             </div>
-            <div class="panel-footer">Panel footer</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              Panel content
-            </div>
-            <div class="panel-footer">Panel footer</div>
+            <div class="panel-footer"><%= @person.current_constituency.name %></div>
           </div>
         </div>
       </div>
@@ -48,27 +39,121 @@
         </div>
         <div class="panel-body">
           <ul class="list-unstyled">
-            <% unless @person.email.nil? %>
-            <li><%= mail_to @person.email %></li>
+            <% unless @person.phone_number.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-phone"></i>
+                </li>
+                <li>
+                  <%= link_to @person.phone_number, "tel:#{@person.phone_number}", target: "_blank" %>
+                </li>
+              </ul>
+            </li>
             <% end %>
             <% unless @person.facebook.nil? %>
-            <li><%= link_to "Facebook", @person.facebook_url, target: "_blank" %></li>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-facebook"></i>
+                </li>
+                <li>
+                  <%= link_to @person.facebook, @person.facebook_url, target: "_blank" %>
+                </li>
+              </ul>
+            </li>
             <% end %>
             <% unless @person.twitter.nil? %>
-            <li><%= link_to "twitter", @person.twitter_url, target: "_blank" %></li>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-twitter"></i>
+                </li>
+                <li>
+                  <%= link_to @person.twitter, @person.twitter_url, target: "_blank" %>
+                </li>
+              </ul>
+            </li>
             <% end %>
-            <% unless @person.phone_number.nil? %>
-            <li><%= link_to @person.phone_number, "tel:#{@person.phone_number}", target: "_blank" %></li>
+            <% unless @person.email.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-envelope"></i>
+                </li>
+                <li>
+                  <%= mail_to @person.email %>
+                </li>
+              </ul>
+            </li>
             <% end %>
             <% unless @person.website.nil? %>
-            <li><%= link_to "Website", @person.website, target: "_blank" %></li>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-globe"></i>
+                </li>
+                <li>
+                  <%= link_to "Website", @person.website, target: "_blank" %>
+                </li>
+              </ul>
+            </li>
             <% end %>
             <% unless @person.postal_address.nil? %>
-            <li><%= @person.postal_address %></li>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-building"></i>
+                </li>
+                <li>
+                  <%= @person.postal_address %>
+                </li>
+              </ul>
+            </li>
             <% end %>
           </ul>
         </div>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Positions held</h3>
+        </div>
+        <div class="panel-body">
+          <% for position in @person.positions %>
+            <strong><%= link_to position.body.name, position.body %></strong> <%= position.position_type.title %> for <%= position.constituency.name %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Associations</h3>
+        </div>
+        <div class="panel-body">
+          <% for membership in @person.memberships %>
+            <strong><%= link_to membership.group.name, membership.group %></strong>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<script type="text/javascript">
+var mapOptions = {
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  disableDefaultUI: false
+}
+var map = new google.maps.Map(document.getElementById("mini-map"), mapOptions);
+
+var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
+ctaLayer.setMap(map);
+</script>
