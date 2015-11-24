@@ -156,11 +156,13 @@
               <th>Name</th>
               <th>From</th>
               <th>To</th>
+              <th>Note</th>
             </thead>
             <% for membership in @person.memberships %>
             <td><%= link_to membership.group.name, membership.group %></td>
             <td><%= membership.start_date %></td>
             <td><%= membership.end_date ? membership.end_date : "Current" %></td>
+            <td><%= membership.note %></td>
             <% end %>
           </table>
         </div>

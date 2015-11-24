@@ -19,4 +19,18 @@ ActiveAdmin.register Person do
     f.actions
   end
 
+  index do
+    id_column
+    column :first_name
+    column :last_name
+    column :phone_number
+    column :email
+    column :website
+    column :facebook
+    column :twitter
+    column :postal_address
+    column :gender
+    actions
+  end
+
 end
