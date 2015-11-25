@@ -4,4 +4,6 @@ class Position < ActiveRecord::Base
   belongs_to :person
   belongs_to :position_type
 
+  default_scope { order('end_date ASC') }
+
 end

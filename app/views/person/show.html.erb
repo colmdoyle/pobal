@@ -167,6 +167,7 @@
           <table class="table">
             <thead>
               <th>Name</th>
+              <th>Type</th>
               <th>From</th>
               <th>To</th>
               <th>Note</th>
@@ -175,6 +176,7 @@
               <% for membership in @person.memberships %>
               <tr>
                 <td><%= link_to membership.group.name, membership.group %></td>
+                <td><%= membership.group.group_type.name %></td>
                 <td><%= membership.start_date %></td>
                 <td><%= membership.end_date ? membership.end_date : "Current" %></td>
                 <td><%= membership.note %></td>
