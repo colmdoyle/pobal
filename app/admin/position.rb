@@ -2,6 +2,8 @@ ActiveAdmin.register Position do
 
   permit_params :body_id, :constituency_id, :person_id, :position_type_id, :start_date, :end_date, :note
 
+  active_admin_import
+  
   form do |f|
     f.inputs do
       f.input :body

@@ -1,5 +1,5 @@
 ActiveAdmin.register Group do
-  permit_params :name, :description, :homepage, :group_type_id,:avatar
+  permit_params :name, :description, :homepage, :group_type_id, :avatar
 
   active_admin_import
 
