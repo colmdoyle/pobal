@@ -1,6 +1,8 @@
 ActiveAdmin.register Membership do
   permit_params :group_id, :person_id, :note, :start_date, :end_date
 
+  active_admin_import
+
   form do |f|
     f.inputs do
       f.input :group

@@ -146,7 +146,7 @@
                 <td><%= position.position_type.title %></td>
                 <td><%= position.note %></td>
                 <td><%= position.constituency ? position.constituency.name : "" %></td>
-                <td><%= position.start_date %></td>
+                <td><%= position.start_date ? position.start_date : "Unknown" %></td>
                 <td><%= position.end_date ? position.end_date : "Current" %></td>
               </tr>
               <% end %>
@@ -177,7 +177,7 @@
               <tr>
                 <td><%= link_to membership.group.name, membership.group %></td>
                 <td><%= membership.group.group_type.name %></td>
-                <td><%= membership.start_date %></td>
+                <td><%= membership.start_date ? membership.start_date : "Unknown" %></td>
                 <td><%= membership.end_date ? membership.end_date : "Current" %></td>
                 <td><%= membership.note %></td>
               </tr>
