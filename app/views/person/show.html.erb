@@ -7,7 +7,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1><%= @person.name %></h1>
-          <% if @person.current_position && @person.current_position %>
+          <% if @person.current_position && @person.current_party %>
           <p class="lead"><%= "#{@person.current_party.name} #{@person.current_position.position_type.title} for #{@person.current_position.constituency.name}"  %>  </p>
           <% end %>
         </div>
