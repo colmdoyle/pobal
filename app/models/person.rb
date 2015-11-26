@@ -37,7 +37,7 @@ class Person < ActiveRecord::Base
   end
 
   def current_body
-    bodies.order('positions.end_date').first
+    current_position.body
   end
 
   def current_position
@@ -45,8 +45,8 @@ class Person < ActiveRecord::Base
   end
 
   def current_constituency
-    if positions.first
-      positions.order('end_date').includes(:constituency).first.constituency
+    if current_position
+      current_position.constituency
     end
   end
 
