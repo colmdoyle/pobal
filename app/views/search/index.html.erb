@@ -20,9 +20,13 @@
           </p>
         </div>
         <div class="col-md-8">
-          <% for rep in details["representatives"] %>
-            <p class="lead"><%= link_to rep.person.name, rep.person %> <span class="muted"><%= rep.person.current_party ?  "(#{rep.person.current_party.name})" : "" %></span></p>
-          <% end %>
+          <ul class="list-unstyled">
+            <% for rep in details["representatives"] %>
+              <li>
+                  <span class="lead"><%= link_to rep.person.name, rep.person %> <span class="text-muted"><%= rep.person.current_party ?  "(#{rep.person.current_party.name})" : "" %></span></span>
+              </li>
+            <% end %>
+          </ul>
         </div>
       </div>
     </div>

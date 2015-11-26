@@ -9,7 +9,7 @@ class SearchController < ApplicationController
 
       unless constituency.nil?
         constituency_reps = []
-        @representatives = Position.where(constituency: constituency).includes(:person)
+        @representatives = Position.where(constituency: constituency, end_date: nil).includes(:person)
 
         for @representative in @representatives
           constituency_reps << @representative unless @representative.nil?
