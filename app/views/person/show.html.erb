@@ -8,7 +8,9 @@
         <div class="col-md-12">
           <h1><%= @person.name %></h1>
           <% if @person.current_position && @person.current_party %>
-          <p class="lead"><%= "#{@person.current_party.name} #{@person.current_position.position_type.title} for #{@person.current_position.constituency.name}"  %>  </p>
+          <p class="lead">
+            <%= "#{@person.current_party.name} #{@person.current_position.position_type.title} for #{@person.current_position.constituency.name}"  %>
+          </p>
           <% end %>
         </div>
       </div>
@@ -130,30 +132,30 @@
           <h3 class="panel-title">Positions held</h3>
         </div>
         <div class="panel-body">
-<div class="table-responsive">
-          <table class="table">
-            <thead>
-              <th>Body</th>
-              <th>Title</th>
-              <th>Note</th>
-              <th>Constituency</th>
-              <th>From</th>
-              <th>To</th>
-            </thead>
-            <tbody>
-              <% for position in @person.positions %>
-              <tr>
-                <td><%= link_to position.body.name, position.body %></td>
-                <td><%= position.position_type.title %></td>
-                <td><%= position.note %></td>
-                <td><%= position.constituency ? position.constituency.name : "" %></td>
-                <td><%= position.start_date ? position.start_date : "Unknown" %></td>
-                <td><%= position.end_date ? position.end_date : "Current" %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-</div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th>Body</th>
+                <th>Title</th>
+                <th>Note</th>
+                <th>Constituency</th>
+                <th>From</th>
+                <th>To</th>
+              </thead>
+              <tbody>
+                <% for position in @person.positions %>
+                <tr>
+                  <td><%= link_to position.body.name, position.body %></td>
+                  <td><%= position.position_type.title %></td>
+                  <td><%= position.note %></td>
+                  <td><%= position.constituency ? position.constituency.name : "" %></td>
+                  <td><%= position.start_date ? position.start_date : "Unknown" %></td>
+                  <td><%= position.end_date ? position.end_date : "Current" %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
@@ -166,28 +168,28 @@
           <h3 class="panel-title">Associations</h3>
         </div>
         <div class="panel-body">
-<div class="table-responsive">
-          <table class="table">
-            <thead>
-              <th>Name</th>
-              <th>Type</th>
-              <th>From</th>
-              <th>To</th>
-              <th>Note</th>
-            </thead>
-            <tbody>
-              <% for membership in @person.memberships %>
-              <tr>
-                <td><%= link_to membership.group.name, membership.group %></td>
-                <td><%= membership.group.group_type.name %></td>
-                <td><%= membership.start_date ? membership.start_date : "Unknown" %></td>
-                <td><%= membership.end_date ? membership.end_date : "Current" %></td>
-                <td><%= membership.note %></td>
-              </tr>
-              <% end %>
-            </tbody>
-          </table>
-</div>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th>Name</th>
+                <th>Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Note</th>
+              </thead>
+              <tbody>
+                <% for membership in @person.memberships %>
+                <tr>
+                  <td><%= link_to membership.group.name, membership.group %></td>
+                  <td><%= membership.group.group_type.name %></td>
+                  <td><%= membership.start_date ? membership.start_date : "Unknown" %></td>
+                  <td><%= membership.end_date ? membership.end_date : "Current" %></td>
+                  <td><%= membership.note %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
