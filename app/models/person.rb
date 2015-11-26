@@ -33,7 +33,7 @@ class Person < ActiveRecord::Base
   end
 
   def current_party
-    groups.where(group_type_id: 1, 'memberships.end_date': nil).first
+    groups.where(group_type_id: 1, 'memberships.end_date' => nil).first
   end
 
   def current_body
