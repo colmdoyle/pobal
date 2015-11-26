@@ -41,7 +41,7 @@ class Person < ActiveRecord::Base
   end
 
   def current_position
-    positions.order('end_date').first
+    positions.includes(:constituency).where(end_date: nil).where.not(constituency: nil).order('start_date ASC').first
   end
 
   def current_constituency
