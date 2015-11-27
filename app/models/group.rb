@@ -23,7 +23,7 @@ class Group < ActiveRecord::Base
     new_record? || slug.blank?
   end
 
-  def has_contact_details
+  def has_contact_details?
     return true if phone_number || facebook || twitter || email || website || postal_address
   end
 
