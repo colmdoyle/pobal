@@ -10,6 +10,7 @@ class Constituency < ActiveRecord::Base
   def slug_candidates
     [
       :name,
+      :name, :constituency_type,
       :name, :id
     ]
   end
