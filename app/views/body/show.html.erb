@@ -1,8 +1,67 @@
 <div class="container">
-  <h1><%= @body.name %> <small><%= @body.body_type.name %></small></h1>
-  <% for member in @members %>
-  <p>
-    <%= member.person.name %>
-  </p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <h1><%= @body.name %></h1>
+          <p class="lead">
+            <%= @body.body_type.name %>
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <% if @body.description %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">About</h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= @body.description %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% if @body.positions.length > 0 %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Current Members <span class="text-muted">(<%= @body.positions.includes(:person).where(end_date: nil).count %>)</span></h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th>Name</th>
+                <th>Constituency</th>
+                <th>Party</th>
+                <th>Member since</th>
+              </thead>
+              <tbody>
+                <% for member in @body.positions.includes(:person).where(end_date: nil).order('people.last_name') %>
+                <tr>
+                  <td><%= link_to member.person.name, member.person %></td>
+                  <% if member.constituency %>
+                  <td><%= link_to member.constituency.name, member.constituency %></td>
+                  <% else %>
+                  <td></td>
+                  <% end %>
+                  <td><%= link_to member.person.current_party.name, member.person.current_party %></td>
+                  <td><%= member.start_date ? member.start_date : "Unknown" %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <% end %>
 </div>
