@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126181143) do
+ActiveRecord::Schema.define(version: 20151127084253) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -108,6 +108,12 @@ ActiveRecord::Schema.define(version: 20151126181143) do
     t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
+    t.string   "phone_number",        limit: 255
+    t.string   "email",               limit: 255
+    t.string   "facebook",            limit: 255
+    t.string   "twitter",             limit: 255
+    t.string   "postal_address",      limit: 255
+    t.string   "website",             limit: 255
   end
 
   add_index "groups", ["group_type_id"], name: "index_groups_on_group_type_id", using: :btree

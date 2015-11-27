@@ -1,6 +1,8 @@
 class Group < ActiveRecord::Base
   include FriendlyId
   belongs_to :group_type
+  has_many :people, through: :memberships
+  has_many :memberships
 
   has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "/assets/:style/placeholder.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
@@ -19,6 +21,26 @@ class Group < ActiveRecord::Base
 
   def should_generate_new_friendly_id?
     new_record? || slug.blank?
+  end
+
+  def has_contact_details
+    return true if phone_number || facebook || twitter || email || website || postal_address
+  end
+
+  def current_members
+    memberships.where(end_date: nil).includes(:person).order('people.last_name')
+  end
+
+  def former_members
+    memberships.where.not(end_date: nil).includes(:person).order('people.last_name')
+  end
+
+  def facebook_url
+    "https://fb.me/#{facebook}"
+  end
+
+  def twitter_url
+    "https://twitter.com/#{twitter}"
   end
 
 end

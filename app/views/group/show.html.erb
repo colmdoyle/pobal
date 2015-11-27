@@ -1,11 +1,190 @@
 <div class="container">
-  <h1><%= @group.name %> <small><%= @group.group_type.name %></small></h1>
-  <p><%= @group.description %></p>
-  <p><%= link_to "Website", @group.homepage %></p>
-  <h2>Members</h2>
-  <% for member in @members %>
-  <p>
-    <%= link_to member.person.name, member.person %>
-  </p>
+  <div class="row">
+    <div class="col-md-2">
+      <img alt="<%= @group.name %>" class="img-responsive img-rounded center-block" src="<%= @group.avatar.url(:small) %>">
+    </div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-12">
+          <h1><%= @group.name %></h1>
+          <p class="lead">
+            <%= @group.group_type.name %>
+          </p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <% if @group.has_contact_details %>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Contact Details</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <% unless @group.phone_number.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-phone"></i>
+                </li>
+                <li>
+                  <%= link_to @group.phone_number, "tel:#{@group.phone_number}", target: "_blank" %>
+                </li>
+              </ul>
+            </li>
+            <% end %>
+            <% unless @group.facebook.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-facebook"></i>
+                </li>
+                <li>
+                  <%= link_to @group.facebook, @group.facebook_url, target: "_blank" %>
+                </li>
+              </ul>
+            </li>
+            <% end %>
+            <% unless @group.twitter.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-twitter"></i>
+                </li>
+                <li>
+                  <%= link_to @group.twitter, @group.twitter_url, target: "_blank" %>
+                </li>
+              </ul>
+            </li>
+            <% end %>
+            <% unless @group.email.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-envelope"></i>
+                </li>
+                <li>
+                  <%= mail_to @group.email %>
+                </li>
+              </ul>
+            </li>
+            <% end %>
+            <% unless @group.website.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-globe"></i>
+                </li>
+                <li>
+                  <%= link_to "Website", @group.website, target: "_blank" %>
+                </li>
+              </ul>
+            </li>
+            <% end %>
+            <% unless @group.postal_address.nil? %>
+            <li>
+              <ul class="list-inline">
+                <li>
+                  <i class="fa fa-fw fa-building"></i>
+                </li>
+                <li>
+                  <%= @group.postal_address %>
+                </li>
+              </ul>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% if @group.description.length > 0 %>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">About</h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= @group.description %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% if @group.current_members.length > 0 %>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Current Elected Members</h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th>Name</th>
+                <th>Position</th>
+                <th>From</th>
+                <th>To</th>
+              </thead>
+              <tbody>
+                <% for member in @group.current_members %>
+                <tr>
+                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= member.person.current_position.position_type.title %></td>
+                  <td><%= member.start_date ? member.start_date : "Unknown" %></td>
+                  <td><%= member.end_date ? member.end_date : "Current" %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% if @group.former_members.length > 0 %>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Former Elected Members</h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <th>Name</th>
+                <th>Position</th>
+                <th>From</th>
+                <th>To</th>
+              </thead>
+              <tbody>
+                <% for member in @group.former_members %>
+                <tr>
+                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= member.person.current_position.position_type.title %></td>
+                  <td><%= member.start_date ? member.start_date : "Unknown" %></td>
+                  <td><%= member.end_date ? member.end_date : "Current" %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <% end %>
 </div>
