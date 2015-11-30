@@ -1,20 +1,53 @@
 <div class="container">
-  <h1><%= @constituency.name %> <small><%= @constituency.constituency_type.name %></small></h1>
-  <div id="map-canvas">
+  <div class="row">
+    <div class="col-md-12">
+      <h1><%= @constituency.name %>
+        <small><%= @constituency.constituency_type.name %></small>
+      </h1>
+    </div>
   </div>
-  <% for member in @members %>
-  <p>
-    <%= member.person.name %>
-  </p>
+  <% if @constituency.map_it_id %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Map</h3>
+        </div>
+        <div class="panel-body">
+          <div id="map-canvas"></div>
+        </div>
+      </div>
+    </div>
+  </div>
   <% end %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Members</h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <% for member in @members %>
+            <li>
+              <%= link_to member.person.name, member.person %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<% if @constituency.map_it_id %>
 <script type="text/javascript">
-var mapOptions = {
-  mapTypeId: google.maps.MapTypeId.ROADMAP,
-  disableDefaultUI: false
-}
-var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+  var mapOptions = {
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    disableDefaultUI: false
+  }
+  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @constituency.map_it_id %>.kml');
-ctaLayer.setMap(map);
+  var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @constituency.map_it_id %>.kml');
+  ctaLayer.setMap(map);
 </script>
+<% end %>
