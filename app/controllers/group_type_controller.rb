@@ -1,6 +1,6 @@
 class GroupTypeController < ApplicationController
   def index
-    @group_types = GroupType.all.page(params[:page])
+    @group_types = GroupType.all.includes(:groups)
   end
 
   def show

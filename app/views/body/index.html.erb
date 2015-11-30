@@ -1,16 +1,7 @@
 <div class="container">
   <h2>Bodies</h2>
   <% for body in @bodies %>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Contact Details</h3>
-    </div>
-    <div class="panel-body">
-      <div>
-      </div>
-    </div>
-  </div>
-      <h3><%= link_to body.name, body %></h3>
-      <% end %>
-      <%= will_paginate @bodies, renderer: BootstrapPagination::Rails %>
-    </div>
+    <h3><%= link_to body.name, body %></h3>
+  <% end %>
+  <%= will_paginate @bodies, renderer: BootstrapPagination::Rails %>
+</div>

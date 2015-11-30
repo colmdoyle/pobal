@@ -3,6 +3,8 @@ class GroupType < ActiveRecord::Base
   # slug
   friendly_id :name, :use => [:slugged, :finders]
 
+  has_many :groups
+
   default_scope { order('name ASC') }
 
   def slug_candidates

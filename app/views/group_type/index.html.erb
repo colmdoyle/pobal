@@ -1,7 +1,19 @@
 <div class="container">
   <h2>Groups</h2>
-<% for group_type in @group_types %>
-  <h3><%= link_to group_type.name, group_type %></h3>
-<% end %>
-<%= will_paginate @group_types, renderer: BootstrapPagination::Rails %>
+  <% for group_type in @group_types %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= group_type.name %></h3>
+    </div>
+    <div class="panel-body">
+      <ul class="list-unstyled">
+        <% for group in group_type.groups %>
+        <li>
+          <%= link_to group.name, group %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <% end %>
 </div>
