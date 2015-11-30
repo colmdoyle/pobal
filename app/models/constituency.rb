@@ -19,4 +19,13 @@ class Constituency < ActiveRecord::Base
     new_record? || slug.blank?
   end
 
+  def name_initials
+    initials = []
+    words = name.split(' ')
+    words.each do |word|
+      initials << word.first
+    end
+    return initials.join('')
+  end
+
 end

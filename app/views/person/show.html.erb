@@ -30,7 +30,15 @@
         <% if @person.current_constituency %>
         <div class="col-md-6">
           <div class="panel panel-default">
+            <% if @person.current_constituency.map_it_id %>
             <div class="panel-body info-panel" id="mini-map"></div>
+            <% else %>
+            <div class="panel-body info-panel text-center">
+              <p class="info-panel-text">
+                <%= @person.current_constituency.name_initials %>
+              </p>
+            </div>
+            <% end %>
             <div class="panel-footer"><%= link_to @person.current_constituency.name, @person.current_constituency %></div>
           </div>
         </div>
@@ -115,7 +123,7 @@
     </div>
   </div>
 </div>
-<% if @person.current_constituency %>
+<% if @person.current_constituency &&  @person.current_constituency.map_it_id %>
 <script type="text/javascript">
   var mapOptions = {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
