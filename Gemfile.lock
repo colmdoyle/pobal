@@ -182,6 +182,8 @@ GEM
     powerpack (0.1.1)
     puma (2.15.3)
     rack (1.6.4)
+    rack-mini-profiler (0.9.7)
+      rack (>= 1.1.3)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.2.4)
@@ -320,6 +322,7 @@ DEPENDENCIES
   mysql2
   paperclip (~> 4.3)
   puma
+  rack-mini-profiler
   rails (= 4.2.4)
   rails_12factor
   rspec-rails (~> 3.0)
