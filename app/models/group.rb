@@ -4,7 +4,7 @@ class Group < ActiveRecord::Base
   has_many :people, through: :memberships
   has_many :memberships
 
-  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "https://#{ENV['AWS_S3_HOSTNAME']}/#{ENV['S3_BUCKET_NAME']}/default/avatar_placeholder.jpg"
+  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   # slug
@@ -41,6 +41,15 @@ class Group < ActiveRecord::Base
 
   def twitter_url
     "https://twitter.com/#{twitter}"
+  end
+
+  def name_initials
+    initials = []
+    words = name.split(' ')
+    words.each do |word|
+      initials << word.first
+    end
+    return initials.join('')
   end
 
 end

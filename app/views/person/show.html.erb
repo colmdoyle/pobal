@@ -18,8 +18,14 @@
         <% if @person.current_party %>
         <div class="col-md-6">
           <div class="panel panel-default">
-            <div class="panel-body info-panel">
-              <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
+            <div class="panel-body info-panel text-center <% unless @person.current_party.avatar.file? %> blue-bg <% end %>">
+              <% if @person.current_party.avatar.file? %>
+                <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
+                <% else %>
+                <p class="info-panel-text">
+                  <%= @person.current_party.name_initials %>
+                </p>
+                <% end %>
             </div>
             <div class="panel-footer">
               <%= link_to @person.current_party.name, @person.current_party %>
