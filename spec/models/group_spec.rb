@@ -17,7 +17,7 @@ RSpec.describe Group, type: :model do
 
     describe '#member_title_abbreviation' do
       it 'returns the member_title_abbreviation' do
-        expect(group.homepage).to eq("http://starwars.com")
+        expect(group.website).to eq("http://starwars.com")
       end
     end
   end
