@@ -1,7 +1,7 @@
 class Person < ActiveRecord::Base
   include FriendlyId
-  has_many :groups, through: :memberships
-  has_many :bodies, through: :positions
+  has_many :groups, through: :memberships, dependent: :destroy
+  has_many :bodies, through: :positions, dependent: :destroy
   has_many :memberships
   has_many :positions
 

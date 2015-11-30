@@ -3,7 +3,7 @@ class BodyType < ActiveRecord::Base
   # slug
   friendly_id :name, :use => [:slugged, :finders]
 
-  has_many :bodies
+  has_many :bodies, dependent: :destroy
 
   default_scope { order('name ASC') }
 

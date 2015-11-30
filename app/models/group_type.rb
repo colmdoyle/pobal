@@ -3,7 +3,7 @@ class GroupType < ActiveRecord::Base
   # slug
   friendly_id :name, :use => [:slugged, :finders]
 
-  has_many :groups
+  has_many :groups, dependent: :destroy
 
   default_scope { order('name ASC') }
 

@@ -1,6 +1,6 @@
 class Body < ActiveRecord::Base
   include FriendlyId
-  has_many :positions
+  has_many :positions, dependent: :destroy
   belongs_to :body_type
 
   has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }

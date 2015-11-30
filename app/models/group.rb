@@ -1,8 +1,8 @@
 class Group < ActiveRecord::Base
   include FriendlyId
   belongs_to :group_type
-  has_many :people, through: :memberships
-  has_many :memberships
+  has_many :people, through: :memberships, dependent: :destroy
+  has_many :memberships, dependent: :destroy
 
   has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
