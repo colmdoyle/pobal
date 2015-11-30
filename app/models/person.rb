@@ -7,7 +7,7 @@ class Person < ActiveRecord::Base
 
   default_scope { order('last_name ASC') }
 
-  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "/assets/:style/placeholder.jpg"
+  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "/assets/placeholder.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   # slug
