@@ -3,7 +3,7 @@ class Body < ActiveRecord::Base
   has_many :positions
   belongs_to :body_type
 
-  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "/assets/placeholder.jpg"
+  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "https://#{ENV['AWS_S3_HOSTNAME']}/#{ENV['S3_BUCKET_NAME']}/default/avatar_placeholder.jpg"
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   default_scope { order('name ASC') }
