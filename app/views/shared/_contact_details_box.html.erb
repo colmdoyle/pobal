@@ -1,0 +1,81 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Contact Details</h3>
+  </div>
+  <div class="panel-body">
+    <ul class="list-unstyled">
+      <% unless subject.phone_number.nil? %>
+      <li>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-fw fa-phone"></i>
+          </li>
+          <li>
+            <%= link_to subject.phone_number, "tel:#{subject.phone_number}", target: "_blank" %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
+      <% unless subject.facebook.nil? %>
+      <li>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-fw fa-facebook"></i>
+          </li>
+          <li>
+            <%= link_to subject.facebook, subject.facebook_url, target: "_blank" %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
+      <% unless subject.twitter.nil? %>
+      <li>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-fw fa-twitter"></i>
+          </li>
+          <li>
+            <%= link_to subject.twitter, subject.twitter_url, target: "_blank" %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
+      <% unless subject.email.nil? %>
+      <li>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-fw fa-envelope"></i>
+          </li>
+          <li>
+            <%= mail_to subject.email %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
+      <% unless subject.website.nil? %>
+      <li>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-fw fa-globe"></i>
+          </li>
+          <li>
+            <%= link_to "Website", subject.website, target: "_blank" %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
+      <% unless subject.postal_address.nil? %>
+      <li>
+        <ul class="list-inline">
+          <li>
+            <i class="fa fa-fw fa-building"></i>
+          </li>
+          <li>
+            <%= subject.postal_address %>
+          </li>
+        </ul>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
