@@ -7,7 +7,7 @@ class Person < ActiveRecord::Base
 
   default_scope { order('last_name ASC') }
 
-  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: "https://#{ENV['AWS_S3_HOSTNAME']}/#{ENV['S3_BUCKET_NAME']}/default/avatar_placeholder.jpg"
+  has_attached_file :avatar, styles: { large: "600x600#", medium: "300x300#", small: "175x175#", thumb: "100x100#" }, default_url: :set_picture_per_gender
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   # slug
@@ -52,6 +52,14 @@ class Person < ActiveRecord::Base
 
   def should_generate_new_friendly_id?
     new_record? || slug.blank?
+  end
+
+  def set_picture_per_gender
+    if self.gender == 'male'
+      "https://#{ENV['AWS_S3_HOSTNAME']}/#{ENV['S3_BUCKET_NAME']}/default/male.png"
+    else
+      "https://#{ENV['AWS_S3_HOSTNAME']}/#{ENV['S3_BUCKET_NAME']}/default/female.png"
+    end
   end
 
 end
