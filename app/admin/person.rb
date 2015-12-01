@@ -14,12 +14,13 @@ ActiveAdmin.register Person do
       f.input :facebook
       f.input :twitter
       f.input :postal_address
-      f.input :gender, :as => :radio, :collection => ["Female", "Male", "Trans", "Unknown"]
+      f.input :gender, :as => :radio, :collection => ["female", "male", "transgender", "unknown"]
     end
     f.actions
   end
 
   index do
+    selectable_column
     id_column
     column :first_name
     column :last_name
