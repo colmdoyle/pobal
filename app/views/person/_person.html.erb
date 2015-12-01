@@ -1,6 +1,6 @@
 <div class="media">
   <div class="media-left media-middle">
-    <img class="media-object" src="<%= person.avatar.url(:thumb) %>" alt="<%= person.name %>">
+    <img class="media-object person-list-thumb" src="<%= person.avatar.url(:thumb) %>" alt="<%= person.name %>">
   </div>
   <div class="media-body">
     <h2><%= link_to person.name, person %> <small><%= if person.current_party
