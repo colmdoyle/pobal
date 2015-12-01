@@ -1,9 +1,26 @@
 <div class="container">
   <h1>People</h1>
-<% for person in @people %>
-<div class="well">
-  <%= render partial: "person", locals: {person: person} %>
-</div>
-<% end %>
+  <div class="well">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <th>Name</th>
+          <th>Position</th>
+          <th>Party</th>
+          <th>Constituency</th>
+        </thead>
+        <tbody>
+          <% for person in @people %>
+          <tr>
+            <td><%= link_to person.name, person %></td>
+            <td><%= person.current_position.position_type.title %></td>
+            <td><%= person.current_party ? person.current_party.name : "Unknown" %></td>
+            <td><%= person.current_constituency ? person.current_constituency.name : "" %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
 <%= will_paginate @people, renderer: BootstrapPagination::Rails %>
 </div>
