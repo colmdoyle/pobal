@@ -9,13 +9,14 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
-
+  <%= render 'layouts/cookie_warning' %>
 </head>
 
 <body class="<%= controller_name %>">
   <%= render 'layouts/navbar' %>
   <%= yield %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= render 'layouts/footer' %>
   <%= render 'layouts/google_analytics' %>
 </body>
 
