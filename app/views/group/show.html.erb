@@ -47,7 +47,7 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Current Elected Members</h3>
+          <h3 class="panel-title">Current Members</h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
@@ -62,7 +62,7 @@
                 <% for member in @group.current_members %>
                 <tr>
                   <td><%= link_to member.person.name, member.person %></td>
-                  <td><%= member.person.current_position.position_type.title %></td>
+                  <td><%= member.person.current_position ? member.person.current_position.position_type.title : "" %></td>
                   <td><%= member.start_date ? member.start_date : "Unknown" %></td>
                   <td><%= member.end_date ? member.end_date : "Current" %></td>
                 </tr>
@@ -81,7 +81,7 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Former Elected Members</h3>
+          <h3 class="panel-title">Former Members</h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
