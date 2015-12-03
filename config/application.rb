@@ -24,6 +24,8 @@ module Pobal
     config.active_record.raise_in_transactional_callbacks = true
 
     config.exceptions_app = self.routes
-    
+
+    config.middleware.swap(ActionDispatch::Static, Rack::Zippy::AssetServer)
+
   end
 end
