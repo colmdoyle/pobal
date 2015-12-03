@@ -8,6 +8,7 @@ ActiveAdmin.register Body do
       f.input :name
       f.input :body_type
       f.input :avatar, as: :file
+      f.input :people
     end
     f.actions
   end

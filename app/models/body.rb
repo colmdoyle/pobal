@@ -1,5 +1,6 @@
 class Body < ActiveRecord::Base
   include FriendlyId
+  has_many :people, through: :positions, dependent: :destroy
   has_many :positions, dependent: :destroy
   belongs_to :body_type
 
