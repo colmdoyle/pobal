@@ -5,7 +5,7 @@ module Paperclip
         args.first.instance.send(pattern)
       else
         all.reverse.inject( pattern.dup ) do |result, tag|
-          result.gsub(/:#{tag}/) do |match|
+          result.gsub(/:#{tag}/) do |_|
             send( tag, *args )
           end
         end

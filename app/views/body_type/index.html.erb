@@ -1,19 +1,30 @@
 <div class="container">
   <h2>Bodies</h2>
   <% for body_type in @body_types %>
+  <% unless body_type.bodies.count < 1 %>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title"><%= body_type.name %></h3>
     </div>
     <div class="panel-body">
-      <ul class="list-unstyled">
-        <% for body in body_type.bodies %>
-        <li>
-          <%= link_to body.name, body %>
-        </li>
-        <% end %>
-      </ul>
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <th>Name</th>
+            <th>Number of Members</th>
+          </thead>
+          <tbody>
+            <% for body in body_type.bodies %>
+            <tr>
+              <td><%= link_to body.name, body %></td>
+              <td><%= body.current_members.count %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
+  <% end %>
   <% end %>
 </div>

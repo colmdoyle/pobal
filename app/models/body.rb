@@ -23,4 +23,12 @@ class Body < ActiveRecord::Base
     new_record? || slug.blank?
   end
 
+  def current_members
+    positions.where(end_date: nil).includes(:person).order('people.last_name')
+  end
+
+  def former_members
+    positions.where.not(end_date: nil).includes(:person).order('people.last_name')
+  end
+
 end

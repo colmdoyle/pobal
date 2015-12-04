@@ -1,8 +1,24 @@
+<% title "#{@body_type.name}" %>
 <div class="container">
-  <h1><%= @body_type.name %> </h1>
-  <% for body in @bodies %>
-  <p>
-    <%= link_to body.name, body %>
-  </p>
-  <% end %>
+  <h1><%= @body_type.name %></h1>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <th>Name</th>
+            <th>Current Members</th>
+          </thead>
+          <tbody>
+            <% for body in @bodies %>
+            <tr>
+              <td><%= link_to body.name, body %></td>
+              <td><%= body.current_members.count %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
