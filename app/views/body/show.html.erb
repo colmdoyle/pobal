@@ -40,7 +40,12 @@
             <table class="table">
               <thead>
                 <th>Name</th>
+                <% if @body.body_type.has_constituencies %>
                 <th>Constituency</th>
+                <% else %>
+                <th>Type</th>
+                <th>Note</th>
+                <% end %>
                 <th>Party</th>
                 <th>Member since</th>
               </thead>
@@ -51,7 +56,8 @@
                   <% if member.constituency %>
                   <td><%= link_to member.constituency.name, member.constituency %></td>
                   <% else %>
-                  <td></td>
+                  <td><%= member.position_type.title %></td>
+                  <td><%= member.note %></td>
                   <% end %>
                   <td><%= link_to member.person.current_party.name, member.person.current_party %></td>
                   <td><%= member.start_date ? member.start_date : "Unknown" %></td>

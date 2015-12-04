@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151130092018) do
+ActiveRecord::Schema.define(version: 20151204000725) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -62,10 +62,11 @@ ActiveRecord::Schema.define(version: 20151130092018) do
   add_index "bodies", ["body_type_id"], name: "index_bodies_on_body_type_id", using: :btree
 
   create_table "body_types", force: :cascade do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "name",       limit: 255
-    t.string   "slug",       limit: 255, null: false
+    t.datetime "created_at",                                    null: false
+    t.datetime "updated_at",                                    null: false
+    t.string   "name",               limit: 255
+    t.string   "slug",               limit: 255,                null: false
+    t.boolean  "has_constituencies",             default: true
   end
 
   create_table "constituencies", force: :cascade do |t|
