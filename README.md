@@ -2,10 +2,6 @@
 
 Pobal is an application that enables citizens to find contact information for their local representatives.
 
-It is currently a work in progress and subject to constant change, but will likely be similar to [Who is my TD?](http://whoismytd.com), which is currently written in PHP.
-
-Pobal is a Ruby on Rails port of that site.
-
 [![Code Climate](https://codeclimate.com/github/colmdoyle/pobal/badges/gpa.svg)](https://codeclimate.com/github/colmdoyle/pobal)
 
 [![Test Coverage](https://codeclimate.com/github/colmdoyle/pobal/badges/coverage.svg)](https://codeclimate.com/github/colmdoyle/pobal/coverage)
