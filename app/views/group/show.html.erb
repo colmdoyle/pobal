@@ -48,7 +48,7 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Current Members</h3>
+          <h3 class="panel-title">Current Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @group.name, report_url: request.original_url }%></span></h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
