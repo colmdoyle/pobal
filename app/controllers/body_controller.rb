@@ -1,6 +1,6 @@
 class BodyController < ApplicationController
   def index
-    @bodies = Body.all.order(:body_type_id).page(params[:page])
+    @bodies = BodyType.all.includes(:bodies)
   end
 
   def show

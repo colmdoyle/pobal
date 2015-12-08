@@ -1,8 +1,31 @@
 <% title "Groups" %>
 <div class="container">
   <h2>Groups</h2>
-<% for group in @groups %>
-  <h3><%= link_to group.name, group %></h3>
-<% end %>
-<%= will_paginate @groups, renderer: BootstrapPagination::Rails %>
+  <% for group_type in @groups %>
+  <% unless group_type.groups.count < 1 %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= link_to group_type.name, group_type %></h3>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <th>Name</th>
+            <th>Elected Representatives</th>
+          </thead>
+          <tbody>
+        <% for group in group_type.groups %>
+        <tr>
+          <td><%= link_to group.name, group %></td>
+          <td><%= group.current_members.count %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    </div>
+  </div>
+  <% end %>
+  <% end %>
 </div>

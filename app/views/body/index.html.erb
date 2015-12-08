@@ -1,8 +1,31 @@
 <% title "Bodies" %>
 <div class="container">
   <h2>Bodies</h2>
-  <% for body in @bodies %>
-    <h3><%= link_to body.name, body %></h3>
+  <% for body_type in @bodies %>
+  <% unless body_type.bodies.count < 1 %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title"><%= link_to body_type.name, body_type %></h3>
+    </div>
+    <div class="panel-body">
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <th>Name</th>
+            <th>Number of Members</th>
+          </thead>
+          <tbody>
+            <% for body in body_type.bodies %>
+            <tr>
+              <td><%= link_to body.name, body %></td>
+              <td><%= body.current_members.count %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
   <% end %>
-  <%= will_paginate @bodies, renderer: BootstrapPagination::Rails %>
+  <% end %>
 </div>
