@@ -15,15 +15,15 @@
             <th>Elected Representatives</th>
           </thead>
           <tbody>
-        <% for group in group_type.groups %>
-        <tr>
-          <td><%= link_to group.name, group %></td>
-          <td><%= group.current_members.count %></td>
-        </tr>
-        <% end %>
-      </tbody>
-    </table>
-
+            <% for group in group_type.groups %>
+            <tr>
+              <td><%= link_to group.name, group %></td>
+              <td><%= group.current_members.count %></td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
   <% end %>

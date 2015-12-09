@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-2">
       <% if @group.avatar.file? %>
-        <img alt="<%= @group.name %>" class="img-responsive img-rounded center-block" src="<%= @group.avatar.url(:small) %>">
+      <img alt="<%= @group.name %>" class="img-responsive img-rounded center-block" src="<%= @group.avatar.url(:small) %>">
       <% end %>
     </div>
     <div class="col-md-10">
@@ -13,7 +13,7 @@
           <p class="lead">
             <%= @group.group_type.name %>
           </p>
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -48,7 +48,9 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Current Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @group.name, report_url: request.original_url }%></span></h3>
+          <h3 class="panel-title">Current Members
+            <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @group.name, report_url: request.original_url }%></span>
+          </h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">

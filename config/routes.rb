@@ -24,10 +24,13 @@ Rails.application.routes.draw do
   resources :search
   resources :person
   resources :body, only: [:index, :show]
-  resources :body_type
+  resources :body_type, only: [:show]
   resources :constituency
   resources :group, only: [:index, :show]
-  resources :group_type
+  resources :group_type, only: [:show]
+
+  get "/group_type", to: redirect("/group")
+  get "/body_type", to: redirect("/body")
 
   root 'welcome#index'
 end
