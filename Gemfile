@@ -45,6 +45,7 @@ gem 'aws-sdk-v1'
 gem "font-awesome-rails"
 
 gem "codeclimate-test-reporter", group: :test, require: nil
+gem 'newrelic_rpm'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

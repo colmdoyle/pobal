@@ -166,6 +166,7 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     mysql2 (0.3.19)
+    newrelic_rpm (3.14.0.305)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -320,6 +321,7 @@ DEPENDENCIES
   jquery-rails
   json
   mysql2
+  newrelic_rpm
   paperclip (~> 4.3)
   puma
   rack-mini-profiler
