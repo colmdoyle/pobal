@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   get "/dail/:id", to: redirect("/constituency/%{id}", status: 301)
   get "/council/:id", to: redirect("/constituency/%{id}", status: 301)
+  get "/councils/:id", to: redirect("/constituency/%{id}", status: 301)
   get "/europarl/:id", to: redirect("/constituency/%{id}", status: 301)
 
   get "/party/:id", to: redirect("/group/%{id}", status: 301)
