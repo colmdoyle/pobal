@@ -11,7 +11,7 @@
     <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" property="og:description">
     <meta content="website" property="og:type">
     <meta content="<%= request.original_url %>?utm_source=social&amp;utm_medium=share&amp;utm_campaign=facebook" property="og:url">
-    <meta content="http://www.whoismytd.com/bundles/whoismytdmain/images/white-og-image.png" property="og:image">
+    <meta content="<%= image_url('og-image-min') %>" property="og:image">
     <meta content="Who is my TD?" property="og:site_name">
     <meta content="260300016" property="fb:admins">
     <meta content="415289985220755" property="fb:app_id">
@@ -20,7 +20,7 @@
     <meta content="<%= request.original_url %>?utm_source=social&amp;utm_medium=share&amp;utm_campaign=twitter" name="twitter:url">
     <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" name="twitter:title">
     <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" name="twitter:description">
-    <meta content="http://www.whoismytd.com/bundles/whoismytdmain/images/white-og-image.png" name="twitter:image">
+    <meta content="<%= image_url('og-image-min') %>" name="twitter:image">
     <meta content="whoismytd" name="twitter:site">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
