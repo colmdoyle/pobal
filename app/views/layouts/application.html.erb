@@ -10,14 +10,14 @@
     <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" property="og:title">
     <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" property="og:description">
     <meta content="website" property="og:type">
-    <meta content="<%= request.original_url %>?utm_source=social&amp;utm_medium=share&amp;utm_campaign=facebook" property="og:url">
+    <meta content="<%= request.original_url %>" property="og:url">
     <meta content="<%= image_url('og-image-min.png') %>" property="og:image">
     <meta content="Who is my TD?" property="og:site_name">
     <meta content="260300016" property="fb:admins">
     <meta content="415289985220755" property="fb:app_id">
     <!-- Twitter -->
     <meta content="summary" name="twitter:card">
-    <meta content="<%= request.original_url %>?utm_source=social&amp;utm_medium=share&amp;utm_campaign=twitter" name="twitter:url">
+    <meta content="<%= request.original_url %>" name="twitter:url">
     <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" name="twitter:title">
     <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" name="twitter:description">
     <meta content="<%= image_url('og-image-min.png') %>" name="twitter:image">
