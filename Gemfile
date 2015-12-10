@@ -32,6 +32,7 @@ gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'active_admin_import'
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'paperclip', '~> 4.3'
 gem 'geocoder'
 gem 'httparty', '~> 0.13.7'
 gem 'json'
@@ -42,7 +43,7 @@ gem 'airbrake'
 gem 'high_voltage', '~> 2.4.0'
 gem 'aws-sdk-v1'
 gem "font-awesome-rails"
-gem 'le'
+gem "le"
 
 gem "codeclimate-test-reporter", group: :test, require: nil
 gem 'newrelic_rpm'
