@@ -17,6 +17,7 @@ production:
 
   database: whoismytd_production
   url: <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
   socket: /tmp/mysql.sock
 
 staging:
