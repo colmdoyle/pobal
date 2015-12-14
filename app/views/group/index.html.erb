@@ -1,6 +1,6 @@
-<% title "Groups" %>
+<% title t('groups.title') %>
 <div class="container">
-  <h2>Groups</h2>
+  <h2><%= t('groups.title') %></h2>
   <% for group_type in @groups %>
   <% unless group_type.groups.count < 1 %>
   <div class="panel panel-default">
@@ -11,8 +11,8 @@
       <div class="table-responsive">
         <table class="table sortable-theme-bootstrap" data-sortable>
           <thead>
-            <th>Name</th>
-            <th>Elected Representatives</th>
+            <th><%= t('general.name') %></th>
+            <th><%= t('general.elected_representatives') %></th>
           </thead>
           <tbody>
             <% for group in group_type.groups %>

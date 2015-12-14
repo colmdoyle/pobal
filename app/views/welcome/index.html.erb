@@ -3,10 +3,10 @@
     <div class="row billboard">
       <div class="col-md-8 col-md-offset-2">
         <h1>
-          Contact your elected representatives about the issues that matter to you
+          <%= t('homepage.headline') %>
         </h1>
         <p class="lead">
-          We list over <%= number_with_delimiter(@representatives_count - 1) %> representatives across Ireland
+          <%= t 'homepage.sub_heading', representatives_count: number_with_delimiter(@representatives_count - 1) %>
         </p>
       </div>
     </div>
@@ -16,18 +16,18 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <p class="text-center lead">
-        To get started, just enter your home address.
+        <%= t('homepage.address_prompt') %>
       </p>
       <%= form_tag search_index_path, {role: 'form', method: 'GET'} do %>
       <div class="input-group" id="form-search-group">
-        <%= text_field_tag 'form-input', nil, placeholder: 'e.g. Kildare Street, Dublin 2, Ireland', class: 'form-control', autocomplete: 'off' %>
+        <%= text_field_tag 'form-input', nil, placeholder: t('homepage.address_placeholder'), class: 'form-control', autocomplete: 'off' %>
         <span class="input-group-btn">
-          <button class="btn btn-primary btn-search" id="form-submit" type="submit">Search</button>
+          <button class="btn btn-primary btn-search" id="form-submit" type="submit"><%= t('homepage.search_button') %></button>
         </span>
   		</div>
       <% end %>
       <p class="text-center">
-        <small>We need your home address to figure out what constituency you are in.</small>
+        <small><%= t('homepage.address_explanation') %></small>
       </p>
     </div>
   </div>

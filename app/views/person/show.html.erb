@@ -10,7 +10,7 @@
           <h1><%= @person.name %></h1>
           <% if @person.current_position && @person.current_party %>
           <p class="lead">
-            <%= "#{@person.current_party.name} #{@person.current_position.position_type.title} for #{@person.current_position.constituency.name}"  %>
+            <%= t('people.tag_line', current_party: @person.current_party.name, current_position: @person.current_position.position_type.title, constituency: @person.current_position.constituency.name) %>
           </p>
           <% end %>
         </div>
@@ -70,12 +70,12 @@
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Body</th>
-                <th>Title</th>
-                <th>Note</th>
-                <th>Constituency</th>
-                <th>From</th>
-                <th>To</th>
+                <th><%= t('general.body') %></th>
+                <th><%= t('general.title') %></th>
+                <th><%= t('general.note') %></th>
+                <th><%= t('general.constituency') %></th>
+                <th><%= t('general.from') %></th>
+                <th><%= t('general.to') %></th>
               </thead>
               <tbody>
                 <% for position in @person.positions %>
@@ -100,25 +100,25 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Associations</h3>
+          <h3 class="panel-title"><%= t('people.associations') %></h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Name</th>
-                <th>Type</th>
-                <th>From</th>
-                <th>To</th>
-                <th>Note</th>
+                <th><%= t('general.name') %></th>
+                <th><%= t('general.type') %></th>
+                <th><%= t('general.from') %></th>
+                <th><%= t('general.to') %></th>
+                <th><%= t('general.note') %></th>
               </thead>
               <tbody>
                 <% for membership in @person.memberships %>
                 <tr>
                   <td><%= link_to membership.group.name, membership.group %></td>
                   <td><%= membership.group.group_type.name %></td>
-                  <td><%= membership.start_date ? membership.start_date : "Unknown" %></td>
-                  <td><%= membership.end_date ? membership.end_date : "Current" %></td>
+                  <td><%= membership.start_date ? membership.start_date : t('general.unknown') %></td>
+                  <td><%= membership.end_date ? membership.end_date : t('general.current') %></td>
                   <td><%= membership.note %></td>
                 </tr>
                 <% end %>

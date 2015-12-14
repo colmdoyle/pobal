@@ -1,6 +1,6 @@
-<% title "Constituencies" %>
+<% title t('constituencies.index.title') %>
 <div class="container">
-  <h2>Constituencies</h2>
+  <h2><%= t('constituencies.index.title') %></h2>
 <% for constituency in @constituencies %>
   <h3><%= link_to constituency.name, constituency %> (<%= constituency.constituency_type.name %>)</h3>
 <% end %>

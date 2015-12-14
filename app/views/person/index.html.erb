@@ -1,21 +1,21 @@
-<% title "People" %>
+<% title t('people.page_title') %>
 <div class="container">
-  <h1>People</h1>
+  <h1><%= t('people.page_title') %></h1>
   <div class="well">
     <div class="table-responsive">
       <table class="table sortable-theme-bootstrap" data-sortable>
         <thead>
-          <th>Name</th>
-          <th>Position</th>
-          <th>Party</th>
-          <th>Constituency</th>
+          <th><%= t('general.name') %></th>
+          <th><%= t('general.position') %></th>
+          <th><%= t('general.party') %></th>
+          <th><%= t('general.constituency') %></th>
         </thead>
         <tbody>
           <% for person in @people %>
           <tr>
             <td><%= link_to person.name, person %></td>
             <td><%= person.current_position ? person.current_position.position_type.title : "" %></td>
-            <td><%= person.current_party ? person.current_party.name : "Unknown" %></td>
+            <td><%= person.current_party ? person.current_party.name : t('general.unknown') %></td>
             <td><%= person.current_constituency ? person.current_constituency.name : "" %></td>
           </tr>
           <% end %>

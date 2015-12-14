@@ -1,0 +1,101 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+ga:
+  general:
+    about: "Maidir"
+    name: "Ainm"
+    constituency: "Toghlach"
+    type: "Cineál"
+    note: "Nóta"
+    party: "Páirtí"
+    member_since: "Ball ó"
+    unknown: "Ni fios"
+    correct_a_mistake: "Ceart botún"
+    current_members: "Baill reatha"
+    former_members: "Baill iar"
+    position: "Post"
+    from: "Ó"
+    to: "Go"
+    current: "Reatha"
+    elected_representatives: "Elected Representatives"
+    body: "Comhlacht"
+    title: "Title"
+
+  cookie_warning:
+    message: "Úsáideann an láithreán gréasáin fianáin a chinntiú go bhfaigheann tú an taithí is fearr ar ár láithreán gréasáin"
+    dismiss: "Fuair sé!"
+    learn_more: "Tuilleadh eolais"
+  error_pages:
+    five_hundred:
+      heading: "Tá brón orm faoi seo, ach chuaigh rud éigin mícheart"
+      error_message: "Rinneamar nóta de cad a rinne muid mícheart, agus beidh breathnú isteach é. Idir an dá linn, d'fhéadfaí tú iarracht refreshing an leathanach"
+    four_oh_four:
+      heading: "Tá brón orainn, nach bhfuil sé seo ar fáil leathanach"
+      error_message: "Féadfaidh an nasc lean tú a bhriseadh, nó a d'fhéadfadh an leathanach a bheith bainte."
+    return_to_home: "Fill ar ais go dtí an leathanach baile"
+
+  homepage:
+    headline: "Déan teagmháil le do ionadaithe tofa faoi na ceisteanna atá tábhachtach a thabhairt duit"
+    sub_heading: "Liostaíonn muid níos mó ná %{representatives_count} ionadaí ar fud na hÉireann"
+    address_prompt: "Chun tús a chur, ach isteach do sheoladh baile."
+    address_placeholder: "m.sh. Sráid Chill Dara, Baile Átha Cliath 2, Éire"
+    address_explanation: "Ní mór dúinn do sheoladh baile a dhéanamh amach cad toghlach a bhfuil tú i."
+    search_button: "Cuardaigh"
+  navbar:
+    site_name: "Who is my TD?"
+    person_link: "Daoine"
+    group_link: "Grúpaí"
+    body_link: "Comhlachtaí"
+    about_link: "Maidir"
+    toggle_nav: "Nascleanúint scoránaigh"
+  footer:
+    facebook: "Facebook"
+    twitter: "Twitter"
+    powered_by: "Cumhachtaithe ag Pobal"
+    language_switcher: "English"
+  body:
+    index:
+      title: "Comhlachtaí"
+      name: "Ainm"
+      number_of_members: "Líon na gcomhaltaí"
+    show:
+      current_members: "Baill reatha"
+  constituencies:
+    index:
+      title: "Constituencies"
+    show:
+      map: "Map"
+  groups:
+    title: "Groups"
+  about_us:
+    title: "Fúinn"
+  people:
+    page_title: "Duine"
+    associations: "Associations"
+  search:
+    results_not_found: "No results found"
+  will_paginate:
+    previous_label: "&#8592; Roimhe"
+    next_label: "Seo chugainn &#8594;"
+  page_gap: "&hellip;"
+  contact_details_box:
+    title: "Sonraí teagmhála"

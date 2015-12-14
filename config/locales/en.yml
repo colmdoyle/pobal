@@ -20,4 +20,89 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  general:
+    about: "About"
+    name: "Name"
+    constituency: "Constituency"
+    type: "Type"
+    note: "Note"
+    party: "Party"
+    member_since: "Member since"
+    unknown: "Unknown"
+    correct_a_mistake: "Correct a mistake"
+    current_members: "Current members"
+    former_members: "Former members"
+    members: "Members"
+    position: "Position"
+    from: "From"
+    to: "To"
+    current: "Current"
+    elected_representatives: "Elected Representatives"
+    body: "Body"
+    body: "Title"
+
+  cookie_warning:
+    message: "This website uses cookies to ensure you get the best experience on our website"
+    dismiss: "Got it!"
+    learn_more: "More info"
+  error_pages:
+    five_hundred:
+      title: "Page not found"
+      heading: "Sorry about this, but something went wrong"
+      error_message: "We made a note of what we did wrong, and will look into it. In the meantime, you could try refreshing the page"
+    four_oh_four:
+      title: "Page not found"
+      heading: "Sorry, this page isn't available"
+      error_message: "The link you followed may be broken, or the page may have been removed."
+    return_to_home: "Return to the home page"
+
+  homepage:
+    headline: "Contact your elected representatives about the issues that matter to you"
+    sub_heading: "We list over %{representatives_count} representatives across Ireland"
+    address_prompt: "To get started, just enter your home address."
+    address_placeholder: "e.g. Kildare Street, Dublin 2, Ireland"
+    address_explanation: "We need your home address to figure out what constituency you are in."
+    search_button: "Search"
+  navbar:
+    site_name: "Who is my TD?"
+    person_link: "People"
+    group_link: "Groups"
+    body_link: "Bodies"
+    about_link: "About"
+    toggle_nav: "Toggle navigation"
+  footer:
+    facebook: "Facebook"
+    twitter: "Twitter"
+    powered_by: "Powered by Pobal"
+    language_switcher: "Gaelige"
+  body:
+    index:
+      title: "Bodies"
+      name: "Name"
+      number_of_members: "Number of Members"
+    show:
+      current_members: "Current Members"
+  constituencies:
+    index:
+      title: "Constituencies"
+    show:
+      map: "Map"
+  groups:
+    title: "Groups"
+  about_us:
+    title: "About us"
+  people:
+    page_title: "Person"
+    associations: "Associations"
+    tag_line: "%{current_party} %{current_position} for %{constituency}"
+  search:
+    results_not_found: "No results found"
+    results_not_found_description_html: "Your search - <em>%{search_query}</em> - returned no results."
+    results_not_found_helper_html: "This is usually because there were too many similar addresses, like <em>\"Blackrock, Co.Dublin\"</em> and <em>\"Blackrock, Cork\"</em>. You can try providing a more detailed address %{link_to_home}."
+    link_to_home: "here"
+    results_title: "Search results for %{query}"
+    result_constituency_description_html:
+      one: "Your %{member_title} for %{constituency_link}"
+      other: "Your %{member_title}s for %{constituency_link}"
+  contact_details_box:
+    title: "Contact details"

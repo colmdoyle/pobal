@@ -1,12 +1,12 @@
-<% title "Search results for #{params['form-input']}" %>
+<% title t('search.results_title', query: params['form-input']) %>
 <div class="container">
   <% if @search_results.empty? %>
     <div class="well">
       <div class="row">
         <div class="col-md-12">
-          <h1>No results found</h1>
-          <p class="lead">Your search - <em><%= params['form-input'] %></em> - returned no results.</p>
-          <p>This is usually because there were too many similar addresses, like <em>"Blackrock, Co.Dublin"</em> and <em>"Blackrock, Cork"</em>. You can try providing a more detailed address <%= link_to "here", root_path %>.</p>
+          <h1><%= t('search.results_not_found') %></h1>
+          <p class="lead"><%= t('search.results_not_found_description_html', search_query: params['form-input']) %></p>
+          <p><%= t('search.results_not_found_helper_html', link_to_home: link_to(t('search.link_to_home'), root_path) )%></p>
         </div>
       </div>
     </div>
@@ -15,7 +15,7 @@
     <div class="well">
       <div class="row">
         <div class="col-md-4">
-          <h2>Your <%= details["constituency_type"].member_title_abbreviation.pluralize(details["representatives"].count) %> for <%= link_to details["constituency"].name, details["constituency"] %></h2>
+          <h2><%= t('search.result_constituency_description_html', member_title: details["constituency_type"].member_title_abbreviation, constituency_link: link_to(details["constituency"].name, details["constituency"]), count: details["constituency_type"].member_title_abbreviation.pluralize(details["representatives"].count)) %></h2>
           <p>
             <%= details["constituency_type"].short_description %>
           </p>

@@ -1,14 +1,14 @@
-<% title "Something went wrong" %>
+<% title t('error_pages.five_hundred.title') %>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="well well-lg">
-        <h1 class="text-center">Sorry about this, but something went wrong</h1>
+        <h1 class="text-center"><%= t('error_pages.five_hundred.heading') %></h1>
         <p class="lead text-center">
-          We made a note of what we did wrong, and will look into it. In the meantime, you could try refreshing the page
+          <%= t('error_pages.five_hundred.error_message') %>
         </p>
         <p class="text-center">
-          <%= link_to "Return to the home page", root_url %>
+          <%= link_to t('error_pages.return_to_home'), root_url %>
         </p>
       </div>
     </div>

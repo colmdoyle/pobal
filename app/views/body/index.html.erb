@@ -1,6 +1,6 @@
-<% title "Bodies" %>
+<% title t('body.index.title') %>
 <div class="container">
-  <h2>Bodies</h2>
+  <h2><%= t('body.index.title') %></h2>
   <% for body_type in @bodies %>
   <% unless body_type.bodies.count < 1 %>
   <div class="panel panel-default">
@@ -11,8 +11,8 @@
       <div class="table-responsive">
         <table class="table sortable-theme-bootstrap" data-sortable>
           <thead>
-            <th>Name</th>
-            <th>Number of Members</th>
+            <th><%= t('body.index.name') %></th>
+            <th><%= t('body.index.number_of_members') %></th>
           </thead>
           <tbody>
             <% for body in body_type.bodies %>

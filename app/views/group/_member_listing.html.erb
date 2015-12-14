@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-md-2"></div>
+  <div class="col-md-10">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= panel_title %>
+          <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @group.name, report_url: request.original_url }%></span>
+        </h3>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table sortable-theme-bootstrap" data-sortable>
+            <thead>
+              <th><%= t('general.name') %></th>
+              <th><%= t('general.position') %></th>
+              <th><%= t('general.from') %></th>
+              <th><%= t('general.to') %></th>
+            </thead>
+            <tbody>
+              <% for member in members %>
+              <tr>
+                <td><%= link_to member.person.name, member.person %></td>
+                <td><%= member.person.current_position ? member.person.current_position.position_type.title : "" %></td>
+                <td><%= member.start_date ? member.start_date : t('general.unknown') %></td>
+                <td><%= member.end_date ? member.end_date : t('general.current') %></td>
+              </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
