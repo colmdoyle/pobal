@@ -7,7 +7,7 @@ class SearchController < ApplicationController
     mapit_lookup = convert_address_to_mapit(params['form-input'])
     @mapit_response = JSON.parse(mapit_lookup.mapit_response)
     @search_results = {}
-    if @mapit_response
+    unless @mapit_response.nil?
       @mapit_response.each do |_, value|
 
         constituency_type = ConstituencyType.find_by(mapit_code: value['type'])
@@ -32,7 +32,6 @@ class SearchController < ApplicationController
   def convert_address_to_mapit(address)
     cached_location = Search.find_by(address: address)
     if cached_location.nil?
-      puts "hitting server"
       location = Geocoder.coordinates(address)
       unless location.nil?
         cached_location = Search.create(latitude: location[1], longitude: location[0], address: address)
