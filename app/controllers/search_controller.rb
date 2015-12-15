@@ -1,32 +1,37 @@
 class SearchController < ApplicationController
   def index
-    unless params['form-input']
+    unless params['form-input'] && params['form-input'].length > 0
       redirect_to root_path
+      return
     end
-
-    mapit_lookup = convert_address_to_mapit(params['form-input'])
-    @mapit_response = JSON.parse(mapit_lookup.mapit_response)
+    @mapit_response = JSON.parse(convert_address_to_mapit(params['form-input']).mapit_response)
     @search_results = {}
     unless @mapit_response.nil?
-      @mapit_response.each do |_, value|
+      @search_results = build_search_results(@mapit_response)
+    end
+  end
 
-        constituency_type = ConstituencyType.find_by(mapit_code: value['type'])
-        constituency = Constituency.find_by(map_it_id: value['id'], constituency_type: constituency_type)
+  def build_search_results(mapit_response)
+    search_results = {}
+    mapit_response.each do |_, value|
 
-        unless constituency.nil?
-          constituency_reps = []
-          for @representative in Position.where(constituency: constituency, end_date: nil).includes(:person)
-            constituency_reps << @representative unless @representative.nil?
-          end
+      constituency_type = ConstituencyType.find_by(mapit_code: value['type'])
+      constituency = Constituency.find_by(map_it_id: value['id'], constituency_type: constituency_type)
 
-          @search_results[constituency.id] = {
-            "constituency_type" => constituency_type,
-            "constituency" => constituency,
-            "representatives" => constituency_reps
-          }
+      unless constituency.nil?
+        constituency_reps = []
+        for @representative in Position.where(constituency: constituency, end_date: nil).includes(:person)
+          constituency_reps << @representative unless @representative.nil?
         end
+
+        search_results[constituency.id] = {
+          "constituency_type" => constituency_type,
+          "constituency" => constituency,
+          "representatives" => constituency_reps
+        }
       end
     end
+    return search_results
   end
 
   def convert_address_to_mapit(address)
