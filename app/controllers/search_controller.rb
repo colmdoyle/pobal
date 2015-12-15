@@ -4,7 +4,8 @@ class SearchController < ApplicationController
       redirect_to root_path
     end
 
-    @mapit_response = convert_address_to_mapit(params['form-input'])
+    mapit_lookup = convert_address_to_mapit(params['form-input'])
+    @mapit_response = JSON.parse(mapit_lookup.mapit_response)
     @search_results = {}
     if @mapit_response
       @mapit_response.each do |_, value|
@@ -29,9 +30,16 @@ class SearchController < ApplicationController
   end
 
   def convert_address_to_mapit(address)
-    @location = Geocoder.coordinates(address)
-    unless @location.nil?
-      @mapit_response = JSON.parse(HTTParty.get("#{Rails.application.secrets.mapit_url}#{@location[1]},#{@location[0]}").body)
+    cached_location = Search.find_by(address: address)
+    if cached_location.nil?
+      puts "hitting server"
+      location = Geocoder.coordinates(address)
+      unless location.nil?
+        cached_location = Search.create(latitude: location[1], longitude: location[0], address: address)
+        cached_location.mapit_response = HTTParty.get("#{Rails.application.secrets.mapit_url}#{cached_location.latitude},#{cached_location.longitude}").body
+        cached_location.save
+      end
     end
+    return cached_location
   end
 end

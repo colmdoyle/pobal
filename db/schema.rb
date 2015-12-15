@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151204000725) do
+ActiveRecord::Schema.define(version: 20151215174229) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -79,6 +79,17 @@ ActiveRecord::Schema.define(version: 20151204000725) do
   end
 
   add_index "constituencies", ["constituency_type_id"], name: "index_constituencies_on_constituency_type_id", using: :btree
+
+  create_table "constituency_translations", force: :cascade do |t|
+    t.integer  "constituency_id", limit: 4,   null: false
+    t.string   "locale",          limit: 255, null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "name",            limit: 255
+  end
+
+  add_index "constituency_translations", ["constituency_id"], name: "index_constituency_translations_on_constituency_id", using: :btree
+  add_index "constituency_translations", ["locale"], name: "index_constituency_translations_on_locale", using: :btree
 
   create_table "constituency_types", force: :cascade do |t|
     t.datetime "created_at",                              null: false
@@ -174,6 +185,15 @@ ActiveRecord::Schema.define(version: 20151204000725) do
   add_index "positions", ["constituency_id"], name: "index_positions_on_constituency_id", using: :btree
   add_index "positions", ["person_id"], name: "index_positions_on_person_id", using: :btree
   add_index "positions", ["position_type_id"], name: "index_positions_on_position_type_id", using: :btree
+
+  create_table "searches", force: :cascade do |t|
+    t.string   "address",        limit: 255,   null: false
+    t.float    "latitude",       limit: 24
+    t.float    "longitude",      limit: 24
+    t.text     "mapit_response", limit: 65535
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+  end
 
   add_foreign_key "bodies", "body_types"
   add_foreign_key "groups", "group_types"
