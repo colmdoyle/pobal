@@ -40,7 +40,12 @@ class SearchController < ApplicationController
       location = Geocoder.coordinates(address)
       unless location.nil?
         cached_location = Search.create(latitude: location[1], longitude: location[0], address: address)
-        cached_location.mapit_response = HTTParty.get("#{Rails.application.secrets.mapit_url}#{cached_location.latitude},#{cached_location.longitude}").body
+        query_to_mapit = HTTParty.get("#{Rails.application.secrets.mapit_url}#{cached_location.latitude},#{cached_location.longitude}")
+        if query_to_mapit.code == 200
+          cached_location.mapit_response = query_to_mapit.body
+        else
+          cached_location.mapit_response = "{}"
+        end
         cached_location.save
       end
     end
