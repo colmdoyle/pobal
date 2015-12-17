@@ -1,5 +1,6 @@
 class Person < ActiveRecord::Base
   include FriendlyId
+  nilify_blanks
   has_many :groups, through: :memberships, dependent: :destroy
   has_many :bodies, through: :positions, dependent: :destroy
   has_many :memberships

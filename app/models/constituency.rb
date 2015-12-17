@@ -1,6 +1,6 @@
 class Constituency < ActiveRecord::Base
   include FriendlyId
-
+  nilify_blanks
   default_scope { order('name ASC') }
 
   belongs_to :constituency_type

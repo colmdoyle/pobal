@@ -1,5 +1,6 @@
 class Group < ActiveRecord::Base
   include FriendlyId
+  nilify_blanks
   belongs_to :group_type
   has_many :people, through: :memberships, dependent: :destroy
   has_many :memberships, dependent: :destroy
