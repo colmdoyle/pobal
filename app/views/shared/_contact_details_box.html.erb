@@ -11,7 +11,7 @@
             <i class="fa fa-fw fa-phone"></i>
           </li>
           <li>
-            <%= link_to subject.phone_number, "tel:#{subject.phone_number}", target: "_blank" %>
+            <%= link_to subject.phone_number, "tel:#{subject.phone_number}", target: "_blank", itemprop: "telephone" %>
           </li>
         </ul>
       </li>
@@ -47,7 +47,7 @@
             <i class="fa fa-fw fa-envelope"></i>
           </li>
           <li>
-            <%= mail_to subject.email %>
+            <%= mail_to subject.email, subject.email, itemprop: "email" %>
           </li>
         </ul>
       </li>
@@ -59,7 +59,7 @@
             <i class="fa fa-fw fa-globe"></i>
           </li>
           <li>
-            <%= link_to subject.website, subject.website, target: "_blank" %>
+            <%= link_to subject.website, subject.website, target: "_blank", itemprop: "url" %>
           </li>
         </ul>
       </li>
@@ -71,7 +71,9 @@
             <i class="fa fa-fw fa-building"></i>
           </li>
           <li>
-            <%= subject.postal_address %>
+            <address itemprop="address">
+              <%= subject.postal_address %>
+            </address>
           </li>
         </ul>
       </li>
