@@ -4,7 +4,7 @@ class GroupController < ApplicationController
   end
 
   def show
-    @group = Group.find(params[:id])
+    @group = Group.includes(:memberships => :person).find(params[:id])
   end
 
 end
