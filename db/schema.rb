@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215212438) do
+ActiveRecord::Schema.define(version: 20151218221846) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 20151215212438) do
   end
 
   add_index "bodies", ["body_type_id"], name: "index_bodies_on_body_type_id", using: :btree
+  add_index "bodies", ["slug"], name: "index_bodies_on_slug", using: :btree
 
   create_table "body_types", force: :cascade do |t|
     t.datetime "created_at",                                    null: false
@@ -68,6 +69,8 @@ ActiveRecord::Schema.define(version: 20151215212438) do
     t.string   "slug",               limit: 255,                null: false
     t.boolean  "has_constituencies",             default: true
   end
+
+  add_index "body_types", ["slug"], name: "index_body_types_on_slug", using: :btree
 
   create_table "constituencies", force: :cascade do |t|
     t.datetime "created_at",                       null: false
@@ -79,6 +82,7 @@ ActiveRecord::Schema.define(version: 20151215212438) do
   end
 
   add_index "constituencies", ["constituency_type_id"], name: "index_constituencies_on_constituency_type_id", using: :btree
+  add_index "constituencies", ["slug"], name: "index_constituencies_on_slug", using: :btree
 
   create_table "constituency_translations", force: :cascade do |t|
     t.integer  "constituency_id", limit: 4,   null: false
@@ -102,12 +106,16 @@ ActiveRecord::Schema.define(version: 20151215212438) do
     t.string   "short_description",         limit: 255
   end
 
+  add_index "constituency_types", ["slug"], name: "index_constituency_types_on_slug", using: :btree
+
   create_table "group_types", force: :cascade do |t|
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "name",       limit: 255
     t.string   "slug",       limit: 255, null: false
   end
+
+  add_index "group_types", ["slug"], name: "index_group_types_on_slug", using: :btree
 
   create_table "groups", force: :cascade do |t|
     t.datetime "created_at",                        null: false
@@ -129,6 +137,7 @@ ActiveRecord::Schema.define(version: 20151215212438) do
   end
 
   add_index "groups", ["group_type_id"], name: "index_groups_on_group_type_id", using: :btree
+  add_index "groups", ["slug"], name: "index_groups_on_slug", using: :btree
 
   create_table "memberships", force: :cascade do |t|
     t.datetime "created_at",             null: false
@@ -162,12 +171,16 @@ ActiveRecord::Schema.define(version: 20151215212438) do
     t.string   "slug",                limit: 255, default: ""
   end
 
+  add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
+
   create_table "position_types", force: :cascade do |t|
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
     t.string   "title",      limit: 255
     t.string   "slug",       limit: 255, null: false
   end
+
+  add_index "position_types", ["slug"], name: "index_position_types_on_slug", using: :btree
 
   create_table "positions", force: :cascade do |t|
     t.datetime "created_at",                   null: false
