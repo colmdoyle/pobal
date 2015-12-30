@@ -11,7 +11,7 @@
     <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" property="og:description">
     <meta content="website" property="og:type">
     <meta content="<%= request.original_url %>" property="og:url">
-    <meta content="<%= image_url('og-image-min.png') %>" property="og:image">
+    <meta content="<%= yield_meta_tag(:og_image, image_url('og-image-min.png')) %>" property="og:image">
     <meta content="Who is my TD?" property="og:site_name">
     <meta content="260300016" property="fb:admins">
     <meta content="415289985220755" property="fb:app_id">

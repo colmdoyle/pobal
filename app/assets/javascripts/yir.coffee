@@ -1,0 +1,1 @@
+$('.yir-panel').fitText()
