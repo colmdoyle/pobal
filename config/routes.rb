@@ -21,6 +21,8 @@ Rails.application.routes.draw do
 
   get "bundles/whoismytdmain/images/headshots/:_/:_", to: redirect("/", status: 404)
 
+  get "/ge16", to: redirect("/body/2016-general-election", status: 301)
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
