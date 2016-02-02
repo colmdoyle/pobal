@@ -11,26 +11,28 @@
       </div>
     </div>
   <% else %>
-  <% @search_results.each { |_, details| %>
+  <% @search_results.each do |_, details| %>
+  <% details["representatives"].each do |position_type, rep_block| %>
     <div class="well">
       <div class="row">
         <div class="col-md-4">
-          <h2>Your <%= details["constituency_type"].member_title_abbreviation.pluralize(details["representatives"].count) %> for <%= link_to details["constituency"].name, details["constituency"] %></h2>
+          <h2>Your <%= position_type.title.pluralize(rep_block.count) %> for <%= link_to details["constituency"].name, details["constituency"] %></h2>
           <p>
-            <%= details["constituency_type"].short_description %>
+            <%= position_type.short_description %>
           </p>
         </div>
         <div class="col-md-8">
           <ul class="list-unstyled">
-            <% for rep in details["representatives"] %>
+            <% for rep in rep_block %>
               <li>
                   <span class="lead"><%= link_to rep.person.name, rep.person %> <span class="text-muted"><%= rep.person.current_party ?  "(#{rep.person.current_party.name})" : "" %></span></span>
               </li>
-            <% end %>
+              <% end %>
           </ul>
         </div>
       </div>
     </div>
-  <% } %>
+    <% end %>
+  <% end %>
   <% end %>
 </div>

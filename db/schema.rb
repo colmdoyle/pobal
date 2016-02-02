@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151218221846) do
+ActiveRecord::Schema.define(version: 20160202223812) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -174,10 +174,11 @@ ActiveRecord::Schema.define(version: 20151218221846) do
   add_index "people", ["slug"], name: "index_people_on_slug", using: :btree
 
   create_table "position_types", force: :cascade do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.string   "title",      limit: 255
-    t.string   "slug",       limit: 255, null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "title",             limit: 255
+    t.string   "slug",              limit: 255, null: false
+    t.string   "short_description", limit: 255
   end
 
   add_index "position_types", ["slug"], name: "index_position_types_on_slug", using: :btree

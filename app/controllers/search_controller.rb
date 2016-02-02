@@ -19,11 +19,10 @@ class SearchController < ApplicationController
       constituency = Constituency.find_by(map_it_id: value['id'], constituency_type: constituency_type)
 
       unless constituency.nil?
-        constituency_reps = []
+        constituency_reps = Hash.new { |hash, key| hash[key] = [] }
         for @representative in Position.where(constituency: constituency, end_date: nil).includes(:person)
-          constituency_reps << @representative unless @representative.nil?
+          constituency_reps[@representative.position_type] << @representative unless @representative.nil?
         end
-
         search_results[constituency.id] = {
           "constituency_type" => constituency_type,
           "constituency" => constituency,
