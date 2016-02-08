@@ -28,12 +28,12 @@
     </div>
   </div>
   <% end %>
-  <% if @body.positions.length > 0 %>
+  <% unless @current_members.empty? %>
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Current Members <span class="text-muted">(<%= @body.positions.includes(:person).where(end_date: nil).count %>)</span><span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @body.name, report_url: request.original_url }%></span></h3>
+          <h3 class="panel-title">Current Members <span class="text-muted">(<%= @current_members.count %>)</span><span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @body.name, report_url: request.original_url }%></span></h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
@@ -50,7 +50,7 @@
                 <th>Member since</th>
               </thead>
               <tbody>
-                <% for member in @body.positions.includes(:person).where(end_date: nil).order('people.last_name') %>
+                <% for member in @current_members %>
                 <tr>
                   <td><%= link_to member.person.name, member.person %></td>
                   <% if member.constituency %>
@@ -61,6 +61,49 @@
                   <% end %>
                   <td><%= link_to member.person.current_party.name, member.person.current_party %></td>
                   <td><%= member.start_date ? member.start_date : "Unknown" %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% unless @former_members.empty? %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Current Members <span class="text-muted">(<%= @former_members.count %>)</span><span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @body.name, report_url: request.original_url }%></span></h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table sortable-theme-bootstrap" data-sortable>
+              <thead>
+                <th>Name</th>
+                <% if @body.body_type.has_constituencies %>
+                <th>Constituency</th>
+                <% else %>
+                <th>Type</th>
+                <th>Note</th>
+                <% end %>
+                <th>Party</th>
+                <th>Member until</th>
+              </thead>
+              <tbody>
+                <% for member in @former_members %>
+                <tr>
+                  <td><%= link_to member.person.name, member.person %></td>
+                  <% if member.constituency %>
+                  <td><%= link_to member.constituency.name, member.constituency %></td>
+                  <% else %>
+                  <td><%= member.position_type.title %></td>
+                  <td><%= member.note %></td>
+                  <% end %>
+                  <td><%= link_to member.person.current_party.name, member.person.current_party %></td>
+                  <td><%= member.end_date ? member.end_date : "Unknown" %></td>
                 </tr>
                 <% end %>
               </tbody>

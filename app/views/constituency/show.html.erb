@@ -21,15 +21,16 @@
     </div>
   </div>
   <% end %>
+  <% unless @current_members.empty? %>
   <div class="row">
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
+          <h3 class="panel-title">Current Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
         </div>
         <div class="panel-body">
           <ul class="list-unstyled">
-            <% for member in @members %>
+            <% for member in @current_members %>
             <li>
               <%= link_to member.person.name, member.person %>
             </li>
@@ -39,6 +40,27 @@
       </div>
     </div>
   </div>
+  <% end %>
+  <% unless @former_members.empty? %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Former Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
+        </div>
+        <div class="panel-body">
+          <ul class="list-unstyled">
+            <% for member in @former_members %>
+            <li>
+              <%= link_to member.person.name, member.person %>
+            </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>
 <% if @constituency.map_it_id %>
 <script type="text/javascript">
