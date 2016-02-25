@@ -15,6 +15,11 @@
 <div class="container search-area">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
+      <% unless @active_megaphone.nil? %>
+      <div class="alert alert-info" role="alert">
+        <%= @active_megaphone.message.html_safe %>
+      </div>
+      <% end %>
       <p class="text-center lead">
         To get started, just enter your home address.
       </p>
