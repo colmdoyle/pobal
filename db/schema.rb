@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160202223812) do
+ActiveRecord::Schema.define(version: 20160225083559) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -138,6 +138,15 @@ ActiveRecord::Schema.define(version: 20160202223812) do
 
   add_index "groups", ["group_type_id"], name: "index_groups_on_group_type_id", using: :btree
   add_index "groups", ["slug"], name: "index_groups_on_slug", using: :btree
+
+  create_table "megaphones", force: :cascade do |t|
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.string   "message",    limit: 255
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.boolean  "active"
+  end
 
   create_table "memberships", force: :cascade do |t|
     t.datetime "created_at",             null: false
