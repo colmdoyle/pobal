@@ -80,7 +80,11 @@
                   <td><%= member.position_type.title %></td>
                   <td><%= member.note %></td>
                   <% end %>
-                  <td><%= link_to member.person.current_party.name, member.person.current_party %></td>
+                  <td>
+                    <% unless member.person.current_party.nil? %>
+                    <%= link_to member.person.current_party.name, member.person.current_party %>
+                    <% end %>
+                  </td>
                   <td><%= member.start_date ? member.start_date : "Unknown" %></td>
                 </tr>
                 <% end %>
@@ -123,7 +127,11 @@
                   <td><%= member.position_type.title %></td>
                   <td><%= member.note %></td>
                   <% end %>
-                  <td><%= link_to member.person.current_party.name, member.person.current_party %></td>
+                  <td>
+                    <% unless member.person.current_party.nil? %>
+                    <%= link_to member.person.current_party.name, member.person.current_party %>
+                    <% end %>
+                  </td>
                   <td><%= member.end_date ? member.end_date : "Unknown" %></td>
                 </tr>
                 <% end %>
