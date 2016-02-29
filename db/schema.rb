@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160225083559) do
+ActiveRecord::Schema.define(version: 20160229092814) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -134,6 +134,7 @@ ActiveRecord::Schema.define(version: 20160225083559) do
     t.string   "twitter",             limit: 255
     t.string   "postal_address",      limit: 255
     t.string   "website",             limit: 255
+    t.string   "color",               limit: 255
   end
 
   add_index "groups", ["group_type_id"], name: "index_groups_on_group_type_id", using: :btree

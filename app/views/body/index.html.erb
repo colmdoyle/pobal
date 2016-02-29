@@ -12,13 +12,11 @@
         <table class="table sortable-theme-bootstrap" data-sortable>
           <thead>
             <th>Name</th>
-            <th>Number of Members</th>
           </thead>
           <tbody>
             <% for body in body_type.bodies %>
             <tr>
               <td><%= link_to body.name, body %></td>
-              <td><%= body.current_members.count %></td>
             </tr>
             <% end %>
           </tbody>

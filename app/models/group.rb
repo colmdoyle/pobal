@@ -47,10 +47,14 @@ class Group < ActiveRecord::Base
   def name_initials
     initials = []
     words = name.split(' ')
-    words.each do |word|
-      initials << word.first
+    if words.count === 1
+      return words[0][0,3].upcase
+    else
+      words.each do |word|
+        initials << word.first
+      end
+      return initials.join('')
     end
-    return initials.join('')
   end
 
 end

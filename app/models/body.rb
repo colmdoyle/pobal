@@ -24,6 +24,14 @@ class Body < ActiveRecord::Base
     new_record? || slug.blank?
   end
 
+  def groups
+    groups = []
+    current_members.each do |member|
+      groups << member.person.current_party
+    end
+    groups
+  end
+
   def current_members
     positions.where(end_date: nil).includes(:person).order('people.last_name')
   end
