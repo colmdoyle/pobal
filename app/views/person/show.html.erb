@@ -81,11 +81,11 @@
                 <% for position in @person.positions %>
                 <tr>
                   <td><%= link_to position.body.name, position.body %></td>
-                  <td><%= position.position_type.title %></td>
+                  <td><%= position.position_type ? position.position_type.title : '' %></td>
                   <td><%= position.note %></td>
-                  <td><%= position.constituency ? position.constituency.name : "" %></td>
-                  <td><%= position.start_date ? position.start_date : "Unknown" %></td>
-                  <td><%= position.end_date ? position.end_date : "Current" %></td>
+                  <td><%= position.constituency ? position.constituency.name : '' %></td>
+                  <td><%= position.start_date ? position.start_date : 'Unknown' %></td>
+                  <td><%= position.end_date ? position.end_date : 'Current' %></td>
                 </tr>
                 <% end %>
               </tbody>
