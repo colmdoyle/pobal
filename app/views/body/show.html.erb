@@ -33,6 +33,27 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
+          <h3 class="panel-title">Seats by Group</h3>
+        </div>
+        <div class="panel-body group-breakdown">
+          <div class="row">
+            <% @group_breakdown.each do |group, count| %>
+            <div class="col-md-<%= (12 / @group_breakdown.count).round %> text-center single-breakdown" style="background-color:<%= group.color ? group.color : 'inherit' %>">
+              <%= group.name_initials %>
+              <p class="breakdown-count">
+                <%= count %>
+              </p>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
           <h3 class="panel-title">Current Members <span class="text-muted">(<%= @current_members.count %>)</span><span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @body.name, report_url: request.original_url }%></span></h3>
         </div>
         <div class="panel-body">

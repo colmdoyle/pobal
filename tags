@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ActiveSupport	spec/support/factory_girl.rb	/^class ActiveSupport::TestCase$/;"	c
+AddActiveFieldToMegaphone	db/migrate/20160225083559_add_active_field_to_megaphone.rb	/^class AddActiveFieldToMegaphone < ActiveRecord::Migration$/;"	c
+AddAssocFieldsToPosition	db/migrate/20151030122918_add_assoc_fields_to_position.rb	/^class AddAssocFieldsToPosition < ActiveRecord::Migration$/;"	c
+AddAttachmentAvatarToPeople	db/migrate/20151022142021_add_attachment_avatar_to_people.rb	/^class AddAttachmentAvatarToPeople < ActiveRecord::Migration$/;"	c
+AddAvatarsToGroupsAndBodies	db/migrate/20151123182632_add_avatars_to_groups_and_bodies.rb	/^class AddAvatarsToGroupsAndBodies < ActiveRecord::Migration$/;"	c
+AddBodyReferenceToPositionType	db/migrate/20151030124546_add_body_reference_to_position_type.rb	/^class AddBodyReferenceToPositionType < ActiveRecord::Migration$/;"	c
+AddBodyTypeToBody	db/migrate/20151104090358_add_body_type_to_body.rb	/^class AddBodyTypeToBody < ActiveRecord::Migration$/;"	c
+AddColorFieldToGroups	db/migrate/20160229092814_add_color_field_to_groups.rb	/^class AddColorFieldToGroups < ActiveRecord::Migration$/;"	c
+AddConstTypeFieldToConstituency	db/migrate/20151029214840_add_const_type_field_to_constituency.rb	/^class AddConstTypeFieldToConstituency < ActiveRecord::Migration$/;"	c
+AddContactDetailsToGroup	db/migrate/20151127084213_add_contact_details_to_group.rb	/^class AddContactDetailsToGroup < ActiveRecord::Migration$/;"	c
+AddDescriptionToBody	db/migrate/20151127180922_add_description_to_body.rb	/^class AddDescriptionToBody < ActiveRecord::Migration$/;"	c
+AddFieldsToBody	db/migrate/20151029220203_add_fields_to_body.rb	/^class AddFieldsToBody < ActiveRecord::Migration$/;"	c
+AddFieldsToConstituency	db/migrate/20151029144817_add_fields_to_constituency.rb	/^class AddFieldsToConstituency < ActiveRecord::Migration$/;"	c
+AddFieldsToConstituencyType	db/migrate/20151102175213_add_fields_to_constituency_type.rb	/^class AddFieldsToConstituencyType < ActiveRecord::Migration$/;"	c
+AddFieldsToGroup	db/migrate/20151021150633_add_fields_to_group.rb	/^class AddFieldsToGroup < ActiveRecord::Migration$/;"	c
+AddFieldsToMegaphone	db/migrate/20160224180622_add_fields_to_megaphone.rb	/^class AddFieldsToMegaphone < ActiveRecord::Migration$/;"	c
+AddFieldsToMembership	db/migrate/20151102214214_add_fields_to_membership.rb	/^class AddFieldsToMembership < ActiveRecord::Migration$/;"	c
+AddFieldsToPerson	db/migrate/20151021150940_add_fields_to_person.rb	/^class AddFieldsToPerson < ActiveRecord::Migration$/;"	c
+AddFieldsToPosition	db/migrate/20151030120621_add_fields_to_position.rb	/^class AddFieldsToPosition < ActiveRecord::Migration$/;"	c
+AddGroupTypeToGroup	db/migrate/20151104091143_add_group_type_to_group.rb	/^class AddGroupTypeToGroup < ActiveRecord::Migration$/;"	c
+AddHasConstituencyFieldToBodyType	db/migrate/20151204000725_add_has_constituency_field_to_body_type.rb	/^class AddHasConstituencyFieldToBodyType < ActiveRecord::Migration$/;"	c
+AddIndexToSearch	db/migrate/20151215212438_add_index_to_search.rb	/^class AddIndexToSearch < ActiveRecord::Migration$/;"	c
+AddMapItToConstituencyType	db/migrate/20151102175329_add_map_it_to_constituency_type.rb	/^class AddMapItToConstituencyType < ActiveRecord::Migration$/;"	c
+AddNewFieldsToGroupType	db/migrate/20151104091042_add_new_fields_to_group_type.rb	/^class AddNewFieldsToGroupType < ActiveRecord::Migration$/;"	c
+AddNoteToMembership	db/migrate/20151124092055_add_note_to_membership.rb	/^class AddNoteToMembership < ActiveRecord::Migration$/;"	c
+AddNoteToPosition	db/migrate/20151124214505_add_note_to_position.rb	/^class AddNoteToPosition < ActiveRecord::Migration$/;"	c
+AddPositionTypeToPosition	db/migrate/20151030130339_add_position_type_to_position.rb	/^class AddPositionTypeToPosition < ActiveRecord::Migration$/;"	c
+AddShortDescriptionToConstituencyType	db/migrate/20151126181143_add_short_description_to_constituency_type.rb	/^class AddShortDescriptionToConstituencyType < ActiveRecord::Migration$/;"	c
+AddShortDescriptionToPositionType	db/migrate/20160202223812_add_short_description_to_position_type.rb	/^class AddShortDescriptionToPositionType < ActiveRecord::Migration$/;"	c
+AddSlugIndexesToObjects	db/migrate/20151218221846_add_slug_indexes_to_objects.rb	/^class AddSlugIndexesToObjects < ActiveRecord::Migration$/;"	c
+AddSlugToPerson	db/migrate/20151112183218_add_slug_to_person.rb	/^class AddSlugToPerson < ActiveRecord::Migration$/;"	c
+AddTitleToBodyTypes	db/migrate/20151104085942_add_title_to_body_types.rb	/^class AddTitleToBodyTypes < ActiveRecord::Migration$/;"	c
+AddTitleToPositionType	db/migrate/20151030124142_add_title_to_position_type.rb	/^class AddTitleToPositionType < ActiveRecord::Migration$/;"	c
+AddWebsiteToGroup	db/migrate/20151127084253_add_website_to_group.rb	/^class AddWebsiteToGroup < ActiveRecord::Migration$/;"	c
+AdminUser	app/models/admin_user.rb	/^class AdminUser < ActiveRecord::Base$/;"	c
+Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Pobal
+ApplicationController	app/controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Body	app/models/body.rb	/^class Body < ActiveRecord::Base$/;"	c
+BodyController	app/controllers/body_controller.rb	/^class BodyController < ApplicationController$/;"	c
+BodyHelper	app/helpers/body_helper.rb	/^module BodyHelper$/;"	m
+BodyType	app/models/body_type.rb	/^class BodyType < ActiveRecord::Base$/;"	c
+BodyTypeController	app/controllers/body_type_controller.rb	/^class BodyTypeController < ApplicationController$/;"	c
+BodyTypeHelper	app/helpers/body_type_helper.rb	/^module BodyTypeHelper$/;"	m
+ChangeConstituencyTypeColumnInConstituency	db/migrate/20151102180139_change_constituency_type_column_in_constituency.rb	/^class ChangeConstituencyTypeColumnInConstituency < ActiveRecord::Migration$/;"	c
+ChangeDescriptionTypeInConstituencyType	db/migrate/20151102175806_change_description_type_in_constituency_type.rb	/^class ChangeDescriptionTypeInConstituencyType < ActiveRecord::Migration$/;"	c
+Constituency	app/models/constituency.rb	/^class Constituency < ActiveRecord::Base$/;"	c
+ConstituencyController	app/controllers/constituency_controller.rb	/^class ConstituencyController < ApplicationController$/;"	c
+ConstituencyHelper	app/helpers/constituency_helper.rb	/^module ConstituencyHelper$/;"	m
+ConstituencyType	app/models/constituency_type.rb	/^class ConstituencyType < ActiveRecord::Base$/;"	c
+Create	db/migrate/20151116182702_create.rb	/^class Create < ActiveRecord::Migration$/;"	c
+CreateActiveAdminComments	db/migrate/20151021142753_create_active_admin_comments.rb	/^class CreateActiveAdminComments < ActiveRecord::Migration$/;"	c
+CreateBodies	db/migrate/20151021145430_create_bodies.rb	/^class CreateBodies < ActiveRecord::Migration$/;"	c
+CreateBodyTypes	db/migrate/20151104085836_create_body_types.rb	/^class CreateBodyTypes < ActiveRecord::Migration$/;"	c
+CreateConstituencies	db/migrate/20151021145511_create_constituencies.rb	/^class CreateConstituencies < ActiveRecord::Migration$/;"	c
+CreateConstituencyTypes	db/migrate/20151102174919_create_constituency_types.rb	/^class CreateConstituencyTypes < ActiveRecord::Migration$/;"	c
+CreateGroupTypes	db/migrate/20151104091016_create_group_types.rb	/^class CreateGroupTypes < ActiveRecord::Migration$/;"	c
+CreateGroups	db/migrate/20151021145409_create_groups.rb	/^class CreateGroups < ActiveRecord::Migration$/;"	c
+CreateMegaphones	db/migrate/20160224180456_create_megaphones.rb	/^class CreateMegaphones < ActiveRecord::Migration$/;"	c
+CreateMemberships	db/migrate/20151102213707_create_memberships.rb	/^class CreateMemberships < ActiveRecord::Migration$/;"	c
+CreatePeople	db/migrate/20151021092433_create_people.rb	/^class CreatePeople < ActiveRecord::Migration$/;"	c
+CreatePositionTypes	db/migrate/20151030124056_create_position_types.rb	/^class CreatePositionTypes < ActiveRecord::Migration$/;"	c
+CreatePositions	db/migrate/20151021145416_create_positions.rb	/^class CreatePositions < ActiveRecord::Migration$/;"	c
+CreateSearches	db/migrate/20151215174229_create_searches.rb	/^class CreateSearches < ActiveRecord::Migration$/;"	c
+DeviseCreateAdminUsers	db/migrate/20151021142751_devise_create_admin_users.rb	/^class DeviseCreateAdminUsers < ActiveRecord::Migration$/;"	c
+ErrorsController	app/controllers/errors_controller.rb	/^class ErrorsController < ApplicationController$/;"	c
+ErrorsHelper	app/helpers/errors_helper.rb	/^module ErrorsHelper$/;"	m
+Group	app/models/group.rb	/^class Group < ActiveRecord::Base$/;"	c
+GroupController	app/controllers/group_controller.rb	/^class GroupController < ApplicationController$/;"	c
+GroupHelper	app/helpers/group_helper.rb	/^module GroupHelper$/;"	m
+GroupType	app/models/group_type.rb	/^class GroupType < ActiveRecord::Base$/;"	c
+GroupTypeController	app/controllers/group_type_controller.rb	/^class GroupTypeController < ApplicationController$/;"	c
+GroupTypeHelper	app/helpers/group_type_helper.rb	/^module GroupTypeHelper$/;"	m
+Interpolations	config/initializers/paper_clip_default_url_fix.rb	/^  module Interpolations$/;"	m	class:Paperclip
+Megaphone	app/models/megaphone.rb	/^class Megaphone < ActiveRecord::Base$/;"	c
+Membership	app/models/membership.rb	/^class Membership < ActiveRecord::Base$/;"	c
+Minitest	spec/support/factory_girl.rb	/^class Minitest::Spec$/;"	c
+Minitest	spec/support/factory_girl.rb	/^class Minitest::Unit::TestCase$/;"	c
+Paperclip	config/initializers/paper_clip_default_url_fix.rb	/^module Paperclip$/;"	m
+Person	app/models/person.rb	/^class Person < ActiveRecord::Base$/;"	c
+PersonController	app/controllers/person_controller.rb	/^class PersonController < ApplicationController$/;"	c
+PersonHelper	app/helpers/person_helper.rb	/^module PersonHelper$/;"	m
+Pobal	config/application.rb	/^module Pobal$/;"	m
+Position	app/models/position.rb	/^class Position < ActiveRecord::Base$/;"	c
+PositionType	app/models/position_type.rb	/^class PositionType < ActiveRecord::Base$/;"	c
+RemoveBodyReferenceFromPositionType	db/migrate/20151030130128_remove_body_reference_from_position_type.rb	/^class RemoveBodyReferenceFromPositionType < ActiveRecord::Migration$/;"	c
+RemoveBodyTypeStringFromBody	db/migrate/20151104090621_remove_body_type_string_from_body.rb	/^class RemoveBodyTypeStringFromBody < ActiveRecord::Migration$/;"	c
+RemoveHomepageFromGroup	db/migrate/20151130092018_remove_homepage_from_group.rb	/^class RemoveHomepageFromGroup < ActiveRecord::Migration$/;"	c
+RemovePositionTypeStringFromPosition	db/migrate/20151030131801_remove_position_type_string_from_position.rb	/^class RemovePositionTypeStringFromPosition < ActiveRecord::Migration$/;"	c
+RemoveProfilePictureFromPerson	db/migrate/20151022142126_remove_profile_picture_from_person.rb	/^class RemoveProfilePictureFromPerson < ActiveRecord::Migration$/;"	c
+RemoveTypeFromConstituency	db/migrate/20151029214907_remove_type_from_constituency.rb	/^class RemoveTypeFromConstituency < ActiveRecord::Migration$/;"	c
+ReplaceMapItFieldInConstituency	db/migrate/20151117205706_replace_map_it_field_in_constituency.rb	/^class ReplaceMapItFieldInConstituency < ActiveRecord::Migration$/;"	c
+Search	app/models/search.rb	/^class Search < ActiveRecord::Base$/;"	c
+SearchController	app/controllers/search_controller.rb	/^class SearchController < ApplicationController$/;"	c
+SearchHelper	app/helpers/search_helper.rb	/^module SearchHelper$/;"	m
+Spinach	spec/support/factory_girl.rb	/^class Spinach::FeatureSteps$/;"	c
+Test	spec/support/factory_girl.rb	/^class Test::Unit::TestCase$/;"	c
+WelcomeController	app/controllers/welcome_controller.rb	/^class WelcomeController < ApplicationController$/;"	c
+WelcomeHelper	app/helpers/welcome_helper.rb	/^module WelcomeHelper$/;"	m
+build_search_results	app/controllers/search_controller.rb	/^  def build_search_results(mapit_response)$/;"	f	class:SearchController
+change	db/migrate/20151021092433_create_people.rb	/^  def change$/;"	f	class:CreatePeople
+change	db/migrate/20151021142751_devise_create_admin_users.rb	/^  def change$/;"	f	class:DeviseCreateAdminUsers
+change	db/migrate/20151021145409_create_groups.rb	/^  def change$/;"	f	class:CreateGroups
+change	db/migrate/20151021145416_create_positions.rb	/^  def change$/;"	f	class:CreatePositions
+change	db/migrate/20151021145430_create_bodies.rb	/^  def change$/;"	f	class:CreateBodies
+change	db/migrate/20151021145511_create_constituencies.rb	/^  def change$/;"	f	class:CreateConstituencies
+change	db/migrate/20151021150633_add_fields_to_group.rb	/^  def change$/;"	f	class:AddFieldsToGroup
+change	db/migrate/20151021150940_add_fields_to_person.rb	/^  def change$/;"	f	class:AddFieldsToPerson
+change	db/migrate/20151022142126_remove_profile_picture_from_person.rb	/^  def change$/;"	f	class:RemoveProfilePictureFromPerson
+change	db/migrate/20151029144817_add_fields_to_constituency.rb	/^  def change$/;"	f	class:AddFieldsToConstituency
+change	db/migrate/20151029214840_add_const_type_field_to_constituency.rb	/^  def change$/;"	f	class:AddConstTypeFieldToConstituency
+change	db/migrate/20151029214907_remove_type_from_constituency.rb	/^  def change$/;"	f	class:RemoveTypeFromConstituency
+change	db/migrate/20151029220203_add_fields_to_body.rb	/^  def change$/;"	f	class:AddFieldsToBody
+change	db/migrate/20151030120621_add_fields_to_position.rb	/^  def change$/;"	f	class:AddFieldsToPosition
+change	db/migrate/20151030122918_add_assoc_fields_to_position.rb	/^  def change$/;"	f	class:AddAssocFieldsToPosition
+change	db/migrate/20151030124056_create_position_types.rb	/^  def change$/;"	f	class:CreatePositionTypes
+change	db/migrate/20151030124142_add_title_to_position_type.rb	/^  def change$/;"	f	class:AddTitleToPositionType
+change	db/migrate/20151030124546_add_body_reference_to_position_type.rb	/^  def change$/;"	f	class:AddBodyReferenceToPositionType
+change	db/migrate/20151030130128_remove_body_reference_from_position_type.rb	/^  def change$/;"	f	class:RemoveBodyReferenceFromPositionType
+change	db/migrate/20151030130339_add_position_type_to_position.rb	/^  def change$/;"	f	class:AddPositionTypeToPosition
+change	db/migrate/20151030131801_remove_position_type_string_from_position.rb	/^  def change$/;"	f	class:RemovePositionTypeStringFromPosition
+change	db/migrate/20151102174919_create_constituency_types.rb	/^  def change$/;"	f	class:CreateConstituencyTypes
+change	db/migrate/20151102175213_add_fields_to_constituency_type.rb	/^  def change$/;"	f	class:AddFieldsToConstituencyType
+change	db/migrate/20151102175329_add_map_it_to_constituency_type.rb	/^  def change$/;"	f	class:AddMapItToConstituencyType
+change	db/migrate/20151102175806_change_description_type_in_constituency_type.rb	/^  def change$/;"	f	class:ChangeDescriptionTypeInConstituencyType
+change	db/migrate/20151102180139_change_constituency_type_column_in_constituency.rb	/^  def change$/;"	f	class:ChangeConstituencyTypeColumnInConstituency
+change	db/migrate/20151102213707_create_memberships.rb	/^  def change$/;"	f	class:CreateMemberships
+change	db/migrate/20151102214214_add_fields_to_membership.rb	/^  def change$/;"	f	class:AddFieldsToMembership
+change	db/migrate/20151104085836_create_body_types.rb	/^  def change$/;"	f	class:CreateBodyTypes
+change	db/migrate/20151104085942_add_title_to_body_types.rb	/^  def change$/;"	f	class:AddTitleToBodyTypes
+change	db/migrate/20151104090358_add_body_type_to_body.rb	/^  def change$/;"	f	class:AddBodyTypeToBody
+change	db/migrate/20151104090621_remove_body_type_string_from_body.rb	/^  def change$/;"	f	class:RemoveBodyTypeStringFromBody
+change	db/migrate/20151104091016_create_group_types.rb	/^  def change$/;"	f	class:CreateGroupTypes
+change	db/migrate/20151104091042_add_new_fields_to_group_type.rb	/^  def change$/;"	f	class:AddNewFieldsToGroupType
+change	db/migrate/20151104091143_add_group_type_to_group.rb	/^  def change$/;"	f	class:AddGroupTypeToGroup
+change	db/migrate/20151112183218_add_slug_to_person.rb	/^  def change$/;"	f	class:AddSlugToPerson
+change	db/migrate/20151116182702_create.rb	/^  def change$/;"	f	class:Create
+change	db/migrate/20151117205706_replace_map_it_field_in_constituency.rb	/^  def change$/;"	f	class:ReplaceMapItFieldInConstituency
+change	db/migrate/20151124092055_add_note_to_membership.rb	/^  def change$/;"	f	class:AddNoteToMembership
+change	db/migrate/20151124214505_add_note_to_position.rb	/^  def change$/;"	f	class:AddNoteToPosition
+change	db/migrate/20151126181143_add_short_description_to_constituency_type.rb	/^  def change$/;"	f	class:AddShortDescriptionToConstituencyType
+change	db/migrate/20151127084213_add_contact_details_to_group.rb	/^  def change$/;"	f	class:AddContactDetailsToGroup
+change	db/migrate/20151127084253_add_website_to_group.rb	/^  def change$/;"	f	class:AddWebsiteToGroup
+change	db/migrate/20151127180922_add_description_to_body.rb	/^  def change$/;"	f	class:AddDescriptionToBody
+change	db/migrate/20151130092018_remove_homepage_from_group.rb	/^  def change$/;"	f	class:RemoveHomepageFromGroup
+change	db/migrate/20151204000725_add_has_constituency_field_to_body_type.rb	/^  def change$/;"	f	class:AddHasConstituencyFieldToBodyType
+change	db/migrate/20151215174229_create_searches.rb	/^  def change$/;"	f	class:CreateSearches
+change	db/migrate/20151215212438_add_index_to_search.rb	/^  def change$/;"	f	class:AddIndexToSearch
+change	db/migrate/20151218221846_add_slug_indexes_to_objects.rb	/^  def change$/;"	f	class:AddSlugIndexesToObjects
+change	db/migrate/20160202223812_add_short_description_to_position_type.rb	/^  def change$/;"	f	class:AddShortDescriptionToPositionType
+change	db/migrate/20160224180456_create_megaphones.rb	/^  def change$/;"	f	class:CreateMegaphones
+change	db/migrate/20160224180622_add_fields_to_megaphone.rb	/^  def change$/;"	f	class:AddFieldsToMegaphone
+change	db/migrate/20160225083559_add_active_field_to_megaphone.rb	/^  def change$/;"	f	class:AddActiveFieldToMegaphone
+change	db/migrate/20160229092814_add_color_field_to_groups.rb	/^  def change$/;"	f	class:AddColorFieldToGroups
+convert_address_to_mapit	app/controllers/search_controller.rb	/^  def convert_address_to_mapit(address)$/;"	f	class:SearchController
+current_body	app/models/person.rb	/^  def current_body$/;"	f	class:Person
+current_constituency	app/models/person.rb	/^  def current_constituency$/;"	f	class:Person
+current_members	app/models/body.rb	/^  def current_members$/;"	f	class:Body
+current_members	app/models/group.rb	/^  def current_members$/;"	f	class:Group
+current_party	app/models/person.rb	/^  def current_party$/;"	f	class:Person
+down	db/migrate/20151021142753_create_active_admin_comments.rb	/^  def self.down$/;"	F	class:CreateActiveAdminComments
+down	db/migrate/20151022142021_add_attachment_avatar_to_people.rb	/^  def self.down$/;"	F	class:AddAttachmentAvatarToPeople
+down	db/migrate/20151123182632_add_avatars_to_groups_and_bodies.rb	/^  def self.down$/;"	F	class:AddAvatarsToGroupsAndBodies
+facebook_url	app/models/group.rb	/^  def facebook_url$/;"	f	class:Group
+facebook_url	app/models/person.rb	/^  def facebook_url$/;"	f	class:Person
+former_members	app/models/body.rb	/^  def former_members$/;"	f	class:Body
+former_members	app/models/group.rb	/^  def former_members$/;"	f	class:Group
+has_contact_details?	app/models/group.rb	/^  def has_contact_details? # rubocop:disable Metrics\/CyclomaticComplexity$/;"	f	class:Group
+index	app/controllers/body_controller.rb	/^  def index$/;"	f	class:BodyController
+index	app/controllers/body_type_controller.rb	/^  def index$/;"	f	class:BodyTypeController
+index	app/controllers/constituency_controller.rb	/^  def index$/;"	f	class:ConstituencyController
+index	app/controllers/group_controller.rb	/^  def index$/;"	f	class:GroupController
+index	app/controllers/group_type_controller.rb	/^  def index$/;"	f	class:GroupTypeController
+index	app/controllers/person_controller.rb	/^  def index$/;"	f	class:PersonController
+index	app/controllers/search_controller.rb	/^  def index$/;"	f	class:SearchController
+index	app/controllers/welcome_controller.rb	/^  def index$/;"	f	class:WelcomeController
+internal_server_error	app/controllers/errors_controller.rb	/^  def internal_server_error$/;"	f	class:ErrorsController
+interpolate	config/initializers/paper_clip_default_url_fix.rb	/^    def self.interpolate pattern, *args$/;"	F	class:Paperclip.Interpolations
+meta_tag	app/helpers/application_helper.rb	/^  def meta_tag(tag, text)$/;"	f	class:ApplicationHelper
+name	app/models/person.rb	/^  def name$/;"	f	class:Person
+name_initials	app/models/constituency.rb	/^  def name_initials$/;"	f	class:Constituency
+name_initials	app/models/group.rb	/^  def name_initials$/;"	f	class:Group
+not_found	app/controllers/errors_controller.rb	/^  def not_found$/;"	f	class:ErrorsController
+set_picture_per_gender	app/models/person.rb	/^  def set_picture_per_gender$/;"	f	class:Person
+should_generate_new_friendly_id?	app/models/body.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:Body
+should_generate_new_friendly_id?	app/models/body_type.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:BodyType
+should_generate_new_friendly_id?	app/models/constituency.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:Constituency
+should_generate_new_friendly_id?	app/models/constituency_type.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:ConstituencyType
+should_generate_new_friendly_id?	app/models/group.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:Group
+should_generate_new_friendly_id?	app/models/group_type.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:GroupType
+should_generate_new_friendly_id?	app/models/person.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:Person
+should_generate_new_friendly_id?	app/models/position_type.rb	/^  def should_generate_new_friendly_id?$/;"	f	class:PositionType
+show	app/controllers/body_controller.rb	/^  def show$/;"	f	class:BodyController
+show	app/controllers/body_type_controller.rb	/^  def show$/;"	f	class:BodyTypeController
+show	app/controllers/constituency_controller.rb	/^  def show$/;"	f	class:ConstituencyController
+show	app/controllers/group_controller.rb	/^  def show$/;"	f	class:GroupController
+show	app/controllers/group_type_controller.rb	/^  def show$/;"	f	class:GroupTypeController
+show	app/controllers/person_controller.rb	/^  def show$/;"	f	class:PersonController
+slug_candidates	app/models/body.rb	/^  def slug_candidates$/;"	f	class:Body
+slug_candidates	app/models/body_type.rb	/^  def slug_candidates$/;"	f	class:BodyType
+slug_candidates	app/models/constituency.rb	/^  def slug_candidates$/;"	f	class:Constituency
+slug_candidates	app/models/constituency_type.rb	/^  def slug_candidates$/;"	f	class:ConstituencyType
+slug_candidates	app/models/group.rb	/^  def slug_candidates$/;"	f	class:Group
+slug_candidates	app/models/group_type.rb	/^  def slug_candidates$/;"	f	class:GroupType
+slug_candidates	app/models/person.rb	/^  def slug_candidates$/;"	f	class:Person
+slug_candidates	app/models/position_type.rb	/^  def slug_candidates$/;"	f	class:PositionType
+title	app/helpers/application_helper.rb	/^  def title(text)$/;"	f	class:ApplicationHelper
+twitter_url	app/models/group.rb	/^  def twitter_url$/;"	f	class:Group
+twitter_url	app/models/person.rb	/^  def twitter_url$/;"	f	class:Person
+up	db/migrate/20151021142753_create_active_admin_comments.rb	/^  def self.up$/;"	F	class:CreateActiveAdminComments
+up	db/migrate/20151022142021_add_attachment_avatar_to_people.rb	/^  def self.up$/;"	F	class:AddAttachmentAvatarToPeople
+up	db/migrate/20151123182632_add_avatars_to_groups_and_bodies.rb	/^  def self.up$/;"	F	class:AddAvatarsToGroupsAndBodies
+yield_meta_tag	app/helpers/application_helper.rb	/^  def yield_meta_tag(tag, default_text='')$/;"	f	class:ApplicationHelper
