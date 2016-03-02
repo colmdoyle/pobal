@@ -32,6 +32,14 @@ class Body < ActiveRecord::Base
     groups
   end
 
+  def gender_breakdown
+    gender_breakdown = Hash.new(0)
+    current_members.each do |member|
+      gender_breakdown[member.person.gender] += 1
+    end
+    gender_breakdown
+  end
+
   def current_members
     positions.where(end_date: nil).includes(:person).order('people.last_name')
   end
