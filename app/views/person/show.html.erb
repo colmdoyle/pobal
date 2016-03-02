@@ -8,7 +8,7 @@
       <div class="row">
         <div class="col-md-12">
           <h1 itemprop="name"><%= @person.name %></h1>
-          <% if @person.current_position && @person.current_party && @person.current_constituency %>
+          <% if @person.current_position && @person.current_party && @person.current_constituency &&  @person.current_position.position_type %>
           <p class="lead">
             <span itemprop='affiliation'><%= @person.current_party.name %></span> <span itemprop='jobTitle'><%= @person.current_position.position_type.title %> </span> for <%= @person.current_constituency.name %>
           </p>
