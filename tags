@@ -171,6 +171,7 @@ facebook_url	app/models/group.rb	/^  def facebook_url$/;"	f	class:Group
 facebook_url	app/models/person.rb	/^  def facebook_url$/;"	f	class:Person
 former_members	app/models/body.rb	/^  def former_members$/;"	f	class:Body
 former_members	app/models/group.rb	/^  def former_members$/;"	f	class:Group
+groups	app/models/body.rb	/^  def groups$/;"	f	class:Body
 has_contact_details?	app/models/group.rb	/^  def has_contact_details? # rubocop:disable Metrics\/CyclomaticComplexity$/;"	f	class:Group
 index	app/controllers/body_controller.rb	/^  def index$/;"	f	class:BodyController
 index	app/controllers/body_type_controller.rb	/^  def index$/;"	f	class:BodyTypeController
