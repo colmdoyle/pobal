@@ -138,7 +138,7 @@
   }
   var map = new google.maps.Map(document.getElementById("mini-map"), mapOptions);
 
-  var ctaLayer = new google.maps.KmlLayer('http://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
+  var ctaLayer = new google.maps.KmlLayer('https://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
   ctaLayer.setMap(map);
 </script>
 <% end %>
