@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160229092814) do
+ActiveRecord::Schema.define(version: 20160323083457) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -72,6 +72,19 @@ ActiveRecord::Schema.define(version: 20160229092814) do
 
   add_index "body_types", ["slug"], name: "index_body_types_on_slug", using: :btree
 
+  create_table "candidacies", force: :cascade do |t|
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "person_id",       limit: 4
+    t.integer  "election_id",     limit: 4
+    t.integer  "constituency_id", limit: 4
+    t.text     "note",            limit: 65535
+  end
+
+  add_index "candidacies", ["constituency_id"], name: "index_candidacies_on_constituency_id", using: :btree
+  add_index "candidacies", ["election_id"], name: "index_candidacies_on_election_id", using: :btree
+  add_index "candidacies", ["person_id"], name: "index_candidacies_on_person_id", using: :btree
+
   create_table "constituencies", force: :cascade do |t|
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
@@ -83,17 +96,6 @@ ActiveRecord::Schema.define(version: 20160229092814) do
 
   add_index "constituencies", ["constituency_type_id"], name: "index_constituencies_on_constituency_type_id", using: :btree
   add_index "constituencies", ["slug"], name: "index_constituencies_on_slug", using: :btree
-
-  create_table "constituency_translations", force: :cascade do |t|
-    t.integer  "constituency_id", limit: 4,   null: false
-    t.string   "locale",          limit: 255, null: false
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
-    t.string   "name",            limit: 255
-  end
-
-  add_index "constituency_translations", ["constituency_id"], name: "index_constituency_translations_on_constituency_id", using: :btree
-  add_index "constituency_translations", ["locale"], name: "index_constituency_translations_on_locale", using: :btree
 
   create_table "constituency_types", force: :cascade do |t|
     t.datetime "created_at",                              null: false
@@ -107,6 +109,17 @@ ActiveRecord::Schema.define(version: 20160229092814) do
   end
 
   add_index "constituency_types", ["slug"], name: "index_constituency_types_on_slug", using: :btree
+
+  create_table "elections", force: :cascade do |t|
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.date     "polls_open_date"
+    t.date     "polls_close_date"
+    t.integer  "body_id",          limit: 4
+    t.string   "name",             limit: 255
+  end
+
+  add_index "elections", ["body_id"], name: "index_elections_on_body_id", using: :btree
 
   create_table "group_types", force: :cascade do |t|
     t.datetime "created_at",             null: false
@@ -222,6 +235,10 @@ ActiveRecord::Schema.define(version: 20160229092814) do
   add_index "searches", ["address"], name: "index_searches_on_address", using: :btree
 
   add_foreign_key "bodies", "body_types"
+  add_foreign_key "candidacies", "constituencies"
+  add_foreign_key "candidacies", "elections"
+  add_foreign_key "candidacies", "people"
+  add_foreign_key "elections", "bodies"
   add_foreign_key "groups", "group_types"
   add_foreign_key "positions", "position_types"
 end
