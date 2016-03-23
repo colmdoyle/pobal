@@ -129,6 +129,40 @@
       </div>
     </div>
   </div>
+  <% unless @person.candidacies.empty? %>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-10">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Elections</h3>
+        </div>
+        <div class="panel-body">
+          <div class="table-responsive">
+            <table class="table sortable-theme-bootstrap" data-sortable>
+              <thead>
+                <th>Election</th>
+                <th>Body</th>
+                <th>Constituency</th>
+                <th>Note</th>
+              </thead>
+              <tbody>
+                <% for candidacy in @person.candidacies %>
+                <tr>
+                  <td><%= candidacy.election.name %></td>
+                  <td><%= link_to candidacy.election.body.name, candidacy.election.body %></td>
+                  <td><%= link_to candidacy.constituency.name, candidacy.constituency %></td>
+                  <td><%= candidacy.note %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
 </div>
 <% if @person.current_constituency &&  @person.current_constituency.map_it_id %>
 <script type="text/javascript">
