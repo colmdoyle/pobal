@@ -149,7 +149,7 @@
               <tbody>
                 <% for candidacy in @person.candidacies %>
                 <tr>
-                  <td><%= candidacy.election.name %></td>
+                  <td><%= link_to candidacy.election.name, candidacy.election %></td>
                   <td><%= link_to candidacy.election.body.name, candidacy.election.body %></td>
                   <td><%= link_to candidacy.constituency.name, candidacy.constituency %></td>
                   <td><%= candidacy.note %></td>

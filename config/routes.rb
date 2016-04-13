@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   resources :search
   resources :person
+  resources :election
   resources :body, only: [:index, :show]
   resources :body_type, only: [:show]
   resources :constituency
