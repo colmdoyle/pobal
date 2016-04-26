@@ -29,33 +29,24 @@
           <h3 class="panel-title">Current Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
         </div>
         <div class="panel-body">
-          <ul class="list-unstyled">
-            <% for member in @current_members %>
-            <li>
-              <%= link_to member.person.name, member.person %>
-            </li>
-            <% end %>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <% end %>
-  <% unless @former_members.empty? %>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Former Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
-        </div>
-        <div class="panel-body">
-          <ul class="list-unstyled">
-            <% for member in @former_members %>
-            <li>
-              <%= link_to member.person.name, member.person %>
-            </li>
-            <% end %>
-          </ul>
+          <div class="table-responsive">
+            <table class="table sortable-theme-bootstrap" data-sortable>
+              <thead>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Since</th>
+              </thead>
+              <tbody>
+                <% for member in @current_members %>
+                <tr>
+                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= member.position_type ? member.position_type.title : '' %></td>
+                  <td><%= member.start_date ? member.start_date : 'Unknown' %></td>
+                </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
