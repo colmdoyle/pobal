@@ -37,7 +37,7 @@ class Group < ActiveRecord::Base
   end
 
   def facebook_url
-    "https://fb.me/#{facebook}"
+    "https://facebook.com/#{facebook}"
   end
 
   def twitter_url

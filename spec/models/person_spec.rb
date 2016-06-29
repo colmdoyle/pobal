@@ -32,7 +32,7 @@ RSpec.describe Person, type: :model do
     end
 
     it 'returns the facebook vanity' do
-      expect(person.facebook_url).to eq("https://fb.me/4")
+      expect(person.facebook_url).to eq("https://facebook.com/4")
     end
 
     it 'returns the twitter username' do
