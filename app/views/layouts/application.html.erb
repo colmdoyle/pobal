@@ -1,48 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="utf-8">
-        <meta content="IE=edge" http-equiv="X-UA-Compatible">
-        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?</title>
-        <!-- OG Meta Data -->
-        <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" property="og:title">
-        <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" property="og:description">
-        <meta content="website" property="og:type">
-        <meta content="<%= request.original_url %>" property="og:url">
-        <meta content="<%= yield_meta_tag(:og_image, image_url('og-image-min.png')) %>" property="og:image">
-        <meta content="Who is my TD?" property="og:site_name">
-        <meta content="260300016" property="fb:admins">
-        <meta content="415289985220755" property="fb:app_id">
-        <!-- Twitter -->
-        <meta content="summary_large_image" name="twitter:card">
-        <meta content="<%= request.original_url %>" name="twitter:url">
-        <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" name="twitter:title">
-        <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" name="twitter:description">
-        <meta content="<%= image_url('og-image-min.png') %>" name="twitter:image">
-        <meta content="@whoismytd" name="twitter:site">
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?</title>
+    <!-- OG Meta Data -->
+    <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" property="og:title">
+    <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" property="og:description">
+    <meta content="website" property="og:type">
+    <meta content="<%= request.original_url %>" property="og:url">
+    <meta content="<%= yield_meta_tag(:og_image, image_url('og-image-min.png')) %>" property="og:image">
+    <meta content="Who is my TD?" property="og:site_name">
+    <meta content="260300016" property="fb:admins">
+    <meta content="415289985220755" property="fb:app_id">
+    <!-- Twitter -->
+    <meta content="summary_large_image" name="twitter:card">
+    <meta content="<%= request.original_url %>" name="twitter:url">
+    <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" name="twitter:title">
+    <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" name="twitter:description">
+    <meta content="<%= image_url('og-image-min.png') %>" name="twitter:image">
+    <meta content="@whoismytd" name="twitter:site">
 
-        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-        <%= csrf_meta_tags %>
-        <script type="text/javascript">
-            ready = function () {
-                var script = document.createElement('script');
-                script.type = 'text/javascript';
-                script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&callback=initialize';
-                document.body.appendChild(script);
-            };
-            $(document).on('ready page:load turbolinks:load', ready);
-        </script>
-        <%= render 'layouts/cookie_warning' %>
-    </head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places" type="text/javascript"></script>
+    <%= render 'layouts/cookie_warning' %>
+  </head>
 
-    <body class="<%= controller_name %>">
-        <%= render 'layouts/navbar' %>
-        <%= yield %>
-        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-        <%= render 'layouts/footer' %>
-        <%= render 'layouts/google_analytics' %>
-    </body>
+  <body class="<%= controller_name %>">
+    <%= render 'layouts/navbar' %>
+    <%= yield %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= render 'layouts/footer' %>
+    <%= render 'layouts/google_analytics' %>
+  </body>
 
 </html>
