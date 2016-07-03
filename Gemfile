@@ -51,6 +51,8 @@ gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'newrelic_rpm'
 gem 'sitemap_generator'
 
+gem 'jquery-turbolinks'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
