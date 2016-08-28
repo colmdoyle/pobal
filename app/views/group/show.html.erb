@@ -64,7 +64,7 @@
               <tbody>
                 <% for member in @group.current_members %>
                 <tr>
-                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= link_to member.person.fullname, member.person %></td>
                   <td><%= member.person.current_position ? member.person.current_position.position_type.title : "" %></td>
                   <td><%= member.start_date ? member.start_date : "Unknown" %></td>
                   <td><%= member.end_date ? member.end_date : "Current" %></td>
@@ -98,7 +98,7 @@
               <tbody>
                 <% for member in @group.former_members %>
                 <tr>
-                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= link_to member.person.fullname, member.person %></td>
                   <td><%= member.person.current_position ? member.person.current_position.position_type.title : "" %></td>
                   <td><%= member.start_date ? member.start_date : "Unknown" %></td>
                   <td><%= member.end_date ? member.end_date : "Current" %></td>

@@ -4,7 +4,7 @@ RSpec.describe Person, type: :model do
   describe 'instance methods' do
     let(:person) {FactoryGirl.create(:person)}
     it 'returns the full name' do
-      expect(person.name).to eq("#{person.first_name} #{person.last_name}")
+      expect(person.fullname).to eq("#{person.first_name} #{person.last_name}")
     end
 
     it 'returns the first name' do

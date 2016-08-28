@@ -1,9 +1,9 @@
 <div class="media">
   <div class="media-left media-middle">
-    <img class="media-object" src="<%= rep.person.avatar.url(:thumb) %>" alt="<%= rep.person.name %>">
+    <img class="media-object" src="<%= rep.person.avatar.url(:thumb) %>" alt="<%= rep.person.fullname %>">
   </div>
   <div class="media-body">
-    <h2><%= link_to rep.person.name, rep.person %></h2>
+    <h2><%= link_to rep.person.fullname, rep.person %></h2>
     <ul class="list-unstyled">
       <% unless rep.person.email.nil? %>
         <li><%= mail_to rep.person.email %></li>

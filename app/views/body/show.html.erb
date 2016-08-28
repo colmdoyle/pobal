@@ -75,7 +75,7 @@
               <tbody>
                 <% for member in @current_members %>
                 <tr>
-                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= link_to member.person.fullname, member.person %></td>
                   <% if member.constituency %>
                   <td><%= link_to member.constituency.name, member.constituency %></td>
                   <% else %>
@@ -122,7 +122,7 @@
               <tbody>
                 <% for member in @former_members %>
                 <tr>
-                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= link_to member.person.fullname, member.person %></td>
                   <% if member.constituency %>
                   <td><%= link_to member.constituency.name, member.constituency %></td>
                   <% else %>

@@ -39,7 +39,7 @@
               <tbody>
                 <% for member in @current_members %>
                 <tr>
-                  <td><%= link_to member.person.name, member.person %></td>
+                  <td><%= link_to member.person.fullname, member.person %></td>
                   <td><%= member.position_type ? member.position_type.title : '' %></td>
                   <td><%= member.start_date ? member.start_date : 'Unknown' %></td>
                 </tr>
