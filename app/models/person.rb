@@ -23,6 +23,14 @@ class Person < ActiveRecord::Base
   end
 
   def name
+    if current_party
+      "#{first_name} #{last_name} (#{current_party.name})"
+    else
+      "#{first_name} #{last_name}"
+    end
+  end
+
+  def fullname
     "#{first_name} #{last_name}"
   end
 

@@ -1,13 +1,13 @@
-<% title "#{@person.name} | #{@person.current_position ? @person.current_position.position_type.title : 'Person'}" %>
+<% title "#{@person.fullname} | #{@person.current_position ? @person.current_position.position_type.title : 'Person'}" %>
 <div class="container" itemscope itemtype="http://schema.org/Person">
   <div class="row">
     <div class="col-md-2">
-      <img alt="<%= @person.name %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>" itemprop="image">
+      <img alt="<%= @person.fullname %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>" itemprop="image">
     </div>
     <div class="col-md-10">
       <div class="row">
         <div class="col-md-12">
-          <h1 itemprop="name"><%= @person.name %></h1>
+          <h1 itemprop="name"><%= @person.fullname %></h1>
           <% if @person.current_position && @person.current_party && @person.current_constituency &&  @person.current_position.position_type %>
           <p class="lead">
             <span itemprop='affiliation'><%= @person.current_party.name %></span> <span itemprop='jobTitle'><%= @person.current_position.position_type.title %> </span> for <%= @person.current_constituency.name %>

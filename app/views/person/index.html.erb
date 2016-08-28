@@ -13,7 +13,7 @@
         <tbody>
           <% for person in @people %>
           <tr>
-            <td><%= link_to person.name, person %></td>
+            <td><%= link_to person.fullname, person %></td>
             <td><%= person.current_position ? person.current_position.position_type.title : "" %></td>
             <td><%= person.current_party ? person.current_party.name : "Unknown" %></td>
             <td><%= person.current_constituency ? person.current_constituency.name : "" %></td>
