@@ -47,7 +47,9 @@
             <i class="fa fa-fw fa-envelope"></i>
           </li>
           <li>
-            <%= mail_to subject.email, subject.email, itemprop: "email" %>
+            <%= mail_to subject.email do %>
+              <span itemprop="email"><%= subject.email %></span>
+            <% end %>
           </li>
         </ul>
       </li>
