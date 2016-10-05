@@ -25,7 +25,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <script src="https://maps.googleapis.com/maps/api/js?libraries=places" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=<%= Rails.application.secrets.google_maps_key %>" type="text/javascript"></script>
     <%= render 'layouts/cookie_warning' %>
     <%= render 'layouts/mixpanel' %>
   </head>
