@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.4'
+gem 'rails', '4.2.7.1'
 gem 'mysql2'
 
 # Use SCSS for stylesheets
@@ -40,7 +40,7 @@ gem 'json'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
 gem 'friendly_id', '~> 5.1.0'
-gem 'airbrake'
+gem 'sentry-raven'
 gem 'high_voltage', '~> 2.4.0'
 gem 'aws-sdk-v1'
 gem 'font-awesome-rails'
@@ -67,6 +67,7 @@ group :development, :test do
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
   gem 'dotenv-rails'
+  gem 'brakeman'
 end
 
 group :production do
