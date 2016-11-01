@@ -1,4 +1,5 @@
 class PositionType < ActiveRecord::Base
+  auditable
   include FriendlyId
   # slug
   friendly_id :title, :use => [:slugged, :finders]

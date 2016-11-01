@@ -1,4 +1,5 @@
 class Body < ActiveRecord::Base
+  auditable
   include FriendlyId
   nilify_blanks
   has_many :people, through: :positions, dependent: :destroy

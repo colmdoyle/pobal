@@ -1,4 +1,5 @@
 class GroupType < ActiveRecord::Base
+  auditable
   include FriendlyId
   # slug
   friendly_id :name, :use => [:slugged, :finders]
