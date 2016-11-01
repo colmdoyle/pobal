@@ -1,4 +1,6 @@
 class Person < ActiveRecord::Base
+  auditable
+  
   include FriendlyId
   nilify_blanks
   has_many :groups, through: :memberships, dependent: :destroy

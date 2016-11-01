@@ -1,4 +1,5 @@
 class Constituency < ActiveRecord::Base
+  auditable
   include FriendlyId
   nilify_blanks
   default_scope { order('name ASC') }

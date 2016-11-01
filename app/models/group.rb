@@ -1,4 +1,5 @@
 class Group < ActiveRecord::Base
+  auditable
   include FriendlyId
   nilify_blanks
   belongs_to :group_type

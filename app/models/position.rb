@@ -1,4 +1,5 @@
 class Position < ActiveRecord::Base
+  auditable
   belongs_to :body
   belongs_to :constituency
   belongs_to :person
