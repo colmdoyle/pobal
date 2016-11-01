@@ -63,6 +63,7 @@ group :development, :test do
   gem 'rubocop'
   gem 'better_errors'
   gem 'rspec-rails', '~> 3.0'
+  gem 'rspec_junit_formatter', '0.2.2'
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
   gem 'dotenv-rails'
