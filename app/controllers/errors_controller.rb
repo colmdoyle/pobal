@@ -15,7 +15,7 @@ class ErrorsController < ApplicationController
 
   def internal_server_error
     respond_to do |format|
-      format.html { render :layout => false, :status => 500 }
+      format.html { render :status => 500, :formats => [:html] }
       format.all { render nothing: true, status: 500 }
     end
   end
