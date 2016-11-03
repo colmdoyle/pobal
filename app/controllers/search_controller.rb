@@ -4,7 +4,7 @@ class SearchController < ApplicationController
       redirect_to root_path
       return
     end
-    @mapit_response = convert_address_to_mapit(params['form-input']) ? JSON.parse(convert_address_to_mapit(params['form-input']).mapit_response) : nil
+    @mapit_response = convert_address_to_mapit(params['form-input']).mapit_response ? JSON.parse(convert_address_to_mapit(params['form-input']).mapit_response) : nil
     @search_results = {}
     unless @mapit_response.nil?
       @search_results = build_search_results(@mapit_response)
