@@ -8,10 +8,10 @@
       <div class="hidden-xs hidden-sm">
         <p>
           <% unless @person.phone_number.nil? %>
-            <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-phone-btn');" %>
+            <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
           <% end %>
           <% unless @person.email.nil? %>
-            <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-email-btn');" do %>
+            <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'email', '#{@person.fullname}-#{@person.id}');" do %>
               <span itemprop="email">Email</span>
             <% end %>
           <% end %>
@@ -30,10 +30,10 @@
           <div class="hidden-md hidden-lg">
             <p>
               <% unless @person.phone_number.nil? %>
-                <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-phone-btn');" %>
+                <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
               <% end %>
               <% unless @person.email.nil? %>
-                <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-email-btn');" do %>
+                <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'email', '#{@person.fullname}-#{@person.id}');" do %>
                   <span itemprop="email">Email</span>
                 <% end %>
               <% end %>
