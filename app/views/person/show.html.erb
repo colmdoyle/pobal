@@ -2,7 +2,21 @@
 <div class="container" itemscope itemtype="http://schema.org/Person">
   <div class="row">
     <div class="col-md-2">
-      <img alt="<%= @person.fullname %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>" itemprop="image">
+      <p>
+        <img alt="<%= @person.fullname %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>" itemprop="image">
+      </p>
+      <div class="hidden-xs hidden-sm">
+        <p>
+          <% unless @person.phone_number.nil? %>
+            <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-phone-btn');" %>
+          <% end %>
+          <% unless @person.email.nil? %>
+            <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-email-btn');" do %>
+              <span itemprop="email">Email</span>
+            <% end %>
+          <% end %>
+        </p>
+      </div>
     </div>
     <div class="col-md-10">
       <div class="row">
@@ -13,6 +27,18 @@
             <span itemprop='affiliation'><%= @person.current_party.name %></span> <span itemprop='jobTitle'><%= @person.current_position.position_type.title %> </span> for <%= @person.current_constituency.name %>
           </p>
           <% end %>
+          <div class="hidden-md hidden-lg">
+            <p>
+              <% unless @person.phone_number.nil? %>
+                <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-phone-btn');" %>
+              <% end %>
+              <% unless @person.email.nil? %>
+                <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'outbound', 'click', '#{@person.fullname}-email-btn');" do %>
+                  <span itemprop="email">Email</span>
+                <% end %>
+              <% end %>
+            </p>
+          </div>
         </div>
       </div>
       <div class="row">

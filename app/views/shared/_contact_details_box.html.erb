@@ -11,7 +11,7 @@
             <i class="fa fa-fw fa-phone"></i>
           </li>
           <li>
-            <%= link_to subject.phone_number, "tel:#{subject.phone_number}", target: "_blank", itemprop: "telephone" %>
+            <%= link_to subject.phone_number, "tel:#{subject.phone_number}", target: "_blank", itemprop: "telephone", onclick: "ga('send', 'event', 'outbound', 'click', '#{subject.fullname}-phone-box');" %>
           </li>
         </ul>
       </li>
@@ -23,7 +23,7 @@
             <i class="fa fa-fw fa-facebook"></i>
           </li>
           <li>
-            <%= link_to subject.facebook, subject.facebook_url, target: "_blank" %>
+            <%= link_to subject.facebook, subject.facebook_url, target: "_blank", onclick: "ga('send', 'event', 'outbound', 'click', '#{subject.fullname}-facebook-box');" %>
           </li>
         </ul>
       </li>
@@ -35,7 +35,7 @@
             <i class="fa fa-fw fa-twitter"></i>
           </li>
           <li>
-            <%= link_to subject.twitter, subject.twitter_url, target: "_blank" %>
+            <%= link_to subject.twitter, subject.twitter_url, target: "_blank", onclick: "ga('send', 'event', 'outbound', 'click', '#{subject.fullname}-twitter-box');" %>
           </li>
         </ul>
       </li>
@@ -47,7 +47,7 @@
             <i class="fa fa-fw fa-envelope"></i>
           </li>
           <li>
-            <%= mail_to subject.email do %>
+            <%= mail_to subject.email, onclick: "ga('send', 'event', 'outbound', 'click', '#{subject.fullname}-email-box');" do %>
               <span itemprop="email"><%= subject.email %></span>
             <% end %>
           </li>
@@ -61,7 +61,7 @@
             <i class="fa fa-fw fa-globe"></i>
           </li>
           <li>
-            <%= link_to subject.website, subject.website, target: "_blank", itemprop: "url" %>
+            <%= link_to subject.website, subject.website, target: "_blank", itemprop: "url", onclick: "ga('send', 'event', 'outbound', 'click', '#{subject.fullname}-facebook-box');" %>
           </li>
         </ul>
       </li>
