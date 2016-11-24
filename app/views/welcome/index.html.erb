@@ -25,7 +25,7 @@
       </p>
       <%= form_tag search_index_path, {role: 'form', method: 'GET'} do %>
       <div class="input-group" id="form-search-group">
-        <%= text_field_tag 'form-input', nil, placeholder: 'e.g. Kildare Street, Dublin 2, Ireland', class: 'form-control', autocomplete: 'off' %>
+        <%= text_field_tag 'form-input', nil, placeholder: 'Enter your address here, e.g. Kildare Street, Dublin 2, Ireland', class: 'form-control', autocomplete: 'off' %>
         <span class="input-group-btn">
           <button class="btn btn-primary btn-search" id="form-submit" type="submit">Search</button>
         </span>
