@@ -23,7 +23,14 @@ module Pobal
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-    config.exceptions_app = self.routes
-    
+    config.exceptions_app = routes
+
+    config.gettext_i18n_rails.xgettext = ['--location', '--no-wrap', '--add-comments=TRANSLATOR']
+    config.gettext_i18n_rails.msgmerge = ['--no-wrap', '--no-sort-output', '--no-fuzzy-matching']
+    config.gettext_i18n_rails.msgcat = ['--no-wrap']
+    config.i18n.enforce_available_locales = false
+    config.i18n.default_locale = :en
+    config.i18n.fallbacks = [:en]
+
   end
 end

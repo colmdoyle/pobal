@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the app package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: app 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-11-25 18:02+0000\n"
+"PO-Revision-Date: 2016-11-25 18:02+0000\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: ../app/views/body/index.html.erb:1 ../app/views/body/index.html.erb:3 ../app/views/layouts/_navbar.html.erb:21
+msgid "Bodies"
+msgstr ""
+
+#: ../app/views/body/index.html.erb:14
+msgid "Name"
+msgstr ""
+
+#: ../app/views/layouts/_navbar.html.erb:19
+msgid "People"
+msgstr ""
+
+#: ../app/views/layouts/_navbar.html.erb:20
+msgid "Groups"
+msgstr ""
+
+#: ../app/views/layouts/_navbar.html.erb:24
+msgid "About"
+msgstr ""
+
+#: ../app/views/welcome/index.html.erb:6
+msgid "Contact your elected representatives about the issues that matter to you"
+msgstr ""
+
+#: ../app/views/welcome/index.html.erb:24
+msgid "To get started, just enter your home address."
+msgstr ""
+
+#: ../app/views/welcome/index.html.erb:28
+msgid "Enter your address here, e.g. Kildare Street, Dublin 2, Ireland"
+msgstr ""
+
+#: ../app/views/welcome/index.html.erb:30
+msgid "Search"
+msgstr ""
+
+#: ../app/views/welcome/index.html.erb:35
+msgid "We need your home address to figure out what constituency you are in."
+msgstr ""

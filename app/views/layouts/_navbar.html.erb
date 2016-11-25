@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="<%= root_path %>" class="navbar-brand">
+      <a href="<%= locale_root_path %>" class="navbar-brand">
         Who is my TD?
       </a>
     </div>
@@ -16,12 +16,12 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navigation-bar">
       <ul class="nav navbar-nav">
-        <li><%= link_to "People", person_index_path %></li>
-        <li><%= link_to "Groups", group_index_path %></li>
-        <li><%= link_to "Bodies", body_index_path %></li>
+        <li><%= link_to _("People"), person_index_path %></li>
+        <li><%= link_to _("Groups"), group_index_path %></li>
+        <li><%= link_to _("Bodies"), body_index_path %></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "About", page_path('about-us') %></li>
+        <li><%= link_to _("About"), page_path('about-us') %></li>
       </ul>
     </div>
     <!-- /.navbar-collapse -->

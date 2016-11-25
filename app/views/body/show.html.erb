@@ -1,12 +1,12 @@
-<% title "#{@body.name} | #{@body.body_type.name}" %>
+<% title "#{_(@body.name)} | #{_(@body.body_type.name)}" %>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-12">
-          <h1><%= @body.name %></h1>
+          <h1><%= _(@body.name) %></h1>
           <p class="lead">
-            <%= @body.body_type.name %>
+            <%= _(@body.body_type.name) %>
           </p>
       </div>
       </div>

@@ -5,6 +5,11 @@
       <div class="col-md-12">
         <hr>
           <ul class="list-inline pull-right">
+            <% if I18n.locale == :ga %>
+              <li class="text-muted"><%= link_to "English", locale_root_path(:en) %></li>
+            <% else %>
+              <li class="text-muted"><%= link_to "Gaelige", locale_root_path(:ga) %></li>
+            <% end %>
             <li class="text-muted"><%= link_to "About", page_path('about-us') %></li>
             <li class="text-muted"><%= link_to "Powered by Pobal", "https://github.com/colmdoyle/pobal", target: "_blank", onclick: "ga('send', 'event', 'outbound', 'click', 'https://github.com/colmdoyle/pobal');" %></li>
             <li class="text-muted"><%= link_to "Facebook", "https://facebook.com/whoismytd", target: "_blank", onclick: "ga('send', 'event', 'outbound', 'click', 'https://facebook.com/whoismytd');" %></li>

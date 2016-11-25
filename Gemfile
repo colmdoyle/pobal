@@ -54,6 +54,9 @@ gem 'sitemap_generator'
 
 gem 'espinita'
 
+gem 'gettext_i18n_rails'
+gem 'gettext', '>=3.0.2', :require => false, :group => :development
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
