@@ -1,17 +1,17 @@
-<% title "#{@group.name} | #{@group.group_type.name}" %>
+<% title "#{_(@group.name)} | #{_(@group.group_type.name)}" %>
 <div class="container" itemscope itemtype="http://schema.org/Organization">
   <div class="row">
     <div class="col-md-2">
       <% if @group.avatar.file? %>
-      <img alt="<%= @group.name %>" class="img-responsive img-rounded center-block" src="<%= @group.avatar.url(:small) %>">
+      <img alt="<%= _(@group.name) %>" class="img-responsive img-rounded center-block" src="<%= @group.avatar.url(:small) %>">
       <% end %>
     </div>
     <div class="col-md-10">
       <div class="row">
         <div class="col-md-12">
-          <h1 itemprop="name"><%= @group.name %></h1>
+          <h1 itemprop="name"><%= _(@group.name) %></h1>
           <p class="lead">
-            <%= @group.group_type.name %>
+            <%= _(@group.group_type.name) %>
           </p>
         </div>
       </div>
@@ -31,11 +31,11 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">About</h3>
+          <h3 class="panel-title"><%= _("About") %></h3>
         </div>
         <div class="panel-body">
           <p>
-            <%= @group.description %>
+            <%= _(@group.description) %>
           </p>
         </div>
       </div>
@@ -48,7 +48,7 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Current Members
+          <h3 class="panel-title"><%= _("Current Members") %>
             <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @group.name, report_url: request.original_url }%></span>
           </h3>
         </div>
@@ -56,18 +56,18 @@
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Name</th>
-                <th>Position</th>
-                <th>From</th>
-                <th>To</th>
+                <th><%= _('Name') %></th>
+                <th><%= _('Position') %></th>
+                <th><%= _('From') %></th>
+                <th><%= _('To') %></th>
               </thead>
               <tbody>
                 <% for member in @group.current_members %>
                 <tr>
-                  <td><%= link_to member.person.fullname, member.person %></td>
-                  <td><%= member.person.current_position ? member.person.current_position.position_type.title : "" %></td>
-                  <td><%= member.start_date ? member.start_date : "Unknown" %></td>
-                  <td><%= member.end_date ? member.end_date : "Current" %></td>
+                  <td><%= link_to _(member.person.fullname), member.person %></td>
+                  <td><%= member.person.current_position ? _(member.person.current_position.position_type.title) : "" %></td>
+                  <td><%= member.start_date ? _(member.start_date) : _("Unknown") %></td>
+                  <td><%= member.end_date ? _(member.end_date) : _("Current") %></td>
                 </tr>
                 <% end %>
               </tbody>
@@ -90,18 +90,18 @@
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Name</th>
-                <th>Position</th>
-                <th>From</th>
-                <th>To</th>
+                <th><%= _('Name') %></th>
+                <th><%= _('Position') %></th>
+                <th><%= _('From') %></th>
+                <th><%= _('To') %></th>
               </thead>
               <tbody>
                 <% for member in @group.former_members %>
                 <tr>
-                  <td><%= link_to member.person.fullname, member.person %></td>
-                  <td><%= member.person.current_position ? member.person.current_position.position_type.title : "" %></td>
-                  <td><%= member.start_date ? member.start_date : "Unknown" %></td>
-                  <td><%= member.end_date ? member.end_date : "Current" %></td>
+                  <td><%= link_to _(member.person.fullname), member.person %></td>
+                  <td><%= member.person.current_position ? _(member.person.current_position.position_type.title) : "" %></td>
+                  <td><%= member.start_date ? _(member.start_date) : _("Unknown") %></td>
+                  <td><%= member.end_date ? _(member.end_date) : _("Current") %></td>
                 </tr>
                 <% end %>
               </tbody>

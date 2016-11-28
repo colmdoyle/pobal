@@ -1,4 +1,4 @@
-<% title "#{@person.fullname} | #{@person.current_position ? @person.current_position.position_type.title : 'Person'}" %>
+<% title "#{_(@person.fullname)} | #{@person.current_position ? _(@person.current_position.position_type.title) : _('Person')}" %>
 <div class="container" itemscope itemtype="http://schema.org/Person">
   <div class="row">
     <div class="col-md-2">
@@ -8,11 +8,11 @@
       <div class="hidden-xs hidden-sm">
         <p>
           <% unless @person.phone_number.nil? %>
-            <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
+            <%= link_to _("Call"), "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
           <% end %>
           <% unless @person.email.nil? %>
             <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'email', '#{@person.fullname}-#{@person.id}');" do %>
-              <span itemprop="email">Email</span>
+              <span itemprop="email"><%= _("Email") %></span>
             <% end %>
           <% end %>
         </p>
@@ -30,11 +30,11 @@
           <div class="hidden-md hidden-lg">
             <p>
               <% unless @person.phone_number.nil? %>
-                <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
+                <%= link_to _("Call"), "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
               <% end %>
               <% unless @person.email.nil? %>
                 <%= mail_to @person.email, class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'email', '#{@person.fullname}-#{@person.id}');" do %>
-                  <span itemprop="email">Email</span>
+                  <span itemprop="email"><%= _("Email") %></span>
                 <% end %>
               <% end %>
             </p>
@@ -47,15 +47,15 @@
           <div class="panel panel-default">
             <div class="panel-body info-panel text-center <% unless @person.current_party.avatar.file? %> blue-bg <% end %>">
               <% if @person.current_party.avatar.file? %>
-                <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
+                <img alt="<%= _(@person.current_party.name) %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
                 <% else %>
                 <p class="info-panel-text">
-                  <%= @person.current_party.name_initials %>
+                  <%= _(@person.current_party.name_initials) %>
                 </p>
                 <% end %>
             </div>
             <div class="panel-footer">
-              <%= link_to @person.current_party.name, @person.current_party %>
+              <%= link_to _(@person.current_party.name), @person.current_party %>
             </div>
           </div>
         </div>
@@ -68,11 +68,11 @@
             <% else %>
             <div class="panel-body info-panel text-center blue-bg">
               <p class="info-panel-text">
-                <%= @person.current_constituency.name_initials %>
+                <%= _(@person.current_constituency.name_initials) %>
               </p>
             </div>
             <% end %>
-            <div class="panel-footer"><%= link_to @person.current_constituency.name, @person.current_constituency %></div>
+            <div class="panel-footer"><%= link_to _(@person.current_constituency.name), @person.current_constituency %></div>
           </div>
         </div>
         <% end %>
@@ -90,28 +90,28 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Positions held</h3>
+          <h3 class="panel-title"><%= _("Positions held") %></h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Body</th>
-                <th>Title</th>
-                <th>Note</th>
-                <th>Constituency</th>
-                <th>From</th>
-                <th>To</th>
+                <th><%= _("Body") %></th>
+                <th><%= _("Title") %></th>
+                <th><%= _("Note") %></th>
+                <th><%= _("Constituency") %></th>
+                <th><%= _("From") %></th>
+                <th><%= _("To") %></th>
               </thead>
               <tbody>
                 <% for position in @person.positions %>
                 <tr>
-                  <td><%= link_to position.body.name, position.body %></td>
-                  <td><%= position.position_type ? position.position_type.title : '' %></td>
-                  <td><%= position.note %></td>
-                  <td><%= position.constituency ? position.constituency.name : '' %></td>
-                  <td><%= position.start_date ? position.start_date : 'Unknown' %></td>
-                  <td><%= position.end_date ? position.end_date : 'Current' %></td>
+                  <td><%= link_to _(position.body.name), position.body %></td>
+                  <td><%= position.position_type ? _(position.position_type.title) : '' %></td>
+                  <td><%= _(position.note) %></td>
+                  <td><%= position.constituency ? _(position.constituency.name) : '' %></td>
+                  <td><%= position.start_date ? position.start_date : _('Unknown') %></td>
+                  <td><%= position.end_date ? position.end_date : _('Current') %></td>
                 </tr>
                 <% end %>
               </tbody>
@@ -126,24 +126,24 @@
     <div class="col-md-10">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Associations</h3>
+          <h3 class="panel-title"><%= _("Associations") %></h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Name</th>
-                <th>Type</th>
-                <th>From</th>
-                <th>To</th>
-                <th>Note</th>
+                <th><%= _("Name") %></th>
+                <th><%= _("Type") %></th>
+                <th><%= _("From") %></th>
+                <th><%= _("To") %></th>
+                <th><%= _("Note") %></th>
               </thead>
               <tbody>
                 <% for membership in @person.memberships %>
                 <tr>
-                  <td><%= link_to membership.group.name, membership.group %></td>
-                  <td><%= membership.group.group_type.name %></td>
-                  <td><%= membership.start_date ? membership.start_date : "Unknown" %></td>
+                  <td><%= link_to _(membership.group.name), membership.group %></td>
+                  <td><%= _(membership.group.group_type.name) %></td>
+                  <td><%= membership.start_date ? membership.start_date : _("Unknown") %></td>
                   <td><%= membership.end_date ? membership.end_date : "Current" %></td>
                   <td><%= membership.note %></td>
                 </tr>

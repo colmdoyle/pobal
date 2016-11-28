@@ -1,9 +1,9 @@
-<% title "#{@constituency.name} | #{@constituency.constituency_type.name}" %>
+<% title "#{_(@constituency.name)} | #{_(@constituency.constituency_type.name)}" %>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <h1><%= @constituency.name %>
-        <small><%= @constituency.constituency_type.name %></small>
+      <h1><%= _(@constituency.name) %>
+        <small><%= _(@constituency.constituency_type.name) %></small>
       </h1>
     </div>
   </div>
@@ -12,7 +12,7 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Map</h3>
+          <h3 class="panel-title"><%= _('Map') %></h3>
         </div>
         <div class="panel-body google-map">
           <div id="map-canvas"></div>
@@ -26,22 +26,22 @@
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Current Members <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
+          <h3 class="panel-title"><%= _('Current Members') %> <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: @constituency.name, report_url: request.original_url }%></span></h3>
         </div>
         <div class="panel-body">
           <div class="table-responsive">
             <table class="table sortable-theme-bootstrap" data-sortable>
               <thead>
-                <th>Name</th>
-                <th>Title</th>
-                <th>Since</th>
+                <th><%= _('Name') %></th>
+                <th><%= _('Title') %></th>
+                <th><%= _('Since') %></th>
               </thead>
               <tbody>
                 <% for member in @current_members %>
                 <tr>
-                  <td><%= link_to member.person.fullname, member.person %></td>
-                  <td><%= member.position_type ? member.position_type.title : '' %></td>
-                  <td><%= member.start_date ? member.start_date : 'Unknown' %></td>
+                  <td><%= link_to _(member.person.fullname), member.person %></td>
+                  <td><%= member.position_type ? _(member.position_type.title) : '' %></td>
+                  <td><%= member.start_date ? _(member.start_date) : _('Unknown') %></td>
                 </tr>
                 <% end %>
               </tbody>
