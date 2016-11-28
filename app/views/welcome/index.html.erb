@@ -6,7 +6,7 @@
           <%= _('Contact your elected representatives about the issues that matter to you') %>
         </h1>
         <p class="lead">
-          We list over <%= number_with_delimiter(@representatives_count - 1) %> representatives across Ireland
+          <%= _("We list over #{number_with_delimiter(@representatives_count - 1)} representatives across Ireland") %>
         </p>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <div class="col-md-8 col-md-offset-2">
       <% unless @active_megaphone.nil? %>
       <div class="alert alert-info" role="alert">
-        <%= @active_megaphone.message.html_safe %>
+        <%= _(@active_megaphone.message.html_safe) %>
       </div>
       <% end %>
       <p class="text-center lead">
