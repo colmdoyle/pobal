@@ -21,24 +21,1549 @@ msgstr ""
 msgid "Bodies"
 msgstr ""
 
-#: ../app/views/body/index.html.erb:14
+#: ../app/views/body/index.html.erb:14 ../app/views/body/show.html.erb:65 ../app/views/body/show.html.erb:112 ../app/views/body_type/show.html.erb:9 ../app/views/constituency/show.html.erb:35 ../app/views/group/show.html.erb:59 ../app/views/group/show.html.erb:93 ../app/views/group_type/show.html.erb:12 ../app/views/person/index.html.erb:8 ../app/views/person/show.html.erb:135
 msgid "Name"
 msgstr ""
 
-#: ../app/views/layouts/_navbar.html.erb:19
-msgid "People"
-msgstr ""
-
-#: ../app/views/layouts/_navbar.html.erb:20
-msgid "Groups"
-msgstr ""
-
-#: ../app/views/layouts/_navbar.html.erb:24
+#: ../app/views/body/show.html.erb:20 ../app/views/group/show.html.erb:34 ../app/views/layouts/_footer.html.erb:13 ../app/views/layouts/_navbar.html.erb:24
 msgid "About"
 msgstr ""
 
-#: ../app/views/welcome/index.html.erb:6
+#: ../app/views/body/show.html.erb:36
+msgid "Groupings"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:59 ../app/views/body_type/show.html.erb:10 ../app/views/constituency/show.html.erb:29 ../app/views/group/show.html.erb:51
+msgid "Current Members"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:67 ../app/views/body/show.html.erb:114 ../app/views/person/index.html.erb:11 ../app/views/person/show.html.erb:102
+msgid "Constituency"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:69 ../app/views/body/show.html.erb:116 ../app/views/person/show.html.erb:136
+msgid "Type"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:70 ../app/views/body/show.html.erb:117 ../app/views/person/show.html.erb:101 ../app/views/person/show.html.erb:139
+msgid "Note"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:72 ../app/views/body/show.html.erb:119 ../app/views/person/index.html.erb:10
+msgid "Party"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:73
+msgid "Member since"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:90 ../app/views/body/show.html.erb:137 ../app/views/constituency/show.html.erb:44 ../app/views/group/show.html.erb:69 ../app/views/group/show.html.erb:103 ../app/views/person/index.html.erb:18 ../app/views/person/show.html.erb:113 ../app/views/person/show.html.erb:146
+msgid "Unknown"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:106
+msgid "Former Members"
+msgstr ""
+
+#: ../app/views/body/show.html.erb:120
+msgid "Member until"
+msgstr ""
+
+#: ../app/views/constituency/index.html.erb:1 ../app/views/constituency/index.html.erb:3
+msgid "Constituencies"
+msgstr ""
+
+#: ../app/views/constituency/show.html.erb:15
+msgid "Map"
+msgstr ""
+
+#: ../app/views/constituency/show.html.erb:36 ../app/views/person/show.html.erb:100
+msgid "Title"
+msgstr ""
+
+#: ../app/views/constituency/show.html.erb:37
+msgid "Since"
+msgstr ""
+
+#: ../app/views/errors/internal_server_error.html.erb:1
+msgid "Something went wrong"
+msgstr ""
+
+#: ../app/views/errors/internal_server_error.html.erb:6
+msgid "Sorry about this, but something went wrong"
+msgstr ""
+
+#: ../app/views/errors/internal_server_error.html.erb:8
+msgid "We track these errors automatically, but if the problem persists feel free to contact us."
+msgstr ""
+
+#: ../app/views/errors/internal_server_error.html.erb:10
+msgid "In the meantime, you could try refreshing."
+msgstr ""
+
+#: ../app/views/errors/internal_server_error.html.erb:13 ../app/views/errors/not_found.html.erb:11
+msgid "Return to the home page"
+msgstr ""
+
+#: ../app/views/errors/not_found.html.erb:1
+msgid "Page not found"
+msgstr ""
+
+#: ../app/views/errors/not_found.html.erb:6
+msgid "Sorry, this page isn't available"
+msgstr ""
+
+#: ../app/views/errors/not_found.html.erb:8
+msgid "The link you followed may be broken, or the page may have been removed."
+msgstr ""
+
+#: ../app/views/group/index.html.erb:1 ../app/views/group/index.html.erb:3 ../app/views/layouts/_navbar.html.erb:20
+msgid "Groups"
+msgstr ""
+
+#: ../app/views/group/show.html.erb:60 ../app/views/group/show.html.erb:94 ../app/views/person/index.html.erb:9
+msgid "Position"
+msgstr ""
+
+#: ../app/views/group/show.html.erb:61 ../app/views/group/show.html.erb:95 ../app/views/person/show.html.erb:103 ../app/views/person/show.html.erb:137
+msgid "From"
+msgstr ""
+
+#: ../app/views/group/show.html.erb:62 ../app/views/group/show.html.erb:96 ../app/views/person/show.html.erb:104 ../app/views/person/show.html.erb:138
+msgid "To"
+msgstr ""
+
+#: ../app/views/group/show.html.erb:70 ../app/views/group/show.html.erb:104 ../app/views/person/show.html.erb:114
+msgid "Current"
+msgstr ""
+
+#: ../app/views/group_type/show.html.erb:13
+msgid "Elected Representatives"
+msgstr ""
+
+#: ../app/views/layouts/_footer.html.erb:14
+msgid "Powered by Pobal"
+msgstr ""
+
+#: ../app/views/layouts/_footer.html.erb:15
+msgid "Facebook"
+msgstr ""
+
+#: ../app/views/layouts/_footer.html.erb:16
+msgid "Twitter"
+msgstr ""
+
+#: ../app/views/layouts/_navbar.html.erb:6
+msgid "Toggle navigation"
+msgstr ""
+
+#: ../app/views/layouts/_navbar.html.erb:19 ../app/views/person/index.html.erb:1 ../app/views/person/index.html.erb:3
+msgid "People"
+msgstr ""
+
+#: ../app/views/layouts/application.html.erb:11 ../app/views/layouts/application.html.erb:22 ../app/views/welcome/index.html.erb:6
 msgid "Contact your elected representatives about the issues that matter to you"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:4
+msgid "2016 General Election"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:5
+msgid "2016 Seanad Election"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:6
+msgid "24th Seanad"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:7
+msgid "25th Seanad Éireann"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:8
+msgid "29th Government of Ireland"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:9
+msgid "30th Government of Ireland"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:10
+msgid "31st Dáil Éireann"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:11
+msgid "32nd Dáil Éireann"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:12
+msgid "8th European Parliament"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:13
+msgid "An Fochoiste um an Straitéis 20 Bliain don Ghaeilge 2010 – 2030 agus Rudaí Gaolmhara"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:14
+msgid "Carlow County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:15
+msgid "Cavan County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:16
+msgid "Clare County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:17
+msgid "Committee of Inquiry into the Banking Crisis"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:18
+msgid "Committee of Public Accounts"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:19
+msgid "Committee of Selection (Seanad Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:20
+msgid "Committee on Agriculture, Food and the Marine"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:21
+msgid "Committee on Education and Social Protection"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:22
+msgid "Committee on European Union Affairs"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:23
+msgid "Committee on Finance, Public Expenditure and Reform"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:24
+msgid "Committee on Foreign Affairs and Trade"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:25
+msgid "Committee on Health and Children"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:26
+msgid "Committee on Housing and Homelessness"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:27
+msgid "Committee on Jobs, Enterprise and Innovation"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:28
+msgid "Committee on Justice, Defence and Equality"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:29
+msgid "Committee on Members’ Interests (Dáil Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:30
+msgid "Committee on Members’ Interests (Seanad Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:31
+msgid "Committee on Procedure and Privileges (Dáil Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:32
+msgid "Committee on Procedure and Privileges (Seanad Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:33
+msgid "Committee on Public Service Oversight and Petitions"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:34
+msgid "Committee on Standing Orders (Private Business)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:35
+msgid "Committee on the Environment, Culture and the Gaeltacht"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:36
+msgid "Committee on the Implementation of the Good Friday Agreement"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:37
+msgid "Committee on Transport and Communications"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:38
+msgid "Cork City Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:39
+msgid "Cork County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:40
+msgid "Donegal County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:41
+msgid "Dublin City Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:42
+msgid "Dun Laoghaire-Rathdown County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:43
+msgid "Fingal County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:44
+msgid "Galway City Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:45
+msgid "Galway County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:46
+msgid "Joint sub-Committee on Fisheries"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:47
+msgid "Joint sub-Committee on Public Petitions"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:48
+msgid "Joint sub-Committee on the Ombudsman"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:49
+msgid "Kerry County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:50
+msgid "Kildare County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:51
+msgid "Kilkenny County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:52
+msgid "Laois County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:53
+msgid "Leitrim County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:54
+msgid "Limerick City and County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:55
+msgid "Longford County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:56
+msgid "Louth County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:57
+msgid "Mayo County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:58
+msgid "Meath County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:59
+msgid "Monaghan County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:60
+msgid "Offaly County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:61
+msgid "Public Consultation Committee (Seanad Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:62
+msgid "Roscommon County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:63
+msgid "Select sub-Committee on Arts, Heritage and the Gaeltacht"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:64
+msgid "Select sub-Committee on Children and Youth Affairs"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:65
+msgid "Select sub-Committee on Communications, Energy and Natural Resources"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:66
+msgid "Select sub-Committee on Education and Skills"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:67
+msgid "Select sub-Committee on Environment, Community and Local Government"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:68
+msgid "Select sub-Committee on Finance"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:69
+msgid "Select sub-Committee on Health"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:70
+msgid "Select sub-Committee on Public Expenditure and Reform"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:71
+msgid "Select sub-Committee on Social Protection"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:72
+msgid "Select sub-Committee on the Department of the Taoiseach"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:73
+msgid "Select sub-Committee on Transport, Tourism and Sport"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:74
+msgid "Sligo County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:75
+msgid "South Dublin County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:76
+msgid "Sub Committee on European Scrutiny - Finance & Expenditure"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:77
+msgid "Sub-Committee on Administration (Dáil Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:78
+msgid "Sub-Committee on Administration (Seanad Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:79
+msgid "Sub-Committee on Dáil Reform"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:80
+msgid "Sub-Committee on Global Taxation"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:81
+msgid "Sub-Committee on Human Rights relative to Justice and Equality Matters"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:82
+msgid "Sub-Committee on Penal Reform"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:83
+msgid "Sub-Committee on Privileges (Dáil Éireann)"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:84
+msgid "Tipperary County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:85
+msgid "Waterford City and County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:86
+msgid "Westmeath County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:87
+msgid "Wexford County Council"
+msgstr ""
+
+#: ../app/views/localization/bodies.html.erb:88
+msgid "Wicklow County Council"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:4
+msgid "Adare-Rathkeale"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:5
+msgid "Administrative Panel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:6
+msgid "Agricultural Panel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:7
+msgid "Ardee"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:8
+msgid "Arklow"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:9
+msgid "Ashbourne"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:10
+msgid "Athenry-Oranmore"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:11
+msgid "Athlone (Roscommon)"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:12
+msgid "Athlone (Westmeath)"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:13
+msgid "Athy"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:14
+msgid "Bailieborough-Cootehill"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:15
+msgid "Balbriggan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:16
+msgid "Ballina"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:17
+msgid "Ballinamore"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:18
+msgid "Ballinasloe"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:19
+msgid "Ballincollig-Carrigaline"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:20
+msgid "Ballybay-Clones"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:21
+msgid "Ballyfermot-Drimnagh"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:22
+msgid "Ballyjamesduff"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:23
+msgid "Ballymahon"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:24
+msgid "Ballymote-Tubbercurry"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:25
+msgid "Ballymun"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:26
+msgid "Baltinglass"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:27
+msgid "Bandon-Kinsale"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:28
+msgid "Beaumont-Donaghmede"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:29
+msgid "Birr"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:30
+msgid "Blackrock"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:31
+msgid "Blarney-Macroom"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:32
+msgid "Borris in Ossory-Mountmellick"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:33
+msgid "Boyle"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:34
+msgid "Bray"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:35
+msgid "Cabra-Finglas"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:36
+msgid "Cappamore-Kilmallock"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:37
+msgid "Carlow"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:38
+msgid "Carlow-Kilkenny"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:39
+msgid "Carrick-On-Shannon"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:40
+msgid "Carrick-on-Suir"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:41
+msgid "Carrickmacross-Castleblayney"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:42
+msgid "Cashel-Tipperary"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:43
+msgid "Castlebar"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:44
+msgid "Castlecomer"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:45
+msgid "Castleknock"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:46
+msgid "Cavan-Belturbet"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:47
+msgid "Cavan-Monaghan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:48
+msgid "Celbridge-Leixlip"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:49
+msgid "Clane"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:50
+msgid "Clare"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:51
+msgid "Claremorris"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:52
+msgid "Clondalkin"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:53
+msgid "Clonmel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:54
+msgid "Clontarf"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:55
+msgid "Cobh"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:56
+msgid "Comeragh"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:57
+msgid "Connamara"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:58
+msgid "Cork City North-Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:59
+msgid "Cork City North-East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:60
+msgid "Cork City North-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:61
+msgid "Cork City South-Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:62
+msgid "Cork City South-East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:63
+msgid "Cork City South-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:64
+msgid "Cork East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:65
+msgid "Cork North-Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:66
+msgid "Cork North-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:67
+msgid "Cork South-Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:68
+msgid "Cork South-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:69
+msgid "Crumlin-Kimmage"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:70
+msgid "Cultural and Educational Panel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:71 ../app/views/localization/constituencies.html.erb:72
+msgid "Donegal"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:73
+msgid "Donegal North-East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:74
+msgid "Donegal South-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:75
+msgid "Drogheda"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:76
+msgid "Dublin"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:77
+msgid "Dublin Bay North"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:78
+msgid "Dublin Bay South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:79
+msgid "Dublin Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:80
+msgid "Dublin Fingal"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:81
+msgid "Dublin Mid-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:82
+msgid "Dublin North"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:83
+msgid "Dublin North-Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:84
+msgid "Dublin North-East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:85
+msgid "Dublin North-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:86
+msgid "Dublin Rathdown"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:87
+msgid "Dublin South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:88
+msgid "Dublin South-Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:89
+msgid "Dublin South-East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:90
+msgid "Dublin South-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:91
+msgid "Dublin West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:92 ../app/views/localization/constituencies.html.erb:93
+msgid "Dún Laoghaire"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:94
+msgid "Dundalk South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:95
+msgid "Dundalk-Carlingford"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:96
+msgid "Dundrum"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:97
+msgid "Dungarvan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:98
+msgid "Dungarvan-Lismore"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:99
+msgid "East Cork"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:100
+msgid "Edenderry"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:101
+msgid "Ennis"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:102
+msgid "Enniscorthy"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:103
+msgid "Fermoy"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:104
+msgid "Galway City Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:105
+msgid "Galway City East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:106
+msgid "Galway City West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:107
+msgid "Galway East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:108
+msgid "Galway West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:109
+msgid "Glencullen-Sandyford"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:110
+msgid "Glenties"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:111
+msgid "Gorey"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:112
+msgid "Graiguecullen-Portarlington"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:113
+msgid "Granard"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:114
+msgid "Greystones"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:115
+msgid "Howth-Malahide"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:116
+msgid "Industrial and Commercial Panel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:117
+msgid "Inishowen"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:118
+msgid "Kanturk-Mallow"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:119
+msgid "Kells"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:120
+msgid "Kerry"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:121
+msgid "Kerry North-West Limerick"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:122
+msgid "Kerry South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:123
+msgid "Kildare North"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:124
+msgid "Kildare South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:125
+msgid "Kildare-Newbridge"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:126
+msgid "Kilkenny City East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:127
+msgid "Kilkenny City West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:128
+msgid "Killaloe"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:129
+msgid "Killarney"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:130
+msgid "Killiney-Shankill"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:131
+msgid "Labour Panel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:132
+msgid "Laois"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:133
+msgid "Laois-Offaly"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:134
+msgid "Laytown-Bettystown"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:135
+msgid "Letterkenny"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:136
+msgid "Limerick"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:137
+msgid "Limerick City"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:138
+msgid "Limerick City East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:139
+msgid "Limerick City North"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:140
+msgid "Limerick City West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:141
+msgid "Limerick County"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:142
+msgid "Listowel"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:143
+msgid "Longford"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:144
+msgid "Longford-Westmeath"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:145
+msgid "Loughrea"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:146
+msgid "Louth"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:147
+msgid "Lucan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:148
+msgid "Manorhamilton"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:149
+msgid "Maynooth"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:150
+msgid "Mayo"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:151
+msgid "Meath East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:152
+msgid "Meath West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:153
+msgid "Midlands-North-West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:154
+msgid "Monaghan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:155
+msgid "Muinebeag"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:156
+msgid "Mulhuddart"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:157
+msgid "Mullingar-Coole"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:158
+msgid "Mullingar-Kilbeggan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:159
+msgid "Naas"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:160
+msgid "National University of Ireland"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:161
+msgid "Navan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:162
+msgid "Nenagh"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:163
+msgid "New Ross"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:164
+msgid "Newcastle West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:165
+msgid "North Inner City"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:166
+msgid "Offaly"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:167
+msgid "Pembroke-South Dock"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:168
+msgid "Piltown"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:169
+msgid "Portlaoise"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:170
+msgid "Rathfarnham"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:171
+msgid "Rathgar-Rathmines"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:172
+msgid "Ratoath"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:173
+msgid "Roscommon"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:174
+msgid "Roscommon-Galway"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:175
+msgid "Roscommon-South Leitrim"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:176
+msgid "Shannon"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:177
+msgid "Sligo"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:178
+msgid "Sligo-Leitrim"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:179
+msgid "Sligo-North Leitrim"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:180
+msgid "South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:181
+msgid "South and West Kerry"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:182
+msgid "Stillorgan"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:183
+msgid "Stranorlar"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:184
+msgid "Swords"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:185
+msgid "Tallaght Central"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:186
+msgid "Tallaght South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:187
+msgid "Taoiseach's Nominee"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:188
+msgid "Templemore-Thurles"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:189
+msgid "Templeogue-Terenure"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:190
+msgid "Tipperary"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:191
+msgid "Tipperary North"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:192
+msgid "Tipperary South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:193
+msgid "Tralee"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:194
+msgid "Tramore-Waterford City West"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:195
+msgid "Trim"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:196
+msgid "Tuam"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:197
+msgid "Tullamore"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:198
+msgid "University of Dublin"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:199
+msgid "Waterford"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:200
+msgid "Waterford City East"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:201
+msgid "Waterford City South"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:202
+msgid "West Clare"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:203
+msgid "West Cork"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:204
+msgid "West Mayo"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:205 ../app/views/localization/constituencies.html.erb:206
+msgid "Wexford"
+msgstr ""
+
+#: ../app/views/localization/constituencies.html.erb:207 ../app/views/localization/constituencies.html.erb:208
+msgid "Wicklow"
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:4
+msgid "Dáil Eireann"
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:5
+msgid ""
+"Dáil Éireann is the lower house of the Oireachtas, but is the source of almost all legislation in Ireland. It consists of no less than one Teachta Dála (TD) for every thirty thousand citizens. TDs are full time public representatives and are responsible for representing their constituents on the national level.\n"
+"\n"
+"The Dáil elects members of the Cabinet who ensure that the policies of the Government are carried out. They are assisted by the various Ministers of State in this. The Dáil also has a number of committees which scrutinise legislation proposed to them.\n"
+"\n"
+"TDs are the people you should contact if you have questions or concerns about national issues. Examples would be the Budget, taxation, Health policy or other nationwide initiatives."
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:10
+msgid "European Parliament"
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:11
+msgid ""
+"MEPs serve in the European Parliament, the directly elected parliamentary institution of the European Union (EU). Together with the Council of the European Union (the Council) and the European Commission, it exercises the legislative function of the EU.\n"
+"\n"
+"MEPs are the people you should contact if you have questions or concerns about european issues. Examples would be EU treaties and Union wide agreements such as the Common Agricultural Policy or Fisheries Policy."
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:14
+msgid "Local Electoral Area"
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:15
+msgid ""
+"City and County Councils exist to represent the interest of large communities. Whilst the role of a Councillor is similar to that of a TD or MEP in that they represent the views of their constituents, they are slightly different in the sense that it is primarily a part-time function, so most Councillors will also have a \"regular\" job.\n"
+"\n"
+"County and City Councils are elected from a number of Local Electoral Areas.\n"
+"\n"
+"Councillors are the people you should contact if you have questions or concerns about local issues. Examples would include problems with local infrastructure like refuse collection or damaged facilities."
+msgstr ""
+
+#: ../app/views/localization/constituency_types.html.erb:20
+msgid "Seanad Panel"
+msgstr ""
+
+#: ../app/views/localization/group_types.html.erb:4
+msgid "European parliamentary group"
+msgstr ""
+
+#: ../app/views/localization/group_types.html.erb:5
+msgid "Political Party"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:4
+msgid "Alliance of Liberals and Democrats for Europe Group"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:5
+msgid "Anti Austerity Alliance"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:6
+msgid "Communist Party of Ireland"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:7
+msgid "Direct Democracy Ireland - National Citizens Movement"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:8
+msgid "éirígí"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:9
+msgid "European Conservatives and Reformists"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:10
+msgid "European People's Party"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:11
+msgid "European United Left–Nordic Green Left"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:12
+msgid "Fianna Fáil"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:13
+msgid "Fine Gael"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:14
+msgid "Fís Nua"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:15
+msgid "Green Party"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:16
+msgid "Identity Ireland"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:17
+msgid "Independent"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:18
+msgid "Independents 4 Change"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:19
+msgid "Labour"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:20
+msgid "Letterkenny Residents Party"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:21
+msgid "People Before Profit Alliance"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:22
+msgid "Progressive Alliance of Socialists and Democrats"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:23
+msgid "Renua Ireland"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:24
+msgid "Sinn Féin"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:25
+msgid "Social Democrats"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:26
+msgid "Socialist Party"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:27
+msgid "South Kerry Independent Alliance"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:28
+msgid "United People"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:29
+msgid "Workers and Unemployed Action Group South-Tipperary"
+msgstr ""
+
+#: ../app/views/localization/groups.html.erb:30
+msgid "Workers Party"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:4
+msgid "Candidate"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:5
+msgid "These people have officially declared for the upcoming general election. You should contact them if you're interested in hearing their position on issues important to you."
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:6
+msgid "Ceann Comhairle"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:8
+msgid "Councillor"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:9
+msgid "Councillors are the people you should contact if you have questions or concerns about local issues. Examples would include problems with local infrastructure like refuse collection or damaged facilities."
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:10
+msgid "MEP"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:11
+msgid "MEPs are the people you should contact if you have questions or concerns about european issues. Examples would be EU treaties and Union wide agreements such as the Common Agricultural Policy or Fisheries Policy."
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:12
+msgid "Minister"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:14
+msgid "Minister of State"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:16
+msgid "Senator"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:18
+msgid "Tánaiste"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:20
+msgid "Taoiseach"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:22
+msgid "TD"
+msgstr ""
+
+#: ../app/views/localization/position_types.html.erb:23
+msgid "TDs are the people you should contact if you have questions or concerns about national issues. Examples would be the Budget, taxation, Health policy or other nationwide initiatives."
+msgstr ""
+
+#: ../app/views/pages/about-us.html.erb:1
+msgid "About us"
+msgstr ""
+
+#: ../app/views/pages/about-us.html.erb:5
+msgid "About Who Is My TD?"
+msgstr ""
+
+#: ../app/views/person/show.html.erb:11 ../app/views/person/show.html.erb:33
+msgid "Call"
+msgstr ""
+
+#: ../app/views/person/show.html.erb:15 ../app/views/person/show.html.erb:37
+msgid "Email"
+msgstr ""
+
+#: ../app/views/person/show.html.erb:93
+msgid "Positions held"
+msgstr ""
+
+#: ../app/views/person/show.html.erb:99
+msgid "Body"
+msgstr ""
+
+#: ../app/views/person/show.html.erb:129
+msgid "Associations"
+msgstr ""
+
+#: ../app/views/search/index.html.erb:1
+msgid "\"Search results for #{params['form-input']}\""
+msgstr ""
+
+#: ../app/views/shared/_contact_details_box.html.erb:3
+msgid "Contact Details"
+msgstr ""
+
+#: ../app/views/shared/_report_a_problem_link.html.erb:4
+msgid "Correct a mistake"
+msgstr ""
+
+#: ../app/views/welcome/index.html.erb:9
+msgid "\"We list over #{number_with_delimiter(@representatives_count - 1)} representatives across Ireland\""
 msgstr ""
 
 #: ../app/views/welcome/index.html.erb:24

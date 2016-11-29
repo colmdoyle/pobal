@@ -18,31 +18,1178 @@ msgstr ""
 "\n"
 
 msgid "Bodies"
-msgstr "Comhlachtaí"
+msgstr ""
 
 msgid "Name"
-msgstr "Ainm"
-
-msgid "People"
-msgstr "Daoine"
-
-msgid "Groups"
-msgstr "Grúpaí"
+msgstr ""
 
 msgid "About"
-msgstr "Maidir"
+msgstr ""
+
+msgid "Groupings"
+msgstr ""
+
+msgid "Current Members"
+msgstr ""
+
+msgid "Constituency"
+msgstr ""
+
+msgid "Type"
+msgstr ""
+
+msgid "Note"
+msgstr ""
+
+msgid "Party"
+msgstr ""
+
+msgid "Member since"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Former Members"
+msgstr ""
+
+msgid "Member until"
+msgstr ""
+
+msgid "Constituencies"
+msgstr ""
+
+msgid "Map"
+msgstr ""
+
+msgid "Title"
+msgstr ""
+
+msgid "Since"
+msgstr ""
+
+msgid "Something went wrong"
+msgstr ""
+
+msgid "Sorry about this, but something went wrong"
+msgstr ""
+
+msgid "We track these errors automatically, but if the problem persists feel free to contact us."
+msgstr ""
+
+msgid "In the meantime, you could try refreshing."
+msgstr ""
+
+msgid "Return to the home page"
+msgstr ""
+
+msgid "Page not found"
+msgstr ""
+
+msgid "Sorry, this page isn't available"
+msgstr ""
+
+msgid "The link you followed may be broken, or the page may have been removed."
+msgstr ""
+
+msgid "Groups"
+msgstr ""
+
+msgid "Position"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "To"
+msgstr ""
+
+msgid "Current"
+msgstr ""
+
+msgid "Elected Representatives"
+msgstr ""
+
+msgid "Powered by Pobal"
+msgstr ""
+
+msgid "Facebook"
+msgstr ""
+
+msgid "Twitter"
+msgstr ""
+
+msgid "Toggle navigation"
+msgstr ""
+
+msgid "People"
+msgstr ""
 
 msgid "Contact your elected representatives about the issues that matter to you"
 msgstr "Déan teagmháil le do ionadaithe tofa faoi na hábhair a leagann tú"
 
+msgid "2016 General Election"
+msgstr ""
+
+msgid "2016 Seanad Election"
+msgstr ""
+
+msgid "24th Seanad"
+msgstr ""
+
+msgid "25th Seanad Éireann"
+msgstr ""
+
+msgid "29th Government of Ireland"
+msgstr ""
+
+msgid "30th Government of Ireland"
+msgstr ""
+
+msgid "31st Dáil Éireann"
+msgstr ""
+
+msgid "32nd Dáil Éireann"
+msgstr ""
+
+msgid "8th European Parliament"
+msgstr ""
+
+msgid "An Fochoiste um an Straitéis 20 Bliain don Ghaeilge 2010 – 2030 agus Rudaí Gaolmhara"
+msgstr ""
+
+msgid "Carlow County Council"
+msgstr ""
+
+msgid "Cavan County Council"
+msgstr ""
+
+msgid "Clare County Council"
+msgstr ""
+
+msgid "Committee of Inquiry into the Banking Crisis"
+msgstr ""
+
+msgid "Committee of Public Accounts"
+msgstr ""
+
+msgid "Committee of Selection (Seanad Éireann)"
+msgstr ""
+
+msgid "Committee on Agriculture, Food and the Marine"
+msgstr ""
+
+msgid "Committee on Education and Social Protection"
+msgstr ""
+
+msgid "Committee on European Union Affairs"
+msgstr ""
+
+msgid "Committee on Finance, Public Expenditure and Reform"
+msgstr ""
+
+msgid "Committee on Foreign Affairs and Trade"
+msgstr ""
+
+msgid "Committee on Health and Children"
+msgstr ""
+
+msgid "Committee on Housing and Homelessness"
+msgstr ""
+
+msgid "Committee on Jobs, Enterprise and Innovation"
+msgstr ""
+
+msgid "Committee on Justice, Defence and Equality"
+msgstr ""
+
+msgid "Committee on Members’ Interests (Dáil Éireann)"
+msgstr ""
+
+msgid "Committee on Members’ Interests (Seanad Éireann)"
+msgstr ""
+
+msgid "Committee on Procedure and Privileges (Dáil Éireann)"
+msgstr ""
+
+msgid "Committee on Procedure and Privileges (Seanad Éireann)"
+msgstr ""
+
+msgid "Committee on Public Service Oversight and Petitions"
+msgstr ""
+
+msgid "Committee on Standing Orders (Private Business)"
+msgstr ""
+
+msgid "Committee on the Environment, Culture and the Gaeltacht"
+msgstr ""
+
+msgid "Committee on the Implementation of the Good Friday Agreement"
+msgstr ""
+
+msgid "Committee on Transport and Communications"
+msgstr ""
+
+msgid "Cork City Council"
+msgstr ""
+
+msgid "Cork County Council"
+msgstr ""
+
+msgid "Donegal County Council"
+msgstr ""
+
+msgid "Dublin City Council"
+msgstr ""
+
+msgid "Dun Laoghaire-Rathdown County Council"
+msgstr ""
+
+msgid "Fingal County Council"
+msgstr ""
+
+msgid "Galway City Council"
+msgstr ""
+
+msgid "Galway County Council"
+msgstr ""
+
+msgid "Joint sub-Committee on Fisheries"
+msgstr ""
+
+msgid "Joint sub-Committee on Public Petitions"
+msgstr ""
+
+msgid "Joint sub-Committee on the Ombudsman"
+msgstr ""
+
+msgid "Kerry County Council"
+msgstr ""
+
+msgid "Kildare County Council"
+msgstr ""
+
+msgid "Kilkenny County Council"
+msgstr ""
+
+msgid "Laois County Council"
+msgstr ""
+
+msgid "Leitrim County Council"
+msgstr ""
+
+msgid "Limerick City and County Council"
+msgstr ""
+
+msgid "Longford County Council"
+msgstr ""
+
+msgid "Louth County Council"
+msgstr ""
+
+msgid "Mayo County Council"
+msgstr ""
+
+msgid "Meath County Council"
+msgstr ""
+
+msgid "Monaghan County Council"
+msgstr ""
+
+msgid "Offaly County Council"
+msgstr ""
+
+msgid "Public Consultation Committee (Seanad Éireann)"
+msgstr ""
+
+msgid "Roscommon County Council"
+msgstr ""
+
+msgid "Select sub-Committee on Arts, Heritage and the Gaeltacht"
+msgstr ""
+
+msgid "Select sub-Committee on Children and Youth Affairs"
+msgstr ""
+
+msgid "Select sub-Committee on Communications, Energy and Natural Resources"
+msgstr ""
+
+msgid "Select sub-Committee on Education and Skills"
+msgstr ""
+
+msgid "Select sub-Committee on Environment, Community and Local Government"
+msgstr ""
+
+msgid "Select sub-Committee on Finance"
+msgstr ""
+
+msgid "Select sub-Committee on Health"
+msgstr ""
+
+msgid "Select sub-Committee on Public Expenditure and Reform"
+msgstr ""
+
+msgid "Select sub-Committee on Social Protection"
+msgstr ""
+
+msgid "Select sub-Committee on the Department of the Taoiseach"
+msgstr ""
+
+msgid "Select sub-Committee on Transport, Tourism and Sport"
+msgstr ""
+
+msgid "Sligo County Council"
+msgstr ""
+
+msgid "South Dublin County Council"
+msgstr ""
+
+msgid "Sub Committee on European Scrutiny - Finance & Expenditure"
+msgstr ""
+
+msgid "Sub-Committee on Administration (Dáil Éireann)"
+msgstr ""
+
+msgid "Sub-Committee on Administration (Seanad Éireann)"
+msgstr ""
+
+msgid "Sub-Committee on Dáil Reform"
+msgstr ""
+
+msgid "Sub-Committee on Global Taxation"
+msgstr ""
+
+msgid "Sub-Committee on Human Rights relative to Justice and Equality Matters"
+msgstr ""
+
+msgid "Sub-Committee on Penal Reform"
+msgstr ""
+
+msgid "Sub-Committee on Privileges (Dáil Éireann)"
+msgstr ""
+
+msgid "Tipperary County Council"
+msgstr ""
+
+msgid "Waterford City and County Council"
+msgstr ""
+
+msgid "Westmeath County Council"
+msgstr ""
+
+msgid "Wexford County Council"
+msgstr ""
+
+msgid "Wicklow County Council"
+msgstr ""
+
+msgid "Adare-Rathkeale"
+msgstr ""
+
+msgid "Administrative Panel"
+msgstr ""
+
+msgid "Agricultural Panel"
+msgstr ""
+
+msgid "Ardee"
+msgstr ""
+
+msgid "Arklow"
+msgstr ""
+
+msgid "Ashbourne"
+msgstr ""
+
+msgid "Athenry-Oranmore"
+msgstr ""
+
+msgid "Athlone (Roscommon)"
+msgstr ""
+
+msgid "Athlone (Westmeath)"
+msgstr ""
+
+msgid "Athy"
+msgstr ""
+
+msgid "Bailieborough-Cootehill"
+msgstr ""
+
+msgid "Balbriggan"
+msgstr ""
+
+msgid "Ballina"
+msgstr ""
+
+msgid "Ballinamore"
+msgstr ""
+
+msgid "Ballinasloe"
+msgstr ""
+
+msgid "Ballincollig-Carrigaline"
+msgstr ""
+
+msgid "Ballybay-Clones"
+msgstr ""
+
+msgid "Ballyfermot-Drimnagh"
+msgstr ""
+
+msgid "Ballyjamesduff"
+msgstr ""
+
+msgid "Ballymahon"
+msgstr ""
+
+msgid "Ballymote-Tubbercurry"
+msgstr ""
+
+msgid "Ballymun"
+msgstr ""
+
+msgid "Baltinglass"
+msgstr ""
+
+msgid "Bandon-Kinsale"
+msgstr ""
+
+msgid "Beaumont-Donaghmede"
+msgstr ""
+
+msgid "Birr"
+msgstr ""
+
+msgid "Blackrock"
+msgstr ""
+
+msgid "Blarney-Macroom"
+msgstr ""
+
+msgid "Borris in Ossory-Mountmellick"
+msgstr ""
+
+msgid "Boyle"
+msgstr ""
+
+msgid "Bray"
+msgstr ""
+
+msgid "Cabra-Finglas"
+msgstr ""
+
+msgid "Cappamore-Kilmallock"
+msgstr ""
+
+msgid "Carlow"
+msgstr ""
+
+msgid "Carlow-Kilkenny"
+msgstr ""
+
+msgid "Carrick-On-Shannon"
+msgstr ""
+
+msgid "Carrick-on-Suir"
+msgstr ""
+
+msgid "Carrickmacross-Castleblayney"
+msgstr ""
+
+msgid "Cashel-Tipperary"
+msgstr ""
+
+msgid "Castlebar"
+msgstr ""
+
+msgid "Castlecomer"
+msgstr ""
+
+msgid "Castleknock"
+msgstr ""
+
+msgid "Cavan-Belturbet"
+msgstr ""
+
+msgid "Cavan-Monaghan"
+msgstr ""
+
+msgid "Celbridge-Leixlip"
+msgstr ""
+
+msgid "Clane"
+msgstr ""
+
+msgid "Clare"
+msgstr ""
+
+msgid "Claremorris"
+msgstr ""
+
+msgid "Clondalkin"
+msgstr ""
+
+msgid "Clonmel"
+msgstr ""
+
+msgid "Clontarf"
+msgstr ""
+
+msgid "Cobh"
+msgstr ""
+
+msgid "Comeragh"
+msgstr ""
+
+msgid "Connamara"
+msgstr ""
+
+msgid "Cork City North-Central"
+msgstr ""
+
+msgid "Cork City North-East"
+msgstr ""
+
+msgid "Cork City North-West"
+msgstr ""
+
+msgid "Cork City South-Central"
+msgstr ""
+
+msgid "Cork City South-East"
+msgstr ""
+
+msgid "Cork City South-West"
+msgstr ""
+
+msgid "Cork East"
+msgstr ""
+
+msgid "Cork North-Central"
+msgstr ""
+
+msgid "Cork North-West"
+msgstr ""
+
+msgid "Cork South-Central"
+msgstr ""
+
+msgid "Cork South-West"
+msgstr ""
+
+msgid "Crumlin-Kimmage"
+msgstr ""
+
+msgid "Cultural and Educational Panel"
+msgstr ""
+
+msgid "Donegal"
+msgstr ""
+
+msgid "Donegal North-East"
+msgstr ""
+
+msgid "Donegal South-West"
+msgstr ""
+
+msgid "Drogheda"
+msgstr ""
+
+msgid "Dublin"
+msgstr ""
+
+msgid "Dublin Bay North"
+msgstr ""
+
+msgid "Dublin Bay South"
+msgstr ""
+
+msgid "Dublin Central"
+msgstr ""
+
+msgid "Dublin Fingal"
+msgstr ""
+
+msgid "Dublin Mid-West"
+msgstr ""
+
+msgid "Dublin North"
+msgstr ""
+
+msgid "Dublin North-Central"
+msgstr ""
+
+msgid "Dublin North-East"
+msgstr ""
+
+msgid "Dublin North-West"
+msgstr ""
+
+msgid "Dublin Rathdown"
+msgstr ""
+
+msgid "Dublin South"
+msgstr ""
+
+msgid "Dublin South-Central"
+msgstr ""
+
+msgid "Dublin South-East"
+msgstr ""
+
+msgid "Dublin South-West"
+msgstr ""
+
+msgid "Dublin West"
+msgstr ""
+
+msgid "Dún Laoghaire"
+msgstr ""
+
+msgid "Dundalk South"
+msgstr ""
+
+msgid "Dundalk-Carlingford"
+msgstr ""
+
+msgid "Dundrum"
+msgstr ""
+
+msgid "Dungarvan"
+msgstr ""
+
+msgid "Dungarvan-Lismore"
+msgstr ""
+
+msgid "East Cork"
+msgstr ""
+
+msgid "Edenderry"
+msgstr ""
+
+msgid "Ennis"
+msgstr ""
+
+msgid "Enniscorthy"
+msgstr ""
+
+msgid "Fermoy"
+msgstr ""
+
+msgid "Galway City Central"
+msgstr ""
+
+msgid "Galway City East"
+msgstr ""
+
+msgid "Galway City West"
+msgstr ""
+
+msgid "Galway East"
+msgstr ""
+
+msgid "Galway West"
+msgstr ""
+
+msgid "Glencullen-Sandyford"
+msgstr ""
+
+msgid "Glenties"
+msgstr ""
+
+msgid "Gorey"
+msgstr ""
+
+msgid "Graiguecullen-Portarlington"
+msgstr ""
+
+msgid "Granard"
+msgstr ""
+
+msgid "Greystones"
+msgstr ""
+
+msgid "Howth-Malahide"
+msgstr ""
+
+msgid "Industrial and Commercial Panel"
+msgstr ""
+
+msgid "Inishowen"
+msgstr ""
+
+msgid "Kanturk-Mallow"
+msgstr ""
+
+msgid "Kells"
+msgstr ""
+
+msgid "Kerry"
+msgstr ""
+
+msgid "Kerry North-West Limerick"
+msgstr ""
+
+msgid "Kerry South"
+msgstr ""
+
+msgid "Kildare North"
+msgstr ""
+
+msgid "Kildare South"
+msgstr ""
+
+msgid "Kildare-Newbridge"
+msgstr ""
+
+msgid "Kilkenny City East"
+msgstr ""
+
+msgid "Kilkenny City West"
+msgstr ""
+
+msgid "Killaloe"
+msgstr ""
+
+msgid "Killarney"
+msgstr ""
+
+msgid "Killiney-Shankill"
+msgstr ""
+
+msgid "Labour Panel"
+msgstr ""
+
+msgid "Laois"
+msgstr ""
+
+msgid "Laois-Offaly"
+msgstr ""
+
+msgid "Laytown-Bettystown"
+msgstr ""
+
+msgid "Letterkenny"
+msgstr ""
+
+msgid "Limerick"
+msgstr ""
+
+msgid "Limerick City"
+msgstr ""
+
+msgid "Limerick City East"
+msgstr ""
+
+msgid "Limerick City North"
+msgstr ""
+
+msgid "Limerick City West"
+msgstr ""
+
+msgid "Limerick County"
+msgstr ""
+
+msgid "Listowel"
+msgstr ""
+
+msgid "Longford"
+msgstr ""
+
+msgid "Longford-Westmeath"
+msgstr ""
+
+msgid "Loughrea"
+msgstr ""
+
+msgid "Louth"
+msgstr ""
+
+msgid "Lucan"
+msgstr ""
+
+msgid "Manorhamilton"
+msgstr ""
+
+msgid "Maynooth"
+msgstr ""
+
+msgid "Mayo"
+msgstr ""
+
+msgid "Meath East"
+msgstr ""
+
+msgid "Meath West"
+msgstr ""
+
+msgid "Midlands-North-West"
+msgstr ""
+
+msgid "Monaghan"
+msgstr ""
+
+msgid "Muinebeag"
+msgstr ""
+
+msgid "Mulhuddart"
+msgstr ""
+
+msgid "Mullingar-Coole"
+msgstr ""
+
+msgid "Mullingar-Kilbeggan"
+msgstr ""
+
+msgid "Naas"
+msgstr ""
+
+msgid "National University of Ireland"
+msgstr ""
+
+msgid "Navan"
+msgstr ""
+
+msgid "Nenagh"
+msgstr ""
+
+msgid "New Ross"
+msgstr ""
+
+msgid "Newcastle West"
+msgstr ""
+
+msgid "North Inner City"
+msgstr ""
+
+msgid "Offaly"
+msgstr ""
+
+msgid "Pembroke-South Dock"
+msgstr ""
+
+msgid "Piltown"
+msgstr ""
+
+msgid "Portlaoise"
+msgstr ""
+
+msgid "Rathfarnham"
+msgstr ""
+
+msgid "Rathgar-Rathmines"
+msgstr ""
+
+msgid "Ratoath"
+msgstr ""
+
+msgid "Roscommon"
+msgstr ""
+
+msgid "Roscommon-Galway"
+msgstr ""
+
+msgid "Roscommon-South Leitrim"
+msgstr ""
+
+msgid "Shannon"
+msgstr ""
+
+msgid "Sligo"
+msgstr ""
+
+msgid "Sligo-Leitrim"
+msgstr ""
+
+msgid "Sligo-North Leitrim"
+msgstr ""
+
+msgid "South"
+msgstr ""
+
+msgid "South and West Kerry"
+msgstr ""
+
+msgid "Stillorgan"
+msgstr ""
+
+msgid "Stranorlar"
+msgstr ""
+
+msgid "Swords"
+msgstr ""
+
+msgid "Tallaght Central"
+msgstr ""
+
+msgid "Tallaght South"
+msgstr ""
+
+msgid "Taoiseach's Nominee"
+msgstr ""
+
+msgid "Templemore-Thurles"
+msgstr ""
+
+msgid "Templeogue-Terenure"
+msgstr ""
+
+msgid "Tipperary"
+msgstr ""
+
+msgid "Tipperary North"
+msgstr ""
+
+msgid "Tipperary South"
+msgstr ""
+
+msgid "Tralee"
+msgstr ""
+
+msgid "Tramore-Waterford City West"
+msgstr ""
+
+msgid "Trim"
+msgstr ""
+
+msgid "Tuam"
+msgstr ""
+
+msgid "Tullamore"
+msgstr ""
+
+msgid "University of Dublin"
+msgstr ""
+
+msgid "Waterford"
+msgstr ""
+
+msgid "Waterford City East"
+msgstr ""
+
+msgid "Waterford City South"
+msgstr ""
+
+msgid "West Clare"
+msgstr ""
+
+msgid "West Cork"
+msgstr ""
+
+msgid "West Mayo"
+msgstr ""
+
+msgid "Wexford"
+msgstr ""
+
+msgid "Wicklow"
+msgstr ""
+
+msgid "Dáil Eireann"
+msgstr ""
+
+msgid ""
+"Dáil Éireann is the lower house of the Oireachtas, but is the source of almost all legislation in Ireland. It consists of no less than one Teachta Dála (TD) for every thirty thousand citizens. TDs are full time public representatives and are responsible for representing their constituents on the national level.\n"
+"\n"
+"The Dáil elects members of the Cabinet who ensure that the policies of the Government are carried out. They are assisted by the various Ministers of State in this. The Dáil also has a number of committees which scrutinise legislation proposed to them.\n"
+"\n"
+"TDs are the people you should contact if you have questions or concerns about national issues. Examples would be the Budget, taxation, Health policy or other nationwide initiatives."
+msgstr ""
+
+msgid "European Parliament"
+msgstr ""
+
+msgid ""
+"MEPs serve in the European Parliament, the directly elected parliamentary institution of the European Union (EU). Together with the Council of the European Union (the Council) and the European Commission, it exercises the legislative function of the EU.\n"
+"\n"
+"MEPs are the people you should contact if you have questions or concerns about european issues. Examples would be EU treaties and Union wide agreements such as the Common Agricultural Policy or Fisheries Policy."
+msgstr ""
+
+msgid "Local Electoral Area"
+msgstr ""
+
+msgid ""
+"City and County Councils exist to represent the interest of large communities. Whilst the role of a Councillor is similar to that of a TD or MEP in that they represent the views of their constituents, they are slightly different in the sense that it is primarily a part-time function, so most Councillors will also have a \"regular\" job.\n"
+"\n"
+"County and City Councils are elected from a number of Local Electoral Areas.\n"
+"\n"
+"Councillors are the people you should contact if you have questions or concerns about local issues. Examples would include problems with local infrastructure like refuse collection or damaged facilities."
+msgstr ""
+
+msgid "Seanad Panel"
+msgstr ""
+
+msgid "European parliamentary group"
+msgstr ""
+
+msgid "Political Party"
+msgstr ""
+
+msgid "Alliance of Liberals and Democrats for Europe Group"
+msgstr ""
+
+msgid "Anti Austerity Alliance"
+msgstr ""
+
+msgid "Communist Party of Ireland"
+msgstr ""
+
+msgid "Direct Democracy Ireland - National Citizens Movement"
+msgstr ""
+
+msgid "éirígí"
+msgstr ""
+
+msgid "European Conservatives and Reformists"
+msgstr ""
+
+msgid "European People's Party"
+msgstr ""
+
+msgid "European United Left–Nordic Green Left"
+msgstr ""
+
+msgid "Fianna Fáil"
+msgstr ""
+
+msgid "Fine Gael"
+msgstr ""
+
+msgid "Fís Nua"
+msgstr ""
+
+msgid "Green Party"
+msgstr ""
+
+msgid "Identity Ireland"
+msgstr ""
+
+msgid "Independent"
+msgstr ""
+
+msgid "Independents 4 Change"
+msgstr ""
+
+msgid "Labour"
+msgstr ""
+
+msgid "Letterkenny Residents Party"
+msgstr ""
+
+msgid "People Before Profit Alliance"
+msgstr ""
+
+msgid "Progressive Alliance of Socialists and Democrats"
+msgstr ""
+
+msgid "Renua Ireland"
+msgstr ""
+
+msgid "Sinn Féin"
+msgstr ""
+
+msgid "Social Democrats"
+msgstr ""
+
+msgid "Socialist Party"
+msgstr ""
+
+msgid "South Kerry Independent Alliance"
+msgstr ""
+
+msgid "United People"
+msgstr ""
+
+msgid "Workers and Unemployed Action Group South-Tipperary"
+msgstr ""
+
+msgid "Workers Party"
+msgstr ""
+
+msgid "Candidate"
+msgstr ""
+
+msgid "These people have officially declared for the upcoming general election. You should contact them if you're interested in hearing their position on issues important to you."
+msgstr ""
+
+msgid "Ceann Comhairle"
+msgstr ""
+
+msgid "Councillor"
+msgstr ""
+
+msgid "Councillors are the people you should contact if you have questions or concerns about local issues. Examples would include problems with local infrastructure like refuse collection or damaged facilities."
+msgstr ""
+
+msgid "MEP"
+msgstr ""
+
+msgid "MEPs are the people you should contact if you have questions or concerns about european issues. Examples would be EU treaties and Union wide agreements such as the Common Agricultural Policy or Fisheries Policy."
+msgstr ""
+
+msgid "Minister"
+msgstr ""
+
+msgid "Minister of State"
+msgstr ""
+
+msgid "Senator"
+msgstr ""
+
+msgid "Tánaiste"
+msgstr ""
+
+msgid "Taoiseach"
+msgstr ""
+
+msgid "TD"
+msgstr ""
+
+msgid "TDs are the people you should contact if you have questions or concerns about national issues. Examples would be the Budget, taxation, Health policy or other nationwide initiatives."
+msgstr ""
+
+msgid "About us"
+msgstr ""
+
+msgid "About Who Is My TD?"
+msgstr ""
+
+msgid "Call"
+msgstr ""
+
+msgid "Email"
+msgstr ""
+
+msgid "Positions held"
+msgstr ""
+
+msgid "Body"
+msgstr ""
+
+msgid "Associations"
+msgstr ""
+
+msgid "\"Search results for #{params['form-input']}\""
+msgstr ""
+
+msgid "Contact Details"
+msgstr ""
+
+msgid "Correct a mistake"
+msgstr ""
+
+msgid "\"We list over #{number_with_delimiter(@representatives_count - 1)} representatives across Ireland\""
+msgstr ""
+
 msgid "To get started, just enter your home address."
-msgstr "Chun tús, ach isteach do sheoladh baile."
+msgstr ""
 
 msgid "Enter your address here, e.g. Kildare Street, Dublin 2, Ireland"
-msgstr "Cuir isteach do sheoladh anseo, m.sh. Sráid Chill Dara, Baile Átha Cliath 2, Éire"
+msgstr ""
 
 msgid "Search"
-msgstr "Cuardach"
+msgstr ""
 
 msgid "We need your home address to figure out what constituency you are in."
-msgstr "Ní mór dúinn do sheoladh baile a dhéanamh amach cad toghlach a bhfuil tú i."
+msgstr ""
