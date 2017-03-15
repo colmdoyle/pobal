@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   get "/ge16", to: redirect("/body/2016-general-election", status: 301)
   get "/se16", to: redirect("/body/2016-seanad-election", status: 301)
 
+  get "/group/anti-austerity-alliance", to: redirect("/group/solidarity", status: 301)
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
