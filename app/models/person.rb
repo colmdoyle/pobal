@@ -1,6 +1,6 @@
 class Person < ActiveRecord::Base
   auditable
-  
+
   include FriendlyId
   nilify_blanks
   has_many :groups, through: :memberships, dependent: :destroy
@@ -25,11 +25,7 @@ class Person < ActiveRecord::Base
   end
 
   def name
-    if current_party
-      "#{first_name} #{last_name} (#{current_party.name})"
-    else
-      "#{first_name} #{last_name}"
-    end
+    "#{first_name} #{last_name}"
   end
 
   def fullname
