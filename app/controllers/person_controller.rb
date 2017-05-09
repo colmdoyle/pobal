@@ -1,6 +1,11 @@
 class PersonController < ApplicationController
   def index
-    @people = Person.all.page(params[:page])
+    if params[:letter].nil?
+      @people = Person.all.page(params[:page])
+    else
+      @people = Person.where("last_name LIKE ?", "#{params[:letter]}%").page(params[:page])
+    end
+
   end
 
   def show
