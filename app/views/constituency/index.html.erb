@@ -4,5 +4,7 @@
 <% for constituency in @constituencies %>
   <h3><%= link_to constituency.name, constituency %> (<%= constituency.constituency_type.name %>)</h3>
 <% end %>
-<%= will_paginate @constituencies, renderer: BootstrapPagination::Rails %>
+<div class="text-center">
+  <%= will_paginate @constituencies, renderer: BootstrapPagination::Rails %>
+</div>
 </div>

@@ -1,6 +1,15 @@
 <% title "People" %>
 <div class="container">
   <h1>People</h1>
+  <div class="text-center">
+    <ul class="pagination" role="group">
+      <% ("A".."Z").each do |letter| %>
+        <li class="<%= 'active' if current_page?(person_by_letter_path(letter)) %>">
+          <%= link_to "#{letter}", person_by_letter_path(letter) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
   <div class="well">
     <div class="table-responsive">
       <table class="table sortable-theme-bootstrap" data-sortable>
@@ -23,5 +32,7 @@
       </table>
     </div>
   </div>
-<%= will_paginate @people, renderer: BootstrapPagination::Rails %>
+  <div class="text-center">
+    <%= will_paginate @people, renderer: BootstrapPagination::Rails %>
+  </div>
 </div>

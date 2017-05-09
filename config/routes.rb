@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
   resources :search
+  get "/person/:letter" => 'person#index', :letter => /[a-zA-Z]/, as: :person_by_letter
   resources :person
   resources :body, only: %i[index show]
   resources :body_type, only: [:show]
