@@ -2,14 +2,14 @@ class PositionType < ActiveRecord::Base
   auditable
   include FriendlyId
   # slug
-  friendly_id :title, :use => [:slugged, :finders]
+  friendly_id :title, :use => %i[slugged finders]
 
   default_scope { order('title ASC') }
 
   def slug_candidates
-    [
-      :title,
-      :title, :id
+    %i[
+      title
+      title id
     ]
   end
 

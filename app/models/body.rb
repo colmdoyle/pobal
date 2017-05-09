@@ -12,12 +12,12 @@ class Body < ActiveRecord::Base
   default_scope { order('name ASC') }
 
   # slug
-  friendly_id :name, :use => [:slugged, :finders]
+  friendly_id :name, :use => %i[slugged finders]
 
   def slug_candidates
-    [
-      :name,
-      :name, :id
+    %i[
+      name
+      name id
     ]
   end
 

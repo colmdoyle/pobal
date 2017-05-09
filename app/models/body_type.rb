@@ -3,16 +3,16 @@ class BodyType < ActiveRecord::Base
 
   include FriendlyId
   # slug
-  friendly_id :name, :use => [:slugged, :finders]
+  friendly_id :name, :use => %i[slugged finders]
 
   has_many :bodies, dependent: :destroy
 
   default_scope { order('name ASC') }
 
   def slug_candidates
-    [
-      :name,
-      :name, :id
+    %i[
+      name
+      name id
     ]
   end
 

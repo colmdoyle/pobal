@@ -15,12 +15,12 @@ class Person < ActiveRecord::Base
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
   # slug
-  friendly_id :name, :use => [:slugged, :finders]
+  friendly_id :name, :use => %i[slugged finders]
 
   def slug_candidates
-    [
-      :name,
-      :name, :id
+    %i[
+      name 
+      name id
     ]
   end
 

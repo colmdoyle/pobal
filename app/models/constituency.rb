@@ -6,13 +6,13 @@ class Constituency < ActiveRecord::Base
 
   belongs_to :constituency_type
   # slug
-  friendly_id :name, :use => [:slugged, :finders]
+  friendly_id :name, :use => %i[slugged finders]
 
   def slug_candidates
-    [
-      :name,
-      :name, :constituency_type,
-      :name, :id
+    %i[
+      name
+      name constituency_type
+      name id
     ]
   end
 
