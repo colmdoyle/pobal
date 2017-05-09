@@ -47,7 +47,6 @@ gem 'le'
 gem 'nilify_blanks'
 gem 'fittextjs_rails'
 
-gem 'codeclimate-test-reporter', group: :test, require: nil
 gem 'newrelic_rpm'
 gem 'sitemap_generator'
 

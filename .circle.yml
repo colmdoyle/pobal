@@ -4,3 +4,5 @@ test:
     - bundle exec brakeman -i config/brakeman.ignore -z
   override:
     - RAILS_ENV=test bundle exec rspec -r rspec_junit_formatter --format progress --format RspecJunitFormatter -o $CIRCLE_TEST_REPORTS/rspec/junit.xml
+  post:
+    - bash <(curl -s https://codecov.io/bash)
