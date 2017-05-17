@@ -1,3 +1,4 @@
+<% cache @person do %>
 <% title "#{@person.fullname} | #{@person.current_position ? @person.current_position.position_type.title : 'Person'}" %>
 <div class="container" itemscope itemtype="http://schema.org/Person">
   <div class="row">
@@ -167,4 +168,5 @@
   var ctaLayer = new google.maps.KmlLayer('https://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
   ctaLayer.setMap(map);
 </script>
+<% end %>
 <% end %>
