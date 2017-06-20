@@ -52,6 +52,8 @@ gem 'sitemap_generator'
 
 gem 'espinita'
 
+gem 'marginalia'
+
 gem 'codecov', :require => false, :group => :test
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
