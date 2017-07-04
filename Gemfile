@@ -54,6 +54,8 @@ gem 'espinita'
 
 gem 'marginalia'
 
+gem 'bullet'
+
 gem 'codecov', :require => false, :group => :test
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -81,6 +81,9 @@ GEM
       thor (~> 0.19)
     brakeman (3.6.1)
     builder (3.2.3)
+    bullet (5.5.1)
+      activesupport (>= 3.0.0)
+      uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
     climate_control (0.1.0)
     cocaine (0.5.8)
@@ -320,6 +323,7 @@ GEM
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.2.1)
+    uniform_notifier (1.10.0)
     url (0.3.2)
     warden (1.2.7)
       rack (>= 1.0)
@@ -343,6 +347,7 @@ DEPENDENCIES
   binding_of_caller
   bootstrap-sass (~> 3.3.5)
   brakeman
+  bullet
   byebug
   codecov
   coffee-rails (~> 4.1.0)
