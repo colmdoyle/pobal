@@ -6,8 +6,8 @@ class Person < ActiveRecord::Base
   has_many :groups, through: :memberships, dependent: :destroy
   has_many :bodies, through: :positions, dependent: :destroy
   has_many :memberships
-  has_many :positions
-  has_one :current_position, -> { self.joins(:constituency).where(end_date: nil).where.not(constituency: nil).order('start_date ASC') }, class_name: "Position"
+  has_many :positions, -> { includes(:constituency).includes(:body).includes(:position_type) }, class_name: 'Position'
+  has_one :current_position, -> { self.joins(:constituency).where(end_date: nil).includes(:constituency).includes(:body).includes(:position_type).where.not(constituency: nil).order('start_date ASC') }, class_name: "Position"
 
   default_scope { order('last_name ASC') }
 
@@ -19,7 +19,7 @@ class Person < ActiveRecord::Base
 
   def slug_candidates
     %i[
-      name 
+      name
       name id
     ]
   end
