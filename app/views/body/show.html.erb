@@ -80,7 +80,7 @@
                   <% if member.constituency %>
                   <td><%= link_to member.constituency.name, member.constituency %></td>
                   <% else %>
-                  <td><%= member.position_type.title %></td>
+                  <td><%= member.position_type.try(:title) %></td>
                   <td><%= member.note %></td>
                   <% end %>
                   <td>
