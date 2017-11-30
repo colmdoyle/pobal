@@ -6,6 +6,8 @@
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <title><%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?</title>
+
+    <link rel="apple-touch-icon" href="<%= image_url('site-icon.jpg') %>">
     <!-- OG Meta Data -->
     <meta content="<%= if content_for?(:title) then yield(:title) + ' | ' end %>Who is my TD?" property="og:title">
     <meta content="<%= yield_meta_tag(:description, 'Contact your elected representatives about the issues that matter to you') %>" property="og:description">
