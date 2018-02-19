@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.4.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'mysql2'
-gem 'rails', '4.2.7.1'
+gem 'rails', '4.2.10'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -30,7 +30,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'active_admin_import'
 gem 'activeadmin', '~> 1.0.0.pre2'
-gem 'aws-sdk-v1'
+gem 'aws-sdk', '<3.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise'
 gem 'fittextjs_rails'
@@ -42,7 +42,7 @@ gem 'httparty', '~> 0.13.7'
 gem 'json'
 gem 'le'
 gem 'nilify_blanks'
-gem 'paperclip', '~> 4.3'
+gem 'paperclip'
 gem 'sentry-raven'
 gem 'will_paginate', '~> 3.0.6'
 gem 'will_paginate-bootstrap'
