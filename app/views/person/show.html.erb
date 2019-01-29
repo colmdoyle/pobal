@@ -61,22 +61,6 @@
           </div>
         </div>
         <% end %>
-        <% if @person.current_constituency %>
-        <div class="col-md-6">
-          <div class="panel panel-default">
-            <% if @person.current_constituency.map_it_id %>
-            <div class="panel-body info-panel google-map" id="mini-map"></div>
-            <% else %>
-            <div class="panel-body info-panel text-center blue-bg">
-              <p class="info-panel-text">
-                <%= @person.current_constituency.name_initials %>
-              </p>
-            </div>
-            <% end %>
-            <div class="panel-footer"><%= link_to @person.current_constituency.name, @person.current_constituency %></div>
-          </div>
-        </div>
-        <% end %>
       </div>
     </div>
   </div>
@@ -157,16 +141,4 @@
     </div>
   </div>
 </div>
-<% if @person.current_constituency &&  @person.current_constituency.map_it_id %>
-<script type="text/javascript">
-  var mapOptions = {
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    disableDefaultUI: false
-  }
-  var map = new google.maps.Map(document.getElementById("mini-map"), mapOptions);
-
-  var ctaLayer = new google.maps.KmlLayer('https://maps.whoismytd.com/area/<%= @person.current_constituency.map_it_id %>.kml');
-  ctaLayer.setMap(map);
-</script>
-<% end %>
 <% end %>
