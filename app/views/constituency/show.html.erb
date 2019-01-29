@@ -8,20 +8,6 @@
       </h1>
     </div>
   </div>
-  <% if @constituency.map_it_id %>
-  <div class="row">
-    <div class="col-md-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title">Map</h3>
-        </div>
-        <div class="panel-body google-map">
-          <div id="map-canvas"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <% end %>
   <% unless @current_members.empty? %>
   <div class="row">
     <div class="col-md-12">
@@ -54,16 +40,4 @@
   </div>
   <% end %>
 </div>
-<% if @constituency.map_it_id %>
-<script type="text/javascript">
-  var mapOptions = {
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    disableDefaultUI: false
-  }
-  var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-  var ctaLayer = new google.maps.KmlLayer('https://maps.whoismytd.com/area/<%= @constituency.map_it_id %>.kml');
-  ctaLayer.setMap(map);
-</script>
-<% end %>
 <% end %>
