@@ -41,4 +41,5 @@
   var input=document.getElementById('form-input');
   var options={componentRestrictions:{country:'ie'}};
   autocomplete=new google.maps.places.Autocomplete(input,options);
+  autocomplete.setFields(['formatted_address']);
 </script>
