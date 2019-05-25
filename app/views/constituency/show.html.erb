@@ -8,6 +8,20 @@
       </h1>
     </div>
   </div>
+  <% if @constituency.map_it_id %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Map</h3>
+        </div>
+        <div class="panel-body google-map">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
   <% unless @current_members.empty? %>
   <div class="row">
     <div class="col-md-12">
@@ -40,4 +54,39 @@
   </div>
   <% end %>
 </div>
+<% if @constituency.map_it_id %>
+<script>
+    var map = new L.Map("map");
+    var osm = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Map data © OpenStreetMap contributors',
+        maxZoom: 18
+    });
+    map.addLayer(osm);
+
+    reqwest({
+        url: "https://maps.whoismytd.com/area/<%= @constituency.map_it_id %>.geojson?simplify_tolerance=0.0001",
+        type: 'json',
+        success: function(data) {
+            var area = new L.GeoJSON(data);
+            map.addLayer(area);
+
+            var bounds = new L.LatLngBounds();
+            area._iterateLayers(function (layer) {
+                if (layer instanceof L.MultiPolygon) {
+                    layer._iterateLayers(function(layer2) {
+                        var new_bounds = layer2.getBounds();
+                        bounds.extend(new_bounds.getSouthWest());
+                        bounds.extend(new_bounds.getNorthEast());
+                    });
+                }
+                if (layer instanceof L.Polygon) {
+                    bounds = layer.getBounds();
+                }
+            }, area);
+            map.fitBounds(bounds);
+        }
+    });
+
+</script>
+<% end %>
 <% end %>
