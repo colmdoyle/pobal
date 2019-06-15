@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.4.1'
+ruby '2.4.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'mysql2'
@@ -55,6 +55,8 @@ gem 'espinita'
 gem 'marginalia'
 
 gem 'bullet'
+
+gem 'ransack', '1.8.2'
 
 gem 'codecov', :require => false, :group => :test
 # Use Capistrano for deployment
