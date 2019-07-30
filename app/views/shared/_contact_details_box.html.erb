@@ -4,7 +4,7 @@
     <h3 class="panel-title">Contact Details <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: subject.name, report_url: request.original_url }%></span></h3>
   </div>
   <div class="panel-body">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <ul class="list-unstyled">
         <% unless subject.phone_number.nil? %>
         <li>
@@ -84,12 +84,6 @@
         <% end %>
       </ul>
     </div>
-    <div class="col-md-6">
-      <% unless subject.facebook.nil? %>
-      <div class="fb-page" data-href="<%= subject.facebook_url %>" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"></div>
-      <% end %>
-    </div>
-
   </div>
 </div>
 <% end %>

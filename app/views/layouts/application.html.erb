@@ -16,7 +16,6 @@
     <meta content="<%= yield_meta_tag(:og_image, image_url('og-image-min.png')) %>" property="og:image">
     <meta content="Who is my TD?" property="og:site_name">
     <meta content="260300016" property="fb:admins">
-    <meta content="415289985220755" property="fb:app_id">
     <!-- Twitter -->
     <meta content="summary_large_image" name="twitter:card">
     <meta content="<%= request.original_url %>" name="twitter:url">
@@ -38,7 +37,6 @@
     <%= javascript_include_tag 'application' %>
     <%= render 'layouts/footer' %>
     <%= render 'layouts/google_analytics' %>
-    <%= render 'layouts/facebook_sdk' %>
   </body>
 
 </html>
