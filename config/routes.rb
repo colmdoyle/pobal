@@ -41,5 +41,7 @@ Rails.application.routes.draw do
   get "/group_type", to: redirect("/group")
   get "/body_type", to: redirect("/body")
 
+  get "/sitemap.xml.gz", to: redirect("https://s3-eu-west-1.amazonaws.com/whoismytd/sitemap.xml.gz", status: 301)
+
   root 'welcome#index'
 end
