@@ -6,3 +6,5 @@
 
 User-agent: *
 Disallow: /admin
+
+Sitemap: https://s3-eu-west-1.amazonaws.com/whoismytd/sitemap.xml.gz
