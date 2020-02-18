@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'active_admin_import'
 gem 'activeadmin', '~> 1.0.0.pre2'
 gem 'aws-sdk', '<3.0'
-gem 'bootstrap-sass', '~> 3.3.5'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'devise'
 gem 'fittextjs_rails'
 gem 'font-awesome-rails'
