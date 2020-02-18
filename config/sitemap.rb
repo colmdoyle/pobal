@@ -1,5 +1,5 @@
 # Set the host name for URL creation
-SitemapGenerator::Sitemap.default_host = "http://www.whoismytd.com"
+SitemapGenerator::Sitemap.default_host = "https://www.whoismytd.com"
 
 SitemapGenerator::Sitemap.create do
   add person_index_path
