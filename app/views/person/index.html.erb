@@ -21,6 +21,7 @@
         </thead>
         <tbody>
           <% @people.each do |person| %>
+            <% if person.current_position %>
             <% cache person do %>
             <tr>
               <td><%= link_to person.fullname, person %></td>
@@ -28,6 +29,7 @@
               <td><%= person.current_party ? person.current_party.name : "Unknown" %></td>
               <td><%= person.current_constituency ? person.current_constituency.name : "" %></td>
             </tr>
+            <% end %>
             <% end %>
           <% end %>
         </tbody>

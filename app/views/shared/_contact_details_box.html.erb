@@ -1,4 +1,5 @@
 <% cache subject do %>
+  <% if subject.current_position %>
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">Contact Details <span class="text-muted pull-right small"><%= render partial: "shared/report_a_problem_link", locals: { report_subject: subject.name, report_url: request.original_url }%></span></h3>
@@ -86,4 +87,5 @@
     </div>
   </div>
 </div>
+<% end %>
 <% end %>
