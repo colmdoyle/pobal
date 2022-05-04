@@ -73,7 +73,9 @@
   <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-10">
+      <% if @person.current_position %>
       <%= render partial: "shared/contact_details_box", locals: {subject: @person} %>
+      <% end %>
     </div>
   </div>
   <div class="row">
