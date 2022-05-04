@@ -4,10 +4,9 @@
   <div class="row">
     <div class="col-md-2">
       <p>
-      <img alt="<%= @person.fullname %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>" itemprop="image">
+        <img alt="<%= @person.fullname %>" class="img-responsive img-rounded center-block" src="<%= @person.avatar.url(:small) %>" itemprop="image">
       </p>
       <div class="hidden-xs hidden-sm">
-        <% if @person.current_position %>
         <p>
           <% unless @person.phone_number.nil? %>
             <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
@@ -18,7 +17,6 @@
             <% end %>
           <% end %>
         </p>
-        <% end %>
       </div>
     </div>
     <div class="col-md-10">
@@ -31,8 +29,6 @@
           </p>
           <% end %>
           <div class="hidden-md hidden-lg">
-          <% if @person.current_position %>
-
             <p>
               <% unless @person.phone_number.nil? %>
                 <%= link_to "Call", "tel:#{@person.phone_number}", target: "_blank", itemprop: "telephone", class: "btn btn-primary btn-lg btn-block", onclick: "ga('send', 'event', 'button', 'phone', '#{@person.fullname}-#{@person.id}');" %>
@@ -43,8 +39,6 @@
                 <% end %>
               <% end %>
             </p>
-            <% end %>
-
           </div>
         </div>
       </div>
@@ -52,16 +46,16 @@
         <% if @person.current_party %>
         <div class="col-md-6">
           <div class="panel panel-default">
-          <div class="panel-body info-panel text-center <% unless @person.current_party.avatar.file? %> blue-bg <% end %>">
-          <% if @person.current_party.avatar.file? %>
-            <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
-            <% else %>
-            <p class="info-panel-text">
-              <%= @person.current_party.name_initials %>
-            </p>
-            <% end %>
-        </div>
-        <div class="panel-footer">
+            <div class="panel-body info-panel text-center <% unless @person.current_party.avatar.file? %> blue-bg <% end %>">
+              <% if @person.current_party.avatar.file? %>
+                <img alt="<%= @person.current_party.name %>" class="img-responsive center-block" src="<%= @person.current_party.avatar.url(:thumb) %>">
+                <% else %>
+                <p class="info-panel-text">
+                  <%= @person.current_party.name_initials %>
+                </p>
+                <% end %>
+            </div>
+            <div class="panel-footer">
               <%= link_to @person.current_party.name, @person.current_party %>
             </div>
           </div>
