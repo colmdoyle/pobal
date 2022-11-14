@@ -1,6 +1,0 @@
-test:
-  pre:
-    - bundle exec rubocop --fail-level C
-    - bundle exec brakeman -i config/brakeman.ignore -z
-  post:
-    - bash <(curl -s https://codecov.io/bash)
